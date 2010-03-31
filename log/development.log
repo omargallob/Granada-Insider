@@ -2743,3 +2743,150 @@ Rendering home/index
 Rendered shared/_center_services_swf (0.1ms)
 Rendered shared/_center_services_swf (0.1ms)
 Completed in 6ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.1.3 at 2010-03-31 17:43:49) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://192.168.1.3/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-03-31 17:45:55) [GET]
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Completed in 76ms (View: 71, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-03-31 17:45:56) [GET]
+  [4;36;1mPage Load (73.7ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/pages/index
+  [4;35;1mPage Columns (135.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granadainsider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+Rendered admin/pages/_page (164.3ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granadainsider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+Rendered admin/pages/_page (13.0ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granadainsider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+Rendered admin/pages/_page (9.5ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granadainsider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+Rendered admin/pages/_page (8.4ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granadainsider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+Rendered admin/pages/_page (8.6ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granadainsider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+Rendered admin/pages/_page (9.7ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granadainsider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Rendered admin/pages/_page (9.4ms)
+Completed in 326ms (View: 89, DB: 211) | 200 OK [http://localhost/admin/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-03-31 17:45:57) [GET]
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 17:51:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.9ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 17:56:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 18:01:49) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 18:06:36) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 5ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 18:07:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.9ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 18:07:32) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 18:08:05) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 18:08:20) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 18:15:27) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
