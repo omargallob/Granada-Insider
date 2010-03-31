@@ -1,0 +1,22 @@
+<div id="content">
+
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "New", new_admin_page_path %></li>
+	</ul>
+<% end %>
+
+	<h1>Title<b><%= " :"+@parent.name if params[:parent]%></b></h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<thead>
+				<th>Title</th>
+				<th>Options </th>
+				<th>Sublevel</th>	
+			</thead>			
+			<%= render :partial => "page", :collection => @pages %>
+		</table>
+	</div>
+</div>

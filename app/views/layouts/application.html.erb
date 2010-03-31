@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+		<script type="text/javascript" charset="utf-8">
+	 	 // google.load("swfobject", "2.2");
+	 		google.load("jquery", "1.3.2");
+			google.load("jqueryui", "1.7.2");
+		</script>
+		<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="/stylesheets/test.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="/stylesheets/front.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<!--[if IE]>
+		    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<script type="text/javascript" src="/javascripts/swfobject.js"></script>
+		<script type="text/javascript" src="/javascripts/cufon-yui.js"></script>
+  	<script type="text/javascript" src="/fonts/Quicksand_Book_400-Quicksand_Bold_700.font.js"></script>
+	  <script type="text/javascript" src="/fonts/Rockwell_Std_400-Rockwell_Std_700-Rockwell_Std_italic_400-Rockwell_Std_italic_700.font.js"></script>
+  	<script type="text/javascript" src="/javascripts/nice_fonts.js"></script>
+	<style type="text/css">
+
+	  .clearfix:after {
+	    content: ".";
+	    display: block;
+	    height: 0;
+	    clear: both;
+	  }
+
+	</style>
+
+	<!--[if IE]>
+	<style type="text/css">
+	  .clearfix {
+	    zoom: 1;     /* triggers hasLayout */
+	    } 
+	</style>
+	<![endif]-->
+	
+	
+  </head>
+  <body>
+   <div id="wrapper">
+      <div id="header">
+        <div id="logo">
+         
+        </div> 
+       
+				<div id="navbar">
+         <ul>
+			
+          <li>Home</li>    
+          <li>Magazine</li>  
+          <li><a href="./events.html"> What's on</a></li>
+          <li>Food</li>
+          <li>Community</li>
+          <li>Classified</li>
+          <li>About</li>
+	 			
+         </ul> 
+        </div>               
+
+      </div>  
+		
+		<%= yield %>
+
+    </div>
+     <div id="footer"></div> 
+     <script>
+       jQuery(document).ready(function() {
+        $(document).nice_fonts();
+       }); 
+     </script>
+ </body>
+</html>
+
+
+
