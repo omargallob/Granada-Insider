@@ -1,3 +1,9 @@
 .center_service { height: 200px; width: 200px; margin: 15px; }
 
 .right_sponsored { height: 250px; width: 250px; float: left; margin: 9px 0 4px 9px; }
+
+#travellers { text-align: left; }
+#travellers #center_travellers_logo { height: 115px; width: 81px; background: url(../images/system/bg/versionSprites.png); background-position: 0 -7803px; float: left; margin: 30px 40px 60px 40px; }
+#travellers h1 { float: left; text-transform: capitalize; margin-top: 30px; }
+#travellers h2 { float: left; width: 325px; }
+#travellers p { float: left; font-family: Helvetica; width: 325px; font-size: 12px; margin-top: 10px; }

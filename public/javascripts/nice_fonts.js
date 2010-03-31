@@ -16,14 +16,7 @@ jQuery.fn.nice_fonts = function(){
 	   		color: 'white'
 	  	 }
 	 });
-	Cufon.replace('h1', {
-		   fontFamily: "Quicksand Bold",
-		   color: 'black',
-		   fontSize: "24px",
-	  		hover: {
-	   		color: 'white'
-	  	 }
-	 });
+
 	 	Cufon.replace('h4', {
 		   fontFamily: "Quicksand Bold",
 		   color: 'black',
@@ -32,4 +25,22 @@ jQuery.fn.nice_fonts = function(){
 	   		color: 'white'
 	  	 }
 	 });
+	 	Cufon.replace('#main h1', {
+		   fontFamily: "Helvetica Neue LT Std",
+		   color: 'black',
+		   fontSize: "20px",
+	  		hover: {
+	   		color: 'white'
+	  	 }
+	 });	
+	 	Cufon.replace('#main h2', {
+		   fontFamily: "Helvetica Neue LT Std",
+		   color: 'black',
+		   fontSize: "18px",
+	  		hover: {
+	   		color: 'white'
+	  	 }
+	 });
+
+
 }
