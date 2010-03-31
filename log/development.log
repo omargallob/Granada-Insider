@@ -3069,3 +3069,102 @@ Rendered shared/_center_services_swf (0.1ms)
 Rendered shared/_center_services_swf (0.1ms)
 Rendered shared/_right_ads_swf (0.7ms)
 Completed in 11ms (View: 9, DB: 0) | 200 OK [http://192.168.1.3/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.1.3 at 2010-03-31 18:59:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.7ms)
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://192.168.1.3/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.1.3 at 2010-03-31 19:00:57) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://192.168.1.3/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.1.3 at 2010-03-31 19:03:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.5ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://192.168.1.3/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 192.168.1.3 at 2010-03-31 19:05:08) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_right_ads_swf (1.0ms)
+Rendered shared/_right_ads_swf (0.8ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://192.168.1.3/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 19:08:50) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.7ms)
+Rendered shared/_right_ads_swf (0.5ms)
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 19:10:27) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 19:12:23) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-31 19:14:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
