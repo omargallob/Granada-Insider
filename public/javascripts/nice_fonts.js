@@ -25,7 +25,7 @@ jQuery.fn.nice_fonts = function(){
 	   		color: 'white'
 	  	 }
 	 });
-	 	Cufon.replace('#main h1', {
+	 	Cufon.replace('#travellers h1', {
 		   fontFamily: "Helvetica Neue LT Std",
 		   color: 'black',
 		   fontSize: "20px",
@@ -33,10 +33,36 @@ jQuery.fn.nice_fonts = function(){
 	   		color: 'white'
 	  	 }
 	 });	
-	 	Cufon.replace('#main h2', {
+	 	Cufon.replace('#travellers h2', {
 		   fontFamily: "Helvetica Neue LT Std",
 		   color: 'black',
 		   fontSize: "18px",
+	  		hover: {
+	   		color: 'white'
+	  	 }
+	 });
+
+	 	Cufon.replace('#articles h3', {
+		   fontFamily: "Helvetica Neue LT Std",
+		   color: 'black',
+		   fontSize: "17px",
+	  		hover: {
+	   		color: 'white'
+	  	 }
+	 });
+
+	 	Cufon.replace('#classified h3', {
+		   fontFamily: "Helvetica Neue LT Std",
+		   color: 'black',
+		   fontSize: "16px",
+	  		hover: {
+	   		color: 'white'
+	  	 }
+	 });
+	 	Cufon.replace('#whatson h3', {
+		   fontFamily: "Helvetica Neue LT Std",
+		   color: 'black',
+		   fontSize: "15px",
 	  		hover: {
 	   		color: 'white'
 	  	 }

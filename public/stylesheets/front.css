@@ -1,9 +1,23 @@
+p { font-family: Helvetica; font-size: 12px; }
+
 .center_service { height: 200px; width: 200px; margin: 15px; }
 
 .right_sponsored { height: 250px; width: 250px; float: left; margin: 9px 0 4px 9px; }
 
-#travellers { text-align: left; }
-#travellers #center_travellers_logo { height: 115px; width: 81px; background: url(../images/system/bg/versionSprites.png); background-position: 0 -7803px; float: left; margin: 30px 40px 60px 40px; }
-#travellers h1 { float: left; text-transform: capitalize; margin-top: 30px; }
-#travellers h2 { float: left; width: 325px; }
-#travellers p { float: left; font-family: Helvetica; width: 325px; font-size: 12px; margin-top: 10px; }
+#main p { float: left; width: 315px; margin-top: 10px; padding-right: 10px; }
+#main #travellers { text-align: left; }
+#main #travellers #center_travellers_logo { height: 115px; width: 81px; background: url(../images/system/bg/versionSprites.png); background-position: 0 -7803px; background-repeat: no-repeat; float: left; margin: 30px 40px 60px 40px; }
+#main #travellers h1 { float: left; text-transform: capitalize; margin-top: 30px; }
+#main #travellers h2 { float: left; width: 325px; }
+#main #articles ol { margin-top: 26px; }
+#main #articles ol li { float: left; margin-bottom: 10px; }
+#main #articles ol li img { float: left; margin: 0 20px 0 40px; }
+#main #articles ol li h3 { float: left; font-weight: bold; }
+#main #articles ol li hr { background: #4d4d4d; float: left; width: 450px; border: 0px none; height: 1px; margin-left: 21px; }
+#main #classified ol { margin-top: 11px; }
+#main #classified ol li { float: left; width: 187px; margin-left: 40px; margin-top: 15px; }
+#main #classified ol li p { width: 187px; margin-top: 0; }
+
+#right-column #whatson ol { margin-top: 11px; }
+#right-column #whatson ol li { float: left; width: 220px; margin-top: 15px; margin-left: 40px; }
+#right-column #whatson ol li h3 { text-transform: uppercase; }
