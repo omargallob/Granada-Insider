@@ -5401,3 +5401,25 @@ Rendering viewer/show
 Rendered shared/front/left/_whatson (0.1ms)
 Rendered shared/menu/_front (1.0ms)
 Completed in 24ms (View: 12, DB: 1) | 200 OK [http://192.168.1.4/whatson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 192.168.1.4 at 2010-04-05 16:10:16) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (2.3ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.5ms)
+Rendered shared/menu/_front (1.0ms)
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://192.168.1.4/home]
