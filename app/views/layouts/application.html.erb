@@ -45,24 +45,14 @@
 	
   </head>
   <body>
-   <div id="wrapper">
+   <div id="wrapper" class="<%= @page.name %>">
       <div id="header">
         <div id="logo">
          
         </div> 
        
 				<div id="navbar">
-         <ul>
-			
-          <li><a href="/">Home</a></li>    
-          <li>Magazine</li>  
-          <li>What's on</li>
-          <li>Food</li>
-          <li>Community</li>
-          <li>Classified</li>
-          <li>About</li>
-	 			
-         </ul> 
+        	<%= render :partial =>"shared/menu/front" %>
         </div>               
 
       </div>  

@@ -1,0 +1,6 @@
+<ul>
+	<% for page in @pages %>
+		<li class="<% if page.name == @page.name %>active<% end %>">
+		<%= link_to page.navlabel, view_page_path(page.name) %></a></li>    
+	<% end %>
+</ul> 

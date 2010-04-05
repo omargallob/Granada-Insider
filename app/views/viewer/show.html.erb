@@ -1,0 +1,16 @@
+<div id="left-column" class="<%= @page.name %>">
+<% if @page.name == "home" || @page.name == "whatson" %>
+<%= render :partial =>"shared/front/left/#{@page.name}" %>
+<% end %>
+</div> 
+<div id="main">
+<% if @page.name == "home" %>
+<%= render :partial =>"shared/front/center/home" %>
+<% end %>
+</div> 
+<div id="right-column">
+<% if @page.name == "home" %>
+ <%= render :partial =>"shared/front/right/home" %>
+<% end %>
+</div>
+
