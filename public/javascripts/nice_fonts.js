@@ -16,7 +16,16 @@ jQuery.fn.nice_fonts = function(){
 	   		color: 'white'
 	  	 }
 	 });
-	 	Cufon.replace('h4', {
+	 	Cufon.replace('h3', {
+		   fontFamily: "Quicksand Bold",
+		   color: 'black',
+		   fontSize: "14px",
+	  		hover: {
+	   		color: 'white'
+	  	 }
+	 });
+
+ 	Cufon.replace('h4', {
 		   fontFamily: "Quicksand Bold",
 		   color: 'black',
 		   fontSize: "16px",
@@ -24,4 +33,6 @@ jQuery.fn.nice_fonts = function(){
 	   		color: 'white'
 	  	 }
 	 });
+	
+		
 }
