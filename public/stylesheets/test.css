@@ -398,7 +398,7 @@ body{
     background-image:url(../images/system/bg/versionSprites.png);
     background-position: 0px -6660px;   
   }
-  #wrapper #right-column.events #single_advertisement{
+  #wrapper #right-column.whatson #single_advertisement{
       width: 291px;
     float: left;
     height: 272px;
@@ -407,7 +407,7 @@ body{
     margin-top: 13px;
   }
   
-  #wrapper #right-column.events #double_advertisement{
+  #wrapper #right-column.whatson #double_advertisement{
       width: 291px;
     float: left;
     height: 534px;

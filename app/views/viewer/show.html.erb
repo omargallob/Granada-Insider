@@ -4,13 +4,13 @@
 <% end %>
 </div> 
 <div id="main">
-<% if @page.name == "home" %>
-<%= render :partial =>"shared/front/center/home" %>
+<% if @page.name == "home" ||  @page.name == "whatson" %>
+<%= render :partial =>"shared/front/center/#{@page.name}" %>
 <% end %>
 </div> 
-<div id="right-column">
-<% if @page.name == "home" %>
- <%= render :partial =>"shared/front/right/home" %>
+<div id="right-column" class="<%= @page.name %>">
+<% if @page.name == "home"  ||  @page.name == "whatson" %>
+ <%= render :partial =>"shared/front/right/#{@page.name}" %>
 <% end %>
 </div>
 
