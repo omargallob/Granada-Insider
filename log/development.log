@@ -5732,3 +5732,1729 @@ Rendered shared/front/center/_whatson (0.1ms)
 Rendered shared/front/right/_whatson (0.1ms)
 Rendered shared/menu/_front (0.7ms)
 Completed in 14ms (View: 4, DB: 2) | 200 OK [http://192.168.1.4/whatson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100331125230)
+Migrating to CreatePages (20100331130327)
+Migrating to AddPositionToPage (20100331131808)
+Migrating to AddPositionToPages (20100331131825)
+Migrating to CreateEvents (20100406113517)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'events' already exists: CREATE TABLE `events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `title` varchar(255), `description` text, `start_at` datetime, `end_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100331125230)
+Migrating to CreatePages (20100331130327)
+Migrating to AddPositionToPage (20100331131808)
+Migrating to AddPositionToPages (20100331131825)
+Migrating to CreateEvents (20100406113517)
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE `events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `title` varchar(255), `description` text, `start_at` datetime, `end_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100406113517')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-06 13:50:01) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.6ms)
+Rendered shared/_center_services_swf (0.7ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (22.9ms)
+Rendered shared/_right_ads_swf (0.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (10.5ms)
+Rendered shared/menu/_front (4.6ms)
+Completed in 100ms (View: 82, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-06 13:50:05) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Completed in 28ms (View: 18, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-06 13:50:37) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 13:50:40) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionView::MissingTemplate (Missing template admin/events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 13:51:17) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 13:55:37) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 81ms (View: 66, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-04-06 13:56:07) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/pages/index
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+Rendered admin/pages/_page (22.4ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+Rendered admin/pages/_page (8.4ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+Rendered admin/pages/_page (8.3ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+Rendered admin/pages/_page (8.2ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+Rendered admin/pages/_page (8.1ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+Rendered admin/pages/_page (8.3ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Rendered admin/pages/_page (8.2ms)
+Completed in 100ms (View: 87, DB: 3) | 200 OK [http://localhost/admin/pages]
+  [4;35;1mSQL (1.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 13:56:09) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 11ms (View: 1, DB: 2) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-04-06 13:56:11) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/pages/index
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+Rendered admin/pages/_page (9.1ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+Rendered admin/pages/_page (5.6ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+Rendered admin/pages/_page (5.8ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+Rendered admin/pages/_page (5.4ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+Rendered admin/pages/_page (6.7ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+Rendered admin/pages/_page (5.8ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Rendered admin/pages/_page (5.4ms)
+Completed in 53ms (View: 45, DB: 1) | 200 OK [http://localhost/admin/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 13:56:13) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 15ms (View: 1, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 13:56:49) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 20ms (View: 7, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 13:56:52) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Completed in 18ms (View: 7, DB: 0) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:00:10) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 25ms (View: 11, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-04-06 14:01:32) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/pages/index
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+Rendered admin/pages/_page (55.4ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+Rendered admin/pages/_page (5.9ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+Rendered admin/pages/_page (5.9ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+Rendered admin/pages/_page (6.5ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+Rendered admin/pages/_page (6.0ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+Rendered admin/pages/_page (5.8ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Rendered admin/pages/_page (5.8ms)
+Completed in 109ms (View: 97, DB: 2) | 200 OK [http://localhost/admin/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-04-06 14:02:09) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/pages/index
+  [4;36;1mPage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+Rendered admin/pages/_page (13.9ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+Rendered admin/pages/_page (8.5ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+Rendered admin/pages/_page (8.3ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+Rendered admin/pages/_page (8.3ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+Rendered admin/pages/_page (8.1ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+Rendered admin/pages/_page (8.2ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Rendered admin/pages/_page (7.9ms)
+Completed in 77ms (View: 65, DB: 2) | 200 OK [http://localhost/admin/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-04-06 14:02:55) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/pages/index
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+Rendered admin/pages/_page (69.9ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+Rendered admin/pages/_page (6.4ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+Rendered admin/pages/_page (5.8ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+Rendered admin/pages/_page (10.2ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+Rendered admin/pages/_page (6.1ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+Rendered admin/pages/_page (6.5ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Rendered admin/pages/_page (5.9ms)
+Completed in 135ms (View: 123, DB: 3) | 200 OK [http://localhost/admin/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:03:01) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 15ms (View: 2, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:03:50) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 15ms (View: 2, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:04:47) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 16ms (View: 2, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:05:05) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:31:25) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #14 of app/views/admin/events/new.html.erb:
+11: 
+12: 	<div id="tabs" class="ui-tabs">
+13: 
+14: 		<% form_for @page, :url => {:action => ""}  do |f| %>	
+15: 	  <%= render :partial => "form", :locals => {:f =>f}%>
+16: 	  <p>
+17: 	    <%= f.submit 'Create' %>
+
+    app/views/admin/events/new.html.erb:14
+
+Rendered rescues/_trace (54.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:32:04) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (0.6ms)
+Completed in 93ms (View: 79, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:32:46) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (5.6ms)
+Completed in 30ms (View: 15, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:33:15) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (4.8ms)
+Completed in 78ms (View: 16, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:33:43) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (2.8ms)
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:37:55) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+
+ActionView::TemplateError (undefined method `date' for #<ActionView::Helpers::FormBuilder:0xb713f030>) on line #15 of app/views/admin/events/_form.html.erb:
+12:  </p>
+13: 	<hr>
+14: <p>
+15: 	<%= f.date %>	
+16: 	<%= f.select_date :start_date,:prefix => :start_date %>
+17: </p>	
+
+    app/views/admin/events/_form.html.erb:15
+    app/views/admin/events/new.html.erb:15
+    app/views/admin/events/new.html.erb:14
+
+Rendered rescues/_trace (60.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:38:07) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+
+ActionView::TemplateError (undefined method `select_date' for #<ActionView::Helpers::FormBuilder:0xb6ee4a4c>) on line #15 of app/views/admin/events/_form.html.erb:
+12:  </p>
+13: 	<hr>
+14: <p>
+15: 	<%= f.select_date :start_date,:prefix => :start_date %>
+16: </p>	
+
+    app/views/admin/events/_form.html.erb:15
+    app/views/admin/events/new.html.erb:15
+    app/views/admin/events/new.html.erb:14
+
+Rendered rescues/_trace (57.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:38:19) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+
+ActionView::TemplateError (undefined method `day' for :start_date:Symbol) on line #15 of app/views/admin/events/_form.html.erb:
+12:  </p>
+13: 	<hr>
+14: <p>
+15: 	<%= select_date :start_date,:prefix => :start_date %>
+16: </p>	
+
+    app/views/admin/events/_form.html.erb:15
+    app/views/admin/events/new.html.erb:15
+    app/views/admin/events/new.html.erb:14
+
+Rendered rescues/_trace (122.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:39:00) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+
+ActionView::TemplateError (undefined method `select_date' for #<ActionView::Helpers::FormBuilder:0xb7062694>) on line #15 of app/views/admin/events/_form.html.erb:
+12:  </p>
+13: 	<hr>
+14: <p>
+15: 	<%= f.select_date :start_at %>
+16: </p>	
+
+    app/views/admin/events/_form.html.erb:15
+    app/views/admin/events/new.html.erb:15
+    app/views/admin/events/new.html.erb:14
+
+Rendered rescues/_trace (121.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:39:10) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+
+ActionView::TemplateError (undefined method `day' for :start_at:Symbol) on line #15 of app/views/admin/events/_form.html.erb:
+12:  </p>
+13: 	<hr>
+14: <p>
+15: 	<%= select_date :start_at %>
+16: </p>	
+
+    app/views/admin/events/_form.html.erb:15
+    app/views/admin/events/new.html.erb:15
+    app/views/admin/events/new.html.erb:14
+
+Rendered rescues/_trace (60.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:41:35) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (9.1ms)
+Completed in 81ms (View: 16, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:41:58) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (16.2ms)
+Completed in 45ms (View: 25, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:42:31) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (19.2ms)
+Completed in 43ms (View: 28, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:43:12) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (18.9ms)
+Completed in 42ms (View: 28, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:43:42) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (20.4ms)
+Completed in 52ms (View: 30, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100331125230)
+Migrating to CreatePages (20100331130327)
+Migrating to AddPositionToPage (20100331131808)
+Migrating to AddPositionToPages (20100331131825)
+Migrating to CreateEvents (20100406113517)
+Migrating to AddTwoLinerToEvents (20100406124453)
+  [4;36;1mSQL (4.5ms)[0m   [0;1mALTER TABLE `events` ADD `two_liner` text[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100406124453')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:45:46) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (22.4ms)
+Completed in 47ms (View: 32, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:47:05) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (18.7ms)
+Completed in 46ms (View: 31, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#css to css (for 127.0.0.1 at 2010-04-06 14:47:07) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: get_pages, index, and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#create (for 127.0.0.1 at 2010-04-06 14:50:13) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2IaApkaHK7CgLx/9dxvI4O7a9oFlZl3S86sZCt3E37k=", "events"=>{"name"=>"test", "start_at(1i)"=>"2010", "end_at(1i)"=>"2010", "start_at(2i)"=>"4", "title"=>"test", "end_at(2i)"=>"4", "start_at(3i)"=>"6", "end_at(3i)"=>"6", "description"=>"<p>test</p>", "two_liner"=>"<p>test</p>"}}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO `events` (`name`, `created_at`, `title`, `end_at`, `updated_at`, `start_at`, `description`, `two_liner`) VALUES(NULL, '2010-04-06 12:50:13', NULL, NULL, '2010-04-06 12:50:13', NULL, NULL, NULL)[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events/1
+Completed in 26ms (DB: 6) | 302 Found [http://localhost/admin/events/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 14:50:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, edit, get_pages, index, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:50:25) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (8.9ms)
+Completed in 79ms (View: 64, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:50:29) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (14.9ms)
+Completed in 31ms (View: 18, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#css to css (for 127.0.0.1 at 2010-04-06 14:50:30) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#create (for 127.0.0.1 at 2010-04-06 14:50:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2IaApkaHK7CgLx/9dxvI4O7a9oFlZl3S86sZCt3E37k=", "events"=>{"name"=>"test", "start_at(1i)"=>"2010", "end_at(1i)"=>"2010", "start_at(2i)"=>"4", "title"=>"test", "end_at(2i)"=>"4", "start_at(3i)"=>"6", "end_at(3i)"=>"6", "description"=>"<p>ggh</p>", "two_liner"=>"<p>gh</p>"}}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO `events` (`name`, `created_at`, `title`, `end_at`, `updated_at`, `start_at`, `description`, `two_liner`) VALUES(NULL, '2010-04-06 12:50:36', NULL, NULL, '2010-04-06 12:50:36', NULL, NULL, NULL)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events/2
+Completed in 23ms (DB: 3) | 302 Found [http://localhost/admin/events/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 14:50:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, edit, get_pages, index, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:50:42) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (11.8ms)
+Rendered admin/events/_event (7.4ms)
+Completed in 37ms (View: 21, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#destroy (for 127.0.0.1 at 2010-04-06 14:50:45) [DELETE]
+  Parameters: {"authenticity_token"=>"2IaApkaHK7CgLx/9dxvI4O7a9oFlZl3S86sZCt3E37k=", "id"=>"2"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Destroy (0.2ms)[0m   [0;1mDELETE FROM `events` WHERE `id` = 2[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events
+Completed in 19ms (DB: 3) | 302 Found [http://localhost/admin/events/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:50:45) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (7.9ms)
+Completed in 24ms (View: 9, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#destroy (for 127.0.0.1 at 2010-04-06 14:50:48) [DELETE]
+  Parameters: {"authenticity_token"=>"2IaApkaHK7CgLx/9dxvI4O7a9oFlZl3S86sZCt3E37k=", "id"=>"1"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEvent Destroy (0.2ms)[0m   [0mDELETE FROM `events` WHERE `id` = 1[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events
+Completed in 21ms (DB: 3) | 302 Found [http://localhost/admin/events/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:50:48) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:51:12) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+Completed in 13ms (View: 1, DB: 0) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:52:30) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (14.1ms)
+Completed in 37ms (View: 18, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#css to css (for 127.0.0.1 at 2010-04-06 14:52:31) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;35;1mPage Load (1.2ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 14:53:29) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (15.9ms)
+Completed in 43ms (View: 28, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#css to css (for 127.0.0.1 at 2010-04-06 14:53:31) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#create (for 127.0.0.1 at 2010-04-06 14:53:42) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2IaApkaHK7CgLx/9dxvI4O7a9oFlZl3S86sZCt3E37k=", "event"=>{"name"=>"test", "start_at(1i)"=>"2010", "end_at(1i)"=>"2010", "start_at(2i)"=>"4", "title"=>"test", "end_at(2i)"=>"4", "start_at(3i)"=>"6", "end_at(3i)"=>"6", "description"=>"<p>test</p>", "two_liner"=>"<p>terst</p>"}}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO `events` (`name`, `created_at`, `title`, `end_at`, `updated_at`, `start_at`, `description`, `two_liner`) VALUES('test', '2010-04-06 12:53:42', 'test', '2010-04-06 00:00:00', '2010-04-06 12:53:42', '2010-04-06 00:00:00', '<p>test</p>', '<p>terst</p>')[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events/3
+Completed in 25ms (DB: 5) | 302 Found [http://localhost/admin/events/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 14:53:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, edit, get_pages, index, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:54:05) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (7.7ms)
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:55:12) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+
+ActionView::TemplateError (Object must be a Date, DateTime or Time object. nil given.) on line #10 of app/views/admin/events/index.html.erb:
+7: 
+8: <div id="content">
+9: 	<h1>Events List</h1>
+10: <%= event_calendar %>
+11: 	<div id="itsthetable">	
+12: 		<table class="page_list">
+13: 			<tr>
+
+    app/helpers/calendar_helper.rb:12:in `event_calendar_opts'
+    app/helpers/calendar_helper.rb:19:in `event_calendar'
+    app/views/admin/events/index.html.erb:10
+
+Rendered rescues/_trace (68.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 14:57:34) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+
+ActionView::TemplateError (Object must be a Date, DateTime or Time object. nil given.) on line #10 of app/views/admin/events/index.html.erb:
+7: 
+8: <div id="content">
+9: 	<h1>Events List</h1>
+10: <%= event_calendar %>
+11: 	<div id="itsthetable">	
+12: 		<table class="page_list">
+13: 			<tr>
+
+    app/helpers/calendar_helper.rb:12:in `event_calendar_opts'
+    app/helpers/calendar_helper.rb:19:in `event_calendar'
+    app/views/admin/events/index.html.erb:10
+
+Rendered rescues/_trace (92.4ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-04-06 14:58:53) [GET]
+  Parameters: {"month"=>"4", "year"=>"2010"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-03-27 23:00:00' <= end_at) AND (start_at < '2010-05-01 22:00:00')) ORDER BY start_at ASC[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering calendar/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #48 of app/views/layouts/application.html.erb:
+45: 	
+46:   </head>
+47:   <body>
+48:    <div id="wrapper" class="<%= @page.name %>">
+49:       <div id="header">
+50:         <div id="logo">
+51:          
+
+    app/views/layouts/application.html.erb:48
+
+Rendered rescues/_trace (91.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-04-06 14:59:49) [GET]
+  Parameters: {"month"=>"4", "year"=>"2010"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-03-27 23:00:00' <= end_at) AND (start_at < '2010-05-01 22:00:00')) ORDER BY start_at ASC[0m
+  [4;35;1mEvent Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering calendar/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #48 of app/views/layouts/application.html.erb:
+45: 	
+46:   </head>
+47:   <body>
+48:    <div id="wrapper" class="<%= @page.name %>">
+49:       <div id="header">
+50:         <div id="logo">
+51:          
+
+    app/views/layouts/application.html.erb:48
+
+Rendered rescues/_trace (102.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-04-06 14:59:53) [GET]
+  Parameters: {"month"=>"4", "year"=>"2010"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-03-27 23:00:00' <= end_at) AND (start_at < '2010-05-01 22:00:00')) ORDER BY start_at ASC[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering calendar/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #48 of app/views/layouts/application.html.erb:
+45: 	
+46:   </head>
+47:   <body>
+48:    <div id="wrapper" class="<%= @page.name %>">
+49:       <div id="header">
+50:         <div id="logo">
+51:          
+
+    app/views/layouts/application.html.erb:48
+
+Rendered rescues/_trace (67.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-06 14:59:57) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/admin/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::PagesController#index (for 127.0.0.1 at 2010-04-06 15:00:00) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/pages/index
+  [4;36;1mPage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+Rendered admin/pages/_page (10.1ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+Rendered admin/pages/_page (5.8ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+Rendered admin/pages/_page (5.8ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+Rendered admin/pages/_page (5.7ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+Rendered admin/pages/_page (5.6ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+Rendered admin/pages/_page (5.6ms)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47admin47pages47_page46html46erb_locals_object_page_page_counter at /home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:11)
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Rendered admin/pages/_page (5.5ms)
+Completed in 65ms (View: 56, DB: 1) | 200 OK [http://localhost/admin/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-04-06 15:00:02) [GET]
+  Parameters: {"month"=>"4", "year"=>"2010"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-03-27 23:00:00' <= end_at) AND (start_at < '2010-05-01 22:00:00')) ORDER BY start_at ASC[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering calendar/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #48 of app/views/layouts/application.html.erb:
+45: 	
+46:   </head>
+47:   <body>
+48:    <div id="wrapper" class="<%= @page.name %>">
+49:       <div id="header">
+50:         <div id="logo">
+51:          
+
+    app/views/layouts/application.html.erb:48
+
+Rendered rescues/_trace (59.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:00:21) [GET]
+  Parameters: {"month"=>"4", "year"=>"2010"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+
+ActionView::TemplateError (Object must be a Date, DateTime or Time object. nil given.) on line #10 of app/views/admin/events/index.html.erb:
+7: 
+8: <div id="content">
+9: 	<h1>Events List</h1>
+10: <%= event_calendar %>
+11: 	<div id="itsthetable">	
+12: 		<table class="page_list">
+13: 			<tr>
+
+    app/helpers/calendar_helper.rb:12:in `event_calendar_opts'
+    app/helpers/calendar_helper.rb:19:in `event_calendar'
+    app/views/admin/events/index.html.erb:10
+
+Rendered rescues/_trace (69.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:00:47) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+
+ActionView::TemplateError (Object must be a Date, DateTime or Time object. nil given.) on line #10 of app/views/admin/events/index.html.erb:
+7: 
+8: <div id="content">
+9: 	<h1>Events List</h1>
+10: <%= event_calendar %>
+11: 	<div id="itsthetable">	
+12: 		<table class="page_list">
+13: 			<tr>
+
+    app/helpers/calendar_helper.rb:12:in `event_calendar_opts'
+    app/helpers/calendar_helper.rb:19:in `event_calendar'
+    app/views/admin/events/index.html.erb:10
+
+Rendered rescues/_trace (45.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:01:37) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+
+ArgumentError (invalid date):
+  /usr/lib/ruby/1.8/date.rb:752:in `civil'
+  app/controllers/admin/events_controller.rb:8:in `index'
+
+Rendered rescues/_trace (105.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:01:59) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+
+ActionView::TemplateError (Object must be a Date, DateTime or Time object. nil given.) on line #10 of app/views/admin/events/index.html.erb:
+7: 
+8: <div id="content">
+9: 	<h1>Events List</h1>
+10: <%= event_calendar %>
+11: 	<div id="itsthetable">	
+12: 		<table class="page_list">
+13: 			<tr>
+
+    app/helpers/calendar_helper.rb:12:in `event_calendar_opts'
+    app/helpers/calendar_helper.rb:19:in `event_calendar'
+    app/views/admin/events/index.html.erb:10
+
+Rendered rescues/_trace (68.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:02:23) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (13.1ms)
+Completed in 104ms (View: 90, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:03:59) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (13.0ms)
+Completed in 39ms (View: 25, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:12:08) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #3 of app/views/admin/events/_event.html.erb:
+1: <tr>
+2: 	<td class="title"><%= event.title %></td>
+3: 	<td class="title"><%= event.start_at.strftime() %></td>
+4: 	<td class="title"><%= event.end_at %></td>
+5: 	<td>
+6: 		<table class="nolines">
+
+    app/views/admin/events/_event.html.erb:3:in `strftime'
+    app/views/admin/events/_event.html.erb:3
+    app/views/admin/events/index.html.erb:20
+
+Rendered rescues/_trace (59.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:12:23) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (12.4ms)
+Completed in 32ms (View: 18, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:13:22) [GET]
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (14.1ms)
+Completed in 39ms (View: 24, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:13:44) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (14.1ms)
+Completed in 37ms (View: 20, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:14:09) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (14.6ms)
+Completed in 36ms (View: 21, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:14:25) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (11.0ms)
+Completed in 75ms (View: 18, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:14:55) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (14.1ms)
+Completed in 42ms (View: 26, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:15:09) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (11.4ms)
+Completed in 34ms (View: 19, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:15:27) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (12.7ms)
+Completed in 33ms (View: 19, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:16:55) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (41.3ms)
+Completed in 57ms (View: 42, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-04-06 15:16:58) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #6 of app/views/admin/events/edit.html.erb:
+3: 
+4: 	<div id="tabs" class="ui-tabs">
+5: 
+6: 		<% form_for @event, :url => {:action => "update"}  do |f| %>	
+7: 	  <%= render :partial => "form", :locals => {:f =>f}%>
+8: 	  <p>
+9: 	    <%= f.submit 'Create' %>
+
+    app/views/admin/events/edit.html.erb:6
+
+Rendered rescues/_trace (46.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-04-06 15:17:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/edit
+Rendered admin/events/_form (21.3ms)
+Completed in 48ms (View: 31, DB: 1) | 200 OK [http://localhost/admin/events/3/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-04-06 15:17:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/edit
+Rendered admin/events/_form (20.1ms)
+Completed in 54ms (View: 35, DB: 1) | 200 OK [http://localhost/admin/events/3/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-06 15:17:50) [GET]
+  Parameters: {"1270550688"=>nil}
+
+ActionController::RoutingError (No route matches "/admin/events/3/css/content.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:18:04) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (12.1ms)
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-04-06 15:18:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/edit
+Rendered admin/events/_form (18.4ms)
+Completed in 44ms (View: 24, DB: 1) | 200 OK [http://localhost/admin/events/3/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-06 15:18:14) [GET]
+  Parameters: {"1270550688"=>nil}
+
+ActionController::RoutingError (No route matches "/admin/events/3/css/content.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-04-06 15:18:23) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2IaApkaHK7CgLx/9dxvI4O7a9oFlZl3S86sZCt3E37k=", "id"=>"3", "event"=>{"name"=>"testa", "start_at(1i)"=>"2010", "end_at(1i)"=>"2010", "start_at(2i)"=>"4", "title"=>"test", "end_at(2i)"=>"4", "start_at(3i)"=>"6", "end_at(3i)"=>"6", "description"=>"<p>test</p>", "two_liner"=>"<p>terst</p>"}}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Update (0.4ms)[0m   [0;1mUPDATE `events` SET `updated_at` = '2010-04-06 13:18:23', `name` = 'testa' WHERE `id` = 3[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events/3
+Completed in 26ms (DB: 5) | 302 Found [http://localhost/admin/events/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 15:18:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, edit, get_pages, index, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 15:22:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template admin/events/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 15:22:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/show
+Completed in 26ms (View: 9, DB: 1) | 200 OK [http://localhost/admin/events/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:22:27) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (13.1ms)
+Completed in 80ms (View: 65, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-04-06 15:22:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (96.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/edit
+Rendered admin/events/_form (19.4ms)
+Completed in 137ms (View: 25, DB: 97) | 200 OK [http://localhost/admin/events/3/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-06 15:22:30) [GET]
+  Parameters: {"1270550688"=>nil}
+
+ActionController::RoutingError (No route matches "/admin/events/3/css/content.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-04-06 15:22:35) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2IaApkaHK7CgLx/9dxvI4O7a9oFlZl3S86sZCt3E37k=", "id"=>"3", "event"=>{"name"=>"testa", "start_at(1i)"=>"2010", "end_at(1i)"=>"2010", "start_at(2i)"=>"4", "title"=>"testa", "end_at(2i)"=>"4", "start_at(3i)"=>"6", "end_at(3i)"=>"6", "description"=>"<p>test</p>", "two_liner"=>"<p>terst</p>"}}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEvent Update (0.2ms)[0m   [0mUPDATE `events` SET `updated_at` = '2010-04-06 13:22:35', `title` = 'testa' WHERE `id` = 3[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events/3
+Completed in 27ms (DB: 5) | 302 Found [http://localhost/admin/events/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 15:22:35) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/show
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://localhost/admin/events/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:22:36) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (17.8ms)
+Completed in 35ms (View: 19, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-06 15:30:54) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (16.8ms)
+Completed in 45ms (View: 30, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#css to css (for 127.0.0.1 at 2010-04-06 15:30:55) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#create (for 127.0.0.1 at 2010-04-06 15:31:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2IaApkaHK7CgLx/9dxvI4O7a9oFlZl3S86sZCt3E37k=", "event"=>{"name"=>"las cruces", "start_at(1i)"=>"2010", "end_at(1i)"=>"2010", "start_at(2i)"=>"4", "title"=>"las cruces", "end_at(2i)"=>"5", "start_at(3i)"=>"30", "end_at(3i)"=>"3", "description"=>"<p>lasc ruces</p>", "two_liner"=>"<p>las cruces</p>"}}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO `events` (`name`, `created_at`, `title`, `end_at`, `updated_at`, `start_at`, `description`, `two_liner`) VALUES('las cruces', '2010-04-06 13:31:35', 'las cruces', '2010-05-03 00:00:00', '2010-04-06 13:31:35', '2010-04-30 00:00:00', '<p>lasc ruces</p>', '<p>las cruces</p>')[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events/4
+Completed in 67ms (DB: 4) | 302 Found [http://localhost/admin/events/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 15:31:36) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = '4') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/show
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/admin/events/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:31:37) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (14.9ms)
+Rendered admin/events/_event (7.5ms)
+Completed in 39ms (View: 24, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:32:25) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (14.0ms)
+Rendered admin/events/_event (7.3ms)
+Completed in 42ms (View: 27, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-06 15:32:45) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (11.8ms)
+Rendered admin/events/_event (7.4ms)
+Completed in 36ms (View: 21, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-06 15:32:59) [GET]
+  Parameters: {"id"=>"2010"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = '2010') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/show
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://localhost/admin/events/2010]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-04-06 15:33:47) [GET]
+  Parameters: {"month"=>"april", "year"=>"2010"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ArgumentError (invalid date):
+  /usr/lib/ruby/1.8/date.rb:752:in `civil'
+  app/controllers/calendar_controller.rb:7:in `index'
+
+Rendered rescues/_trace (120.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-04-06 15:34:56) [GET]
+  Parameters: {"month"=>"4", "year"=>"2010"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-03-27 23:00:00' <= end_at) AND (start_at < '2010-05-01 22:00:00')) ORDER BY start_at ASC[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering calendar/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #48 of app/views/layouts/application.html.erb:
+45: 	
+46:   </head>
+47:   <body>
+48:    <div id="wrapper" class="<%= @page.name %>">
+49:       <div id="header">
+50:         <div id="logo">
+51:          
+
+    app/views/layouts/application.html.erb:48
+
+Rendered rescues/_trace (51.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-04-06 15:35:30) [GET]
+  Parameters: {"month"=>"4", "year"=>"2010"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-03-27 23:00:00' <= end_at) AND (start_at < '2010-05-01 22:00:00')) ORDER BY start_at ASC[0m
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering calendar/index
+Rendered shared/menu/_front (1.2ms)
+Completed in 55ms (View: 33, DB: 2) | 200 OK [http://localhost/calendar/2010/4]

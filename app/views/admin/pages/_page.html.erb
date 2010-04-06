@@ -8,7 +8,7 @@
 
 
 
-	<td width="200px"><%=h truncate(page.title, 15) %></td>
+	<td class="title"><%=h truncate(page.title, 15) %></td>
 
 
 	<td>
@@ -20,12 +20,7 @@
 		</tr>
 	</table>	
 	</td>
-	<td style="text-align:right;">
-		<% if page.subpages.size > 0  %>
-			<%= link_to image_tag("system/admin/buttons/subarrow.png", :width=> "35px"),{:controller => "pages", :action => "index", :parent => page.id}, :title => "#{page.name} sublevel" %>
-		<% end %>
-		
-	</td>
+
 </tr>
 
 <%= render :partial => "page", :collection => page.subpages %>

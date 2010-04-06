@@ -1,24 +1,25 @@
-
 <% content_for(:sub_menu) do %>
 	<ul>
 		<li><%= link_to "Back", :back %></li>
-		<li><%= link_to "New", new_admin_page_path %></li>
+		<li><%= link_to "New", new_admin_event_path %></li>
 	</ul>
 <% end %>
 
-
 <div id="content">
-	<h1>Title<b><%= " :"+@parent.name if params[:parent]%></b></h1>
+	<h1>Events List</h1>
 
 	<div id="itsthetable">	
 		<table class="page_list">
-			
-				<tr>
+			<tr>
 				<th>Title</th>
+				<th>Date start</th>	
+				<th></th>
+				<th>Date end</th>
+				<th></th>
 				<th>Options </th>
-				</tr>				
-			
-			<%= render :partial => "page", :collection => @pages %>
+
+			</tr>			
+			<%= render :partial => "event", :collection => @events %>
 		</table>
 	</div>
 </div>

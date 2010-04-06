@@ -1,0 +1,16 @@
+<tr>
+	<td class="title"><%= event.title %></td>
+	<td><%= event.start_at.strftime("%a %d %B %Y") %></td>
+	<td style="width:15px"></td>
+	<td><%= event.end_at.strftime("%a %d %B %Y")  %></td>
+	<td style="width:15px"></td>
+	<td>
+		<table class="nolines">
+			<tr>
+				<td><%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => "show"), admin_event_path(event) %></td><td>&nbsp;|&nbsp;</td>
+				<td><%= link_to image_tag ('system/admin/buttons/edit.jpg', :height => "15px", :title => "edit"), edit_admin_event_path(event) %></td><td>&nbsp;|&nbsp;</td>
+				<td><%= link_to image_tag ('system/admin/buttons/delete.jpg', :height => "15px", :title => "delete"), admin_event_path(event), :confirm => 'Are you sure?', :method => :delete %></td>
+			</tr>
+		</table>	
+	</td>
+</tr>

@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
@@ -14,6 +15,9 @@ ActionController::Routing::Routes.draw do |map|
      map.namespace :admin do |admin|
        # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
        admin.resources :pages
+			
+			 admin.resources :events
+			 admin.calendar '/events/:year/:month', :controller => 'events', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month      
 	     admin.root :controller=>"overview"	
      end
 
