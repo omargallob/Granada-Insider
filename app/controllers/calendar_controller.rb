@@ -1,5 +1,5 @@
 class CalendarController < ApplicationController
-  
+layout 'calendar'  
   def index
 		@page = Page.find_by_name("whatson")
     @month = params[:month].to_i

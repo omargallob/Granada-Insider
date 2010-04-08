@@ -6,6 +6,9 @@
   <div class="subheader">
     <h4>this week</h4>
   </div>
+	<ul>
+		<%= render :partial => "shared/front/center/events/event", :collection => @events %>
+	</ul>
 </div>  
 <div id="events_footer">
   <h4>load more items</h4>
