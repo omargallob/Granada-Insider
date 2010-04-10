@@ -1,3 +1,4 @@
+<% if logged_in? and current_user.has_role?("Admin")%>
 <ul>
 	<li><a href="/admin"> Overview</a></li>
 	<li><a href="/admin/pages">PAGES</a></li>
@@ -6,3 +7,4 @@
 	<li><a href="/admin/users">USERS</a></li>
 	<li><a href="/admin/roles">ROLES</a></li>
 </ul> 
+<% end %>
