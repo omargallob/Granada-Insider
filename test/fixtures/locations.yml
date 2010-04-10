@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  address: MyText
+  description: MyText
+  door_price: 1
+
+two:
+  title: MyString
+  address: MyText
+  description: MyText
+  door_price: 1

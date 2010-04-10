@@ -15,7 +15,7 @@ ActionController::Routing::Routes.draw do |map|
      map.namespace :admin do |admin|
        # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
        admin.resources :pages
-			
+			 admin.resources :locations
 			 admin.resources :events
 			 admin.calendar '/events/:year/:month', :controller => 'events', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month      
 	     admin.root :controller=>"overview"	

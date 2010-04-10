@@ -49,11 +49,7 @@
         </div> 
        
 				<div id="navbar">
-         <ul>
-					<li><a href="/admin"> Overview</a></li>
-					<li><a href="/admin/pages">PAGES</a></li>
-					<li><a href="/admin/events">EVENTS</a></li>
-         </ul> 
+        	<%= render :partial =>"shared/menu/back" %>
         </div>               
 				<div id="sub_navbar">
 					<%= yield :sub_menu %>

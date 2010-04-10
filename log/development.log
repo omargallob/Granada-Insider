@@ -11672,3 +11672,1019 @@ Rendered admin/events/_event (4.9ms)
 Rendered admin/events/_event (10.5ms)
 Rendered admin/events/_event (6.0ms)
 Completed in 71ms (View: 56, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 16:12:55) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (14.1ms)
+Rendered shared/_center_services_swf (4.6ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (91.2ms)
+Rendered shared/_right_ads_swf (0.8ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (17.6ms)
+Rendered shared/menu/_front (6.0ms)
+Completed in 332ms (View: 270, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 18:20:21) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;36;1mEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `events` ORDER BY start_at desc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (11.5ms)
+  [4;35;1mEvent Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (9.1ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/_whatson (40.1ms)
+Rendered shared/front/right/_whatson (12.3ms)
+Rendered shared/menu/_front (1.0ms)
+Completed in 122ms (View: 82, DB: 3) | 200 OK [http://localhost/whatson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 18:26:16) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` ORDER BY start_at desc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (0.1ms)
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (3.8ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/_whatson (7.0ms)
+Rendered shared/front/right/_whatson (0.1ms)
+Rendered shared/menu/_front (1.0ms)
+Completed in 28ms (View: 10, DB: 2) | 200 OK [http://localhost/whatson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 20:29:53) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` ORDER BY start_at desc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (0.1ms)
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (4.1ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/_whatson (7.1ms)
+Rendered shared/front/right/_whatson (0.1ms)
+Rendered shared/menu/_front (0.7ms)
+Completed in 33ms (View: 10, DB: 4) | 200 OK [http://localhost/whatson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 20:29:55) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (2.2ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.4ms)
+Rendered shared/menu/_front (1.0ms)
+Completed in 22ms (View: 7, DB: 1) | 200 OK [http://localhost/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 20:29:57) [GET]
+  Parameters: {"name"=>"magazine"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'magazine') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/menu/_front (1.0ms)
+Completed in 16ms (View: 2, DB: 1) | 200 OK [http://localhost/magazine]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 20:29:58) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` ORDER BY start_at desc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (0.1ms)
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (4.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/events/_event (0.2ms)
+Rendered shared/front/center/_whatson (6.5ms)
+Rendered shared/front/right/_whatson (0.1ms)
+Rendered shared/menu/_front (0.7ms)
+Completed in 28ms (View: 9, DB: 2) | 200 OK [http://localhost/whatson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CalendarController#index (for 127.0.0.1 at 2010-04-09 20:30:02) [GET]
+  Parameters: {"month"=>"4", "year"=>"2010"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-03-27 23:00:00' <= end_at) AND (start_at < '2010-05-01 22:00:00')) ORDER BY start_at ASC[0m
+  [4;35;1mEvent Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/calendar
+Rendering calendar/index
+Rendered shared/menu/_front (2.5ms)
+Completed in 127ms (View: 102, DB: 2) | 200 OK [http://localhost/calendar/2010/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 20:33:12) [GET]
+  Parameters: {"name"=>"magazine"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'magazine') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/menu/_front (0.7ms)
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/magazine]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 20:33:14) [GET]
+  Parameters: {"name"=>"home"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (2.2ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.4ms)
+Rendered shared/menu/_front (1.0ms)
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 20:33:20) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` ORDER BY start_at desc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (0.1ms)
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (3.8ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/_whatson (7.0ms)
+Rendered shared/front/right/_whatson (0.1ms)
+Rendered shared/menu/_front (1.0ms)
+Completed in 28ms (View: 10, DB: 2) | 200 OK [http://localhost/whatson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-09 20:34:00) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` ORDER BY start_at desc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (0.1ms)
+  [4;35;1mEvent Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (4.1ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/_whatson (7.8ms)
+Rendered shared/front/right/_whatson (0.1ms)
+Rendered shared/menu/_front (1.0ms)
+Completed in 85ms (View: 11, DB: 2) | 200 OK [http://localhost/whatson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 11:55:30) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (12.7ms)
+Rendered shared/_center_services_swf (11.4ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (98.1ms)
+Rendered shared/_right_ads_swf (1.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (21.9ms)
+Rendered shared/menu/_front (11.8ms)
+Completed in 381ms (View: 317, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 11:55:40) [GET]
+  Parameters: {"name"=>"magazine"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'magazine') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/menu/_front (1.0ms)
+Completed in 18ms (View: 3, DB: 2) | 200 OK [http://localhost/magazine]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 11:55:42) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;35;1mEvent Load (0.5ms)[0m   [0mSELECT * FROM `events` ORDER BY start_at desc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (4.7ms)
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (14.0ms)
+Rendered shared/front/center/events/_event (1.4ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/_whatson (33.8ms)
+Rendered shared/front/right/_whatson (8.6ms)
+Rendered shared/menu/_front (1.1ms)
+Completed in 157ms (View: 125, DB: 3) | 200 OK [http://localhost/whatson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 12:00:25) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;36;1mEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `events` ORDER BY start_at desc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (0.1ms)
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (4.2ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/_whatson (8.5ms)
+Rendered shared/front/right/_whatson (0.1ms)
+Rendered shared/menu/_front (1.2ms)
+Completed in 38ms (View: 18, DB: 2) | 200 OK [http://localhost/whatson]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 12:00:48) [GET]
+  Parameters: {"name"=>"whatson"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'whatson') LIMIT 1[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` ORDER BY start_at asc[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_whatson (0.1ms)
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered shared/front/center/events/_event (3.9ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.7ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/events/_event (0.3ms)
+Rendered shared/front/center/_whatson (7.7ms)
+Rendered shared/front/right/_whatson (0.1ms)
+Rendered shared/menu/_front (1.1ms)
+Completed in 30ms (View: 11, DB: 2) | 200 OK [http://localhost/whatson]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 12:04:02) [GET]
+  [4;35;1mPage Load (1.4ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Completed in 58ms (View: 47, DB: 3) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100331125230)
+Migrating to CreatePages (20100331130327)
+Migrating to AddPositionToPage (20100331131808)
+Migrating to AddPositionToPages (20100331131825)
+Migrating to CreateEvents (20100406113517)
+Migrating to AddTwoLinerToEvents (20100406124453)
+Migrating to CreateLocations (20100410101050)
+  [4;36;1mSQL (20.2ms)[0m   [0;1mCREATE TABLE `locations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `address` text, `description` text, `door_price` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100410101050')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `locations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `locations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 12:21:51) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 12:23:19) [GET]
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Rendered shared/menu/_back (0.7ms)
+Completed in 28ms (View: 18, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:23:21) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/application
+Rendering admin/locations/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #48 of app/views/layouts/application.html.erb:
+45: 	
+46:   </head>
+47:   <body>
+48:    <div id="wrapper" class="<%= @page.name %>">
+49:       <div id="header">
+50:         <div id="logo">
+51:          
+
+    app/views/layouts/application.html.erb:48
+
+Rendered rescues/_trace (69.6ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:24:04) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+Rendered shared/menu/_back (0.1ms)
+Completed in 17ms (View: 2, DB: 0) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#new (for 127.0.0.1 at 2010-04-10 12:24:08) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendering template within layouts/admin
+Rendering admin/locations/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 34ms (View: 10, DB: 2) | 200 OK [http://localhost/admin/locations/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:24:09) [GET]
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+Rendered shared/menu/_back (0.1ms)
+Completed in 18ms (View: 2, DB: 0) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:26:19) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+Rendered shared/menu/_back (0.1ms)
+Completed in 16ms (View: 2, DB: 1) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#new (for 127.0.0.1 at 2010-04-10 12:26:21) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendering template within layouts/admin
+Rendering admin/locations/new
+Rendered admin/locations/_form (6.6ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 100ms (View: 80, DB: 1) | 200 OK [http://localhost/admin/locations/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#css to css (for 127.0.0.1 at 2010-04-10 12:26:23) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#new (for 127.0.0.1 at 2010-04-10 12:26:37) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendering template within layouts/admin
+Rendering admin/locations/new
+Rendered admin/locations/_form (6.8ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 94ms (View: 21, DB: 1) | 200 OK [http://localhost/admin/locations/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#css to css (for 127.0.0.1 at 2010-04-10 12:26:38) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#new (for 127.0.0.1 at 2010-04-10 12:26:45) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendering template within layouts/admin
+Rendering admin/locations/new
+Rendered admin/locations/_form (5.2ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 32ms (View: 16, DB: 1) | 200 OK [http://localhost/admin/locations/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#css to css (for 127.0.0.1 at 2010-04-10 12:26:47) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#create (for 127.0.0.1 at 2010-04-10 12:27:03) [POST]
+  Parameters: {"location"=>{"address"=>"test", "title"=>"test", "door_price"=>"10", "description"=>"<p>test</p>"}, "commit"=>"Create", "authenticity_token"=>"B3wplL1CDP/54nFfJ9J1BSBxiOFukuPQjMmTjktiFaI="}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mLocation Create (0.3ms)[0m   [0;1mINSERT INTO `locations` (`address`, `created_at`, `title`, `updated_at`, `door_price`, `description`) VALUES('test', '2010-04-10 10:27:03', 'test', '2010-04-10 10:27:03', 10, '<p>test</p>')[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/locations/1
+Completed in 26ms (DB: 4) | 302 Found [http://localhost/admin/locations/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#show (for 127.0.0.1 at 2010-04-10 12:27:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.3ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/locations/show
+Rendered shared/menu/_back (0.1ms)
+Completed in 25ms (View: 8, DB: 1) | 200 OK [http://localhost/admin/locations/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:27:05) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Load (0.3ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered admin/locations/_location (39.4ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 61ms (View: 46, DB: 1) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:27:25) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+  [4;36;1mLocation Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered admin/locations/_location (7.9ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/admin/locations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-10 12:27:57) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (12.6ms)
+Rendered admin/events/_event (7.1ms)
+Rendered admin/events/_event (7.0ms)
+Rendered admin/events/_event (5.0ms)
+Rendered admin/events/_event (4.8ms)
+Rendered admin/events/_event (4.9ms)
+Rendered admin/events/_event (4.7ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 78ms (View: 63, DB: 2) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-10 12:27:59) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+Rendered admin/events/_form (12.2ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 44ms (View: 28, DB: 1) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#css to css (for 127.0.0.1 at 2010-04-10 12:28:00) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100331125230)
+Migrating to CreatePages (20100331130327)
+Migrating to AddPositionToPage (20100331131808)
+Migrating to AddPositionToPages (20100331131825)
+Migrating to CreateEvents (20100406113517)
+Migrating to AddTwoLinerToEvents (20100406124453)
+Migrating to CreateLocations (20100410101050)
+Migrating to AddLocationIdToEvent (20100410102910)
+  [4;36;1mSQL (20.9ms)[0m   [0;1mALTER TABLE `events` ADD `location_id` int(11)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100410102910')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `locations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `locations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-10 12:30:40) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mLocation Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered admin/events/_form (27.8ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 53ms (View: 37, DB: 2) | 200 OK [http://localhost/admin/events/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#css to css (for 127.0.0.1 at 2010-04-10 12:30:41) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#new (for 127.0.0.1 at 2010-04-10 12:31:11) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/admin
+Rendering admin/events/new
+  [4;36;1mLocation Load (0.1ms)[0m   [0;1mSELECT * FROM `locations` [0m
+  [4;35;1mLocation Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered admin/events/_form (32.4ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 66ms (View: 45, DB: 2) | 200 OK [http://localhost/admin/events/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#css to css (for 127.0.0.1 at 2010-04-10 12:31:12) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:31:17) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Load (0.1ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered admin/locations/_location (12.3ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 31ms (View: 14, DB: 1) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#destroy (for 127.0.0.1 at 2010-04-10 12:31:22) [DELETE]
+  Parameters: {"authenticity_token"=>"B3wplL1CDP/54nFfJ9J1BSBxiOFukuPQjMmTjktiFaI=", "id"=>"1"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.2ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mLocation Destroy (0.2ms)[0m   [0;1mDELETE FROM `locations` WHERE `id` = 1[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/locations
+Completed in 20ms (DB: 8) | 302 Found [http://localhost/admin/locations/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:31:22) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+Rendered shared/menu/_back (0.1ms)
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#new (for 127.0.0.1 at 2010-04-10 12:31:24) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendering template within layouts/admin
+Rendering admin/locations/new
+Rendered admin/locations/_form (5.7ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 27ms (View: 11, DB: 1) | 200 OK [http://localhost/admin/locations/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#css to css (for 127.0.0.1 at 2010-04-10 12:31:25) [GET]
+  Parameters: {"1270550688"=>nil, "id"=>"content"}
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+
+ActionController::UnknownAction (No action responded to css. Actions: create, destroy, edit, get_pages, index, new, and show):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#create (for 127.0.0.1 at 2010-04-10 12:33:27) [POST]
+  Parameters: {"location"=>{"address"=>"Santa Escolastica, 15 18009 Granada ", "title"=>"Paddy's Pub", "door_price"=>"0", "description"=>"<p>Four more Premier League games will be shown in 3D this month. Find out how to watch them.</p>"}, "commit"=>"Create", "authenticity_token"=>"B3wplL1CDP/54nFfJ9J1BSBxiOFukuPQjMmTjktiFaI="}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mLocation Create (0.2ms)[0m   [0;1mINSERT INTO `locations` (`address`, `created_at`, `title`, `updated_at`, `door_price`, `description`) VALUES('Santa Escolastica, 15 18009 Granada ', '2010-04-10 10:33:27', 'Paddy\'s Pub', '2010-04-10 10:33:27', 0, '<p>Four more Premier League games will be shown in 3D this month. Find out how to watch them.</p>')[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/admin/locations/2
+Completed in 27ms (DB: 11) | 302 Found [http://localhost/admin/locations/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#show (for 127.0.0.1 at 2010-04-10 12:33:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+  [4;36;1mLocation Load (0.3ms)[0m   [0;1mSELECT * FROM `locations` WHERE (`locations`.`id` = '2') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/locations/show
+Rendered shared/menu/_back (0.1ms)
+Completed in 20ms (View: 2, DB: 1) | 200 OK [http://localhost/admin/locations/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-10 12:33:29) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (11.7ms)
+Rendered admin/events/_event (7.7ms)
+Rendered admin/events/_event (7.3ms)
+Rendered admin/events/_event (7.5ms)
+Rendered admin/events/_event (7.3ms)
+Rendered admin/events/_event (9.1ms)
+Rendered admin/events/_event (7.4ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 121ms (View: 105, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-04-10 12:33:32) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/edit
+  [4;35;1mLocation Load (0.3ms)[0m   [0mSELECT * FROM `locations` [0m
+  [4;36;1mLocation Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered admin/events/_form (31.3ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 79ms (View: 59, DB: 2) | 200 OK [http://localhost/admin/events/3/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-10 12:33:33) [GET]
+  Parameters: {"1270550688"=>nil}
+
+ActionController::RoutingError (No route matches "/admin/events/3/css/content.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-04-10 12:33:36) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"B3wplL1CDP/54nFfJ9J1BSBxiOFukuPQjMmTjktiFaI=", "id"=>"3", "event"=>{"name"=>"testa", "start_at(1i)"=>"2010", "end_at(1i)"=>"2010", "start_at(2i)"=>"4", "title"=>"testa", "end_at(2i)"=>"4", "start_at(3i)"=>"6", "end_at(3i)"=>"6", "location_id"=>"2", "description"=>"<p>test</p>", "two_liner"=>"<p>terst</p>"}}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.2ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEvent Update (0.3ms)[0m   [0mUPDATE `events` SET `updated_at` = '2010-04-10 10:33:36', `location_id` = 2 WHERE `id` = 3[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events/3
+Completed in 24ms (DB: 3) | 302 Found [http://localhost/admin/events/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-04-10 12:33:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mEvent Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = '3') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/events/show
+Rendered shared/menu/_back (0.1ms)
+Completed in 82ms (View: 63, DB: 2) | 200 OK [http://localhost/admin/events/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-10 12:33:39) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (13.1ms)
+Rendered admin/events/_event (7.7ms)
+Rendered admin/events/_event (8.3ms)
+Rendered admin/events/_event (7.8ms)
+Rendered admin/events/_event (8.5ms)
+Rendered admin/events/_event (9.7ms)
+Rendered admin/events/_event (7.6ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 88ms (View: 68, DB: 2) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:33:46) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Load (0.1ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered admin/locations/_location (11.4ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 30ms (View: 13, DB: 1) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:41:47) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+  [4;36;1mLocation Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered admin/locations/_location (73.0ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 90ms (View: 75, DB: 1) | 200 OK [http://localhost/admin/locations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#show (for 127.0.0.1 at 2010-04-10 12:42:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = '2') LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/locations/show
+Rendered shared/menu/_back (0.1ms)
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/admin/locations/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:42:30) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mLocation Load (0.1ms)[0m   [0mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+  [4;36;1mLocation Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+Rendered admin/locations/_location (10.6ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 28ms (View: 12, DB: 1) | 200 OK [http://localhost/admin/locations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:48:33) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Load (0.1ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+  [4;35;1mLocation Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered admin/locations/_location (12.4ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/admin/locations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-04-10 12:48:36) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mEvent Load (0.1ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/admin
+Rendering admin/events/index
+  [4;36;1mEvent Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered admin/events/_event (11.5ms)
+Rendered admin/events/_event (8.0ms)
+Rendered admin/events/_event (6.9ms)
+Rendered admin/events/_event (17.4ms)
+Rendered admin/events/_event (8.4ms)
+Rendered admin/events/_event (7.7ms)
+Rendered admin/events/_event (7.6ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 143ms (View: 128, DB: 1) | 200 OK [http://localhost/admin/events]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::LocationsController#index (for 127.0.0.1 at 2010-04-10 12:48:37) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mLocation Load (0.1ms)[0m   [0;1mSELECT * FROM `locations` [0m
+Rendering template within layouts/admin
+Rendering admin/locations/index
+  [4;35;1mLocation Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `locations`[0m
+Rendered admin/locations/_location (7.2ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://localhost/admin/locations]
