@@ -24,3 +24,10 @@
 	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
 	from /usr/bin/mongrel_rails:19:in `load'
 	from /usr/bin/mongrel_rails:19
+/home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:17: warning: don't put space before argument parentheses
+/home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:18: warning: don't put space before argument parentheses
+/home/omar/Proyectos/granada-insider/app/views/admin/pages/_page.html.erb:19: warning: don't put space before argument parentheses
+/home/omar/Proyectos/granada-insider/app/views/admin/events/_event.html.erb:10: warning: don't put space before argument parentheses
+/home/omar/Proyectos/granada-insider/app/views/admin/events/_event.html.erb:11: warning: don't put space before argument parentheses
+/home/omar/Proyectos/granada-insider/app/views/admin/events/_event.html.erb:12: warning: don't put space before argument parentheses
+** TERM signal received.

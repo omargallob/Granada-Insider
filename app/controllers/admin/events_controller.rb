@@ -11,10 +11,10 @@ class Admin::EventsController < Admin::BaseController
 
 	 respond_to do |format|
 		 if @event.save
-		   flash[:notice] = 'Event was successfully created.'
+		  
 		   format.html {
 		     
-		       flash[:notice] = 'Category was successfully created.'
+		       flash[:notice] = 'Event was successfully created.'
 		       redirect_to(admin_event_path(@event))
 		     
 		     
@@ -39,13 +39,13 @@ class Admin::EventsController < Admin::BaseController
    # PUT /events/1.xml
    def update
      @event = Event.find(params[:id])
+	   @events = Event.find(:all)
      respond_to do |format|
        if @event.update_attributes(params[:event])
-        flash[:notice] = 'Event was successfully UPDATED.'
         format.html {
-           
-             flash[:notice] = 'Category was successfully updated.'
-             redirect_to(admin_event_path(@event))
+
+             flash[:notice] = 'Event was successfully updated.'
+             render :action => "index"
           
           }
         format.xml  { head :ok }
