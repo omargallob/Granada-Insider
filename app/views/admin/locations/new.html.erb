@@ -5,7 +5,7 @@
 
 	<div id="tabs" class="ui-tabs">
 
-		<% form_for :location,@location, :url => {:action => ""}  do |f| %>	
+		<% form_for :location,@location, :url => {:action => ""},:html =>{ :multipart => true}  do |f| %>	
 	  <%= render :partial => "form", :locals => {:f =>f}%>
 	  <p>
 	    <%= f.submit 'Create' %>

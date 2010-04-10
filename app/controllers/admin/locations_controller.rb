@@ -32,7 +32,10 @@ class Admin::LocationsController < Admin::BaseController
 
   def edit
 		@location = Location.find_by_id(params[:id])
-  
+	end
+
+  def update
+		@location = Location.find_by_id(params[:id])
      respond_to do |format|
        if @location.update_attributes(params[:location])
         flash[:notice] = 'Location was successfully UPDATED.'
