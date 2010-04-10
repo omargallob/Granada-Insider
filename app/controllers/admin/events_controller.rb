@@ -1,7 +1,7 @@
 class Admin::EventsController < Admin::BaseController
 
   def index
-		@events = Event.find(:all)
+		@events = Event.find(:all, :order => "start_at asc")
   end
 	def new
 		@events = Event.new
@@ -45,7 +45,7 @@ class Admin::EventsController < Admin::BaseController
         format.html {
 
              flash[:notice] = 'Event was successfully updated.'
-             render :action => "index"
+             redirect_to :action => "index"
           
           }
         format.xml  { head :ok }

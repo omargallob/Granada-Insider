@@ -1,11 +1,14 @@
 <li>
 	<h4><%= event.start_at.strftime("%a %d %B %Y")%></h4>
 <hr />
-<div class="left_short">
-	<% %>
+<div class="left">
+	<% if event.location %>
+	<%=  image_tag event.location.photo.url(:thumb) %>
+	<% end %>
+	<div class="left_short"></div>
 </div>
 <div class="center">
-	<h2><%= event.title %></h2>
+	<h4><%= event.title %></h2>
 	<%= event.description %>
 
 </div>
