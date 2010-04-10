@@ -14060,3 +14060,850 @@ Rendering admin/users/index
 Rendered admin/users/_user (17.2ms)
 Rendered shared/menu/_back (0.1ms)
 Completed in 36ms (View: 24, DB: 2) | 200 OK [http://localhost/admin/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:27:46) [GET]
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/admin/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-10 15:27:46) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 42ms (View: 33, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:27:49) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"y7DC7occfdFWhBhHhI57M3bTGEAlgdGLtul0gaxXfu0=", "login"=>"omargallob@gmail.com", "password"=>"123456"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'omargallob@gmail.com' and activated_at IS NOT NULL) LIMIT 1[0m
+Failed login for 'omargallob@gmail.com' from 127.0.0.1 at Sat Apr 10 13:27:49 UTC 2010
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.2ms)
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:27:56) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"y7DC7occfdFWhBhHhI57M3bTGEAlgdGLtul0gaxXfu0=", "login"=>"master", "password"=>"123456"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'master' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/users
+Completed in 19ms (DB: 2) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:27:56) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.7ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 23ms (View: 1, DB: 4) | 401 Unauthorized [http://localhost/admin/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:28:09) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"y7DC7occfdFWhBhHhI57M3bTGEAlgdGLtul0gaxXfu0=", "login"=>"superuser", "password"=>"123456"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'superuser' and activated_at IS NOT NULL) LIMIT 1[0m
+Failed login for 'superuser' from 127.0.0.1 at Sat Apr 10 13:28:09 UTC 2010
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:28:24) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"y7DC7occfdFWhBhHhI57M3bTGEAlgdGLtul0gaxXfu0=", "login"=>"master", "password"=>"123456"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'master' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:28:24) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.6ms)
+Rendered shared/_center_services_swf (0.7ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (52.1ms)
+Rendered shared/_right_ads_swf (0.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (7.0ms)
+Rendered shared/menu/_front (1.3ms)
+Completed in 98ms (View: 88, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 15:28:30) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 21ms (View: 2, DB: 2) | 401 Unauthorized [http://localhost/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 15:30:20) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Filter chain halted as [:check_roles] rendered_or_redirected.
+Completed in 77ms (View: 1, DB: 3) | 401 Unauthorized [http://localhost/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-04-10 15:30:25) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Redirected to http://localhost:3000/
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:30:25) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (2.5ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.0ms)
+Rendered shared/menu/_front (0.7ms)
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-10 15:30:29) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:30:35) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"sU1KsyynqHOTb/5XGi/zlneJlJ2bLqHgp6JQ9rnhwPY=", "login"=>"master", "password"=>"123456"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'master' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:30:35) [GET]
+  Parameters: {"name"=>"home"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (1.5ms)
+Rendered shared/_right_ads_swf (0.2ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.1ms)
+Rendered shared/menu/_front (0.7ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:31:28) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (1.9ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.1ms)
+Rendered shared/menu/_front (0.7ms)
+Completed in 62ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-10 15:31:35) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:31:41) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"sU1KsyynqHOTb/5XGi/zlneJlJ2bLqHgp6JQ9rnhwPY=", "login"=>"master", "password"=>"123456"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'master' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mroles_users Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:31:41) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (1.5ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.1ms)
+Rendered shared/menu/_front (0.9ms)
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:32:25) [GET]
+  Parameters: {"name"=>"logut"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.9ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'logut') LIMIT 1[0m
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/viewer_controller.rb:4:in `show'
+
+Rendered rescues/_trace (100.5ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-04-10 15:32:28) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Redirected to http://localhost:3000/
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:32:28) [GET]
+  Parameters: {"name"=>"home"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (1.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.0ms)
+Rendered shared/menu/_front (0.7ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-10 15:32:35) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 75ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:32:45) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"nJ5fuNzXm0Rgzkg49zikK2LUVqr1prMZv+LSMhnoPD4=", "login"=>"master", "password"=>"123456"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'master' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mroles_users Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/
+Completed in 21ms (DB: 2) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:32:45) [GET]
+  Parameters: {"name"=>"home"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (2.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.0ms)
+Rendered shared/menu/_front (0.7ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:33:55) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.7ms)
+Rendered shared/_center_services_swf (0.6ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (62.2ms)
+Rendered shared/_right_ads_swf (0.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (6.1ms)
+Rendered shared/menu/_front (1.4ms)
+Completed in 112ms (View: 101, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 15:34:00) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Rendered shared/menu/_back (0.5ms)
+Completed in 95ms (View: 81, DB: 1) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:34:07) [GET]
+  Parameters: {"name"=>"logut"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'logut') LIMIT 1[0m
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/viewer_controller.rb:4:in `show'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-04-10 15:34:12) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:34:12) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (1.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.4ms)
+Rendered shared/menu/_front (0.7ms)
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 15:34:15) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-10 15:34:15) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:35:10) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"kG2yErzdAcxLNsb9otTkFeJlrM0yg12pMJ0iagTfhmw=", "login"=>"master", "password"=>"123456"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'master' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mroles_users Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/admin
+Completed in 20ms (DB: 2) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 15:35:10) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Rendered shared/menu/_back (0.1ms)
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:35:26) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/admin
+Rendering admin/users/index
+Rendered admin/users/_user (64.4ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 110ms (View: 82, DB: 2) | 200 OK [http://localhost/admin/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#new (for 127.0.0.1 at 2010-04-10 15:35:29) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/users/new
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM `roles` ORDER BY name[0m
+  [4;36;1mRole Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT `roles`.id FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`id` = 3) AND (`roles_users`.user_id = NULL ) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT `roles`.id FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`id` = 4) AND (`roles_users`.user_id = NULL ) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT `roles`.id FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`id` = 5) AND (`roles_users`.user_id = NULL ) LIMIT 1[0m
+Rendered admin/users/_form (21.6ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 51ms (View: 35, DB: 3) | 200 OK [http://localhost/admin/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:35:38) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/admin
+Rendering admin/users/index
+Rendered admin/users/_user (9.4ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 25ms (View: 12, DB: 2) | 200 OK [http://localhost/admin/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:36:23) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/admin
+Rendering admin/users/index
+Rendered admin/users/_user (7.6ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 36ms (View: 21, DB: 2) | 200 OK [http://localhost/admin/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:36:35) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/admin
+Rendering admin/users/index
+Rendered admin/users/_user (12.3ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 35ms (View: 20, DB: 1) | 200 OK [http://localhost/admin/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-10 15:38:19) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/admin
+Rendering users/new
+
+ActionView::TemplateError (wrong number of arguments (3 for 2)) on line #17 of app/views/users/new.html.erb:
+14: 
+15: <p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+16: <%= f.password_field :password_confirmation %></p>
+17: <%= f.hidden_field 'role', 'id', :value => "5" %>
+18: <p><%= submit_tag 'Sign up' %></p>
+19: <% end -%>
+
+    app/views/users/new.html.erb:17:in `hidden_field'
+    app/views/users/new.html.erb:17
+    app/views/users/new.html.erb:5
+    app/controllers/users_controller.rb:9:in `new'
+
+Rendered rescues/_trace (68.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-10 15:38:28) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/admin
+Rendering users/new
+
+ActionView::TemplateError (wrong number of arguments (3 for 2)) on line #17 of app/views/users/new.html.erb:
+14: 
+15: <p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+16: <%= f.password_field :password_confirmation %></p>
+17: <%= f.hidden_field 'role', 'id', :value => "5" %>
+18: <p><%= submit_tag 'Sign up' %></p>
+19: <% end -%>
+
+    app/views/users/new.html.erb:17:in `hidden_field'
+    app/views/users/new.html.erb:17
+    app/views/users/new.html.erb:5
+    app/controllers/users_controller.rb:9:in `new'
+
+Rendered rescues/_trace (46.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-10 15:38:52) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/admin
+Rendering users/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-10 15:39:27) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/admin
+Rendering users/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 29ms (View: 16, DB: 2) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::RolesController#index (for 127.0.0.1 at 2010-04-10 15:39:43) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT * FROM `roles` [0m
+Rendering template within layouts/admin
+Rendering admin/roles/index
+  [4;36;1mRole Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Rendered admin/roles/_role (6.9ms)
+Rendered admin/roles/_role (4.8ms)
+Rendered admin/roles/_role (4.7ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 43ms (View: 28, DB: 2) | 200 OK [http://localhost/admin/roles]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:39:45) [GET]
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/admin
+Rendering admin/users/index
+Rendered admin/users/_user (9.6ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 26ms (View: 12, DB: 2) | 200 OK [http://localhost/admin/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-04-10 15:39:50) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Redirected to http://localhost:3000/
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-10 15:39:50) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/_center_services_swf (0.1ms)
+Rendered shared/front/center/_home (1.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (1.6ms)
+Rendered shared/menu/_front (0.8ms)
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 15:40:03) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-10 15:40:03) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-10 15:40:05) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"a93Xz0F1Epv7p8eOCUvuu3+yi60Jowze9ui6B7a5Ndc=", "login"=>"master", "password"=>"123456"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'master' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mroles_users Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Redirected to http://localhost:3000/admin
+Completed in 25ms (DB: 2) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::OverviewController#index (for 127.0.0.1 at 2010-04-10 15:40:05) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/overview/index
+Rendered shared/menu/_back (0.1ms)
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:40:07) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/admin
+Rendering admin/users/index
+Rendered admin/users/_user (9.7ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 27ms (View: 12, DB: 1) | 200 OK [http://localhost/admin/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#new (for 127.0.0.1 at 2010-04-10 15:40:09) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/admin
+Rendering admin/users/new
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` ORDER BY name[0m
+  [4;36;1mRole Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT `roles`.id FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`id` = 3) AND (`roles_users`.user_id = NULL ) LIMIT 1[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT `roles`.id FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`id` = 4) AND (`roles_users`.user_id = NULL ) LIMIT 1[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT `roles`.id FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles`.`id` = 5) AND (`roles_users`.user_id = NULL ) LIMIT 1[0m
+Rendered admin/users/_form (13.2ms)
+Rendered shared/menu/_back (0.1ms)
+Completed in 30ms (View: 15, DB: 2) | 200 OK [http://localhost/admin/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#create (for 127.0.0.1 at 2010-04-10 15:40:57) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"a93Xz0F1Epv7p8eOCUvuu3+yi60Jowze9ui6B7a5Ndc=", "user"=>{"password_confirmation"=>"123456", "role_ids"=>["4"], "password"=>"123456", "login"=>"blogger", "email"=>"omar@featurerich.net"}}
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`id` = 4) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'blogger') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'omar@featurerich.net') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `activated_at`, `crypted_password`, `remember_token_expires_at`, `updated_at`, `activation_code`, `remember_token`, `login`, `email`) VALUES('', '4071db1445c64cd76988995f1fb7e4d8b080abeb', '2010-04-10 13:40:57', NULL, '230eeefd3bbecf14d428914a8029c10021bbfc60', NULL, '2010-04-10 13:40:57', 'd4638fe0245cd9e8b051cd5f28a77f761328e72a', NULL, 'blogger', 'omar@featurerich.net')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mroles_users Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (4, 2)[0m
+Sent mail to omar@featurerich.net
+
+Date: Sat, 10 Apr 2010 15:40:57 +0200
+From: system@granadainsider.com
+To: omar@featurerich.net
+Subject: Granada Insider - Online Magazine Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: blogger
+  Password: 123456
+
+Visit this url to activate your account:
+
+  http://granada-insider.heroku.com/activate/d4638fe0245cd9e8b051cd5f28a77f761328e72a
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/users
+Completed in 71ms (DB: 7) | 302 Found [http://localhost/admin/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::UsersController#index (for 127.0.0.1 at 2010-04-10 15:40:57) [GET]
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/admin/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-10 15:40:57) [GET]
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+Rendering template within layouts/admin
+Rendering sessions/new
+Rendered shared/menu/_back (0.1ms)
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/session/new]
