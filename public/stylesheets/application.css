@@ -10,7 +10,7 @@ body #wrapper #header #navbar ul { width: 962px; height: 53px; margin: 0px; list
 body #wrapper #header #navbar ul li { text-transform: uppercase; float: left; margin: 15px 0 0 21px; }
 body #wrapper #header #navbar ul li a { text-decoration: none; }
 body #wrapper #header #navbar ul li h1 { text-transform: uppercase; float: left; margin: 15px 0 0 22px; }
-body #wrapper #left-column { width: 161px; float: left; height: 1546px; background: transparent; margin-right: 8px; margin-top: 13px; margin-bottom: 25px; }
+body #wrapper #left-column { width: 161px; float: left; height: 1546px; background: transparent; margin-right: 8px; margin-bottom: 25px; }
 body #wrapper #left-column #google_ads { width: 160px; height: 239px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2746px; margin-left: 1px; }
 body #wrapper #left-column .header { height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -145px; margin-top: 11px; float: left; width: 161px; }
 body #wrapper #left-column #magazine { height: 206px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -170px; float: left; width: 161px; }
@@ -20,7 +20,7 @@ body #wrapper #left-column #social { height: 90px; background-image: url(../imag
 body #wrapper #left-column #advertise { height: 107px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1216px; margin-top: 13px; float: left; width: 161px; }
 body #wrapper #left-column #work { width: 161px; float: left; height: 86px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6223px; margin-top: 13px; }
 body #wrapper #main.whatson { width: 492px; float: left; height: 1648px; }
-body #wrapper #main { width: 492px; float: left; height: 1525px; background: transparent; margin-top: 13px; }
+body #wrapper #main { width: 492px; float: left; height: 1525px; background: transparent; }
 body #wrapper #main .header { width: 492px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1323px; }
 body #wrapper #main #travellers { width: 492px; float: left; height: 288px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1348px; margin-bottom: 13px; }
 body #wrapper #main #articles { width: 492px; float: left; height: 379px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1636px; margin-bottom: 13px; }
@@ -36,13 +36,14 @@ body #wrapper #main #events_list .header h1 { margin: 9px 0 0 17px; }
 body #wrapper #main #events_list .subheader { width: 458px; float: left; height: 23px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4811px; margin-left: 17px; }
 body #wrapper #main #events_list .subheader h4 { text-align: left; margin-left: 33px; }
 body #wrapper #main #events_list ul { width: 458px; float: left; margin-left: 26px; }
-body #wrapper #main #events_list ul li { width: 420px; margin: 10px 10px; list-style: disc inside; float: left; }
+body #wrapper #main #events_list ul li { width: 420px; margin: 10px 10px; list-style: disc outside; float: left; }
+body #wrapper #main #events_list ul li h4 { text-align: left; width: 80%; }
 body #wrapper #main #events_list ul li hr { border: 0px; border-top: 1px solid black; }
 body #wrapper #main #events_list ul li .left { width: 84px; height: 156px; float: left; background: green; }
 body #wrapper #main #events_list ul li .left_short { width: 84px; height: 76px; float: left; background: green; }
 body #wrapper #main #events_list ul li .center { width: 325px; float: left; margin-left: 10px; }
 body #wrapper #main #events_footer { width: 458px; float: left; height: 23px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6200px; margin-left: 17px; }
-body #wrapper #right-column { width: 291px; float: left; height: 1525px; background: transparent; margin-top: 13px; margin-left: 8px; }
+body #wrapper #right-column { width: 291px; float: left; height: 1525px; background: transparent; margin-left: 8px; }
 body #wrapper #right-column .header { width: 291px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2985px; }
 body #wrapper #right-column #whatson { width: 291px; float: left; width: 291px; float: left; height: 322px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -3010px; }
 body #wrapper #right-column #advertisements { width: 291px; float: left; height: 1062px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -3332px; margin-top: 13px; }
