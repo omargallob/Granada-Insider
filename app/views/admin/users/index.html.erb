@@ -5,5 +5,21 @@
 	</ul>
 <% end %>
 
-<h1>Admin::Users#index</h1>
-<p>Find me in app/views/admin/users/index.html.erb</p>
+
+<div id="content">
+	<h1>User List</h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th>email</th>
+				<th></th>				
+				<th>validated?</th>
+				<th></th>
+				<th>Options</th>
+
+			</tr>			
+			<%= render :partial => "user", :collection => @users %>
+		</table>
+	</div>
+</div>
