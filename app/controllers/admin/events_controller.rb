@@ -2,6 +2,11 @@ class Admin::EventsController < Admin::BaseController
 
   def index
 		@events = Event.find(:all, :order => "start_at asc")
+		@events.each do |event|
+			if event.start_at < Time.now
+				event.close!
+			end
+		end
   end
 	def new
 		@events = Event.new
@@ -15,7 +20,7 @@ class Admin::EventsController < Admin::BaseController
 		   format.html {
 		     
 		       flash[:notice] = 'Event was successfully created.'
-		       redirect_to(admin_event_path(@event))
+		       redirect_to(admin_events_path)
 		     
 		     
 		    }
