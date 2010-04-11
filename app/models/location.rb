@@ -2,7 +2,7 @@ class Location < ActiveRecord::Base
 	has_many :events
 	has_attached_file :photo,
 			                :styles => {
-			                  :pagesize => ["374x374#", :jpg],:thumb => ["82x82#", :jpg],
+			                  :pagesize => ["492x242#", :jpg],:thumb => ["82x82#", :jpg],
 			                },:processors => [:cropper],:convert_options => {  
 			                    :thumb => "-resize 83x82 -gravity center"
 			              	},

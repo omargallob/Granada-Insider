@@ -1,5 +1,6 @@
 <tr>
 	<td class="title"><%= event.title %></td>
+	<td class="title"><%= event.location.title if event.location %></td>
 	<td><%= event.start_at.strftime("%a %d %B %Y") %></td>
 	<td style="width:15px"></td>
 	<td><%= event.end_at.strftime("%a %d %B %Y")  %></td>

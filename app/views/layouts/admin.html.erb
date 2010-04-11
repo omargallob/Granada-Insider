@@ -11,7 +11,8 @@
 		<title>GI - Backend - <%= controller.controller_name %></title>
 		<link href="/stylesheets/admin.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		<link href="/stylesheets/test.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="/stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="/stylesheets/admin.css" media="screen, projection" rel="stylesheet" type="text/css" />
   	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
 		<!--[if IE]>
 		    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -47,7 +48,9 @@
         <div id="logo">
          
         </div> 
-       
+				<div id="date"> 
+       	<%= Time.now.strftime("%a %d %B %Y") %>
+				</div>
 				<div id="navbar">
         	<%= render :partial =>"shared/menu/back" %>
         </div>               
