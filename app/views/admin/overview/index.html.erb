@@ -1,2 +1,26 @@
-<h1>Admin::Overview#index</h1>
-<p>Find me in app/views/admin/overview/index.html.erb</p>
+<div id="content">
+	<h1>User List</h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th>Total number of:</th><th></th><th></th>
+			</tr>			
+			<tr>
+				<td> </td>				<td  class="title">- Pages </td>				<td><%= @pages.length %> </td>
+			</tr>		
+			<tr>
+				<td> </td>				<td>- Events </td>				<td><%= @events.length %> </td>
+			</tr>		
+			<tr>
+				<td> </td>				<td>- Locations </td>				<td><%= @locations.length %> </td>
+			</tr>		
+			<tr>
+				<td> </td>				<td>- Users </td>				<td><%= @users.length %> </td>
+			</tr>		
+			<tr>
+				<td> </td>				<td>- Roles </td>				<td><%= @roles.length %> </td>
+			</tr>		
+		</table>
+	</div>
+</div>
