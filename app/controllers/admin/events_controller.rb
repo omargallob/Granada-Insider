@@ -2,6 +2,13 @@ class Admin::EventsController < Admin::BaseController
 
   def index
 		@events = Event.find(:all, :order => "start_at asc")
+    @month = params[:month].to_i
+    @year = params[:year].to_i
+
+    @shown_month = Date.civil(@year, @month)
+
+    @event_strips = Event.event_strips_for_month(@shown_month)
+
 		@events.each do |event|
 			if event.start_at < Time.now
 				event.close!
@@ -20,7 +27,7 @@ class Admin::EventsController < Admin::BaseController
 		   format.html {
 		     
 		       flash[:notice] = 'Event was successfully created.'
-		       redirect_to(admin_events_path)
+		       redirect_to("/admin/events/"+ Time.zone.now.year.to_s+"/"+Time.zone.now.month.to_s)
 		     
 		     
 		    }
@@ -68,7 +75,7 @@ class Admin::EventsController < Admin::BaseController
      @event.destroy
 
      respond_to do |format|
-       format.html { redirect_to(admin_events_path) }
+       format.html {  redirect_to("/admin/events/"+ Time.zone.now.year.to_s+"/"+Time.zone.now.month.to_s)}
        format.xml  { head :ok }
      end
    end

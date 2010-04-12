@@ -1,0 +1,133 @@
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline}
+*:focus {outline: 0}
+body {line-height: 1em; color: black; background: #fff}
+ol, ul {list-style: none}
+ table {border-collapse: separate; border-spacing: 0; vertical-align: middle}
+caption, th, td {text-align: left; font-weight: normal; vertical-align: middle}
+q, blockquote {quotes: "" ""}
+q:before, q:after, blockquote:before, blockquote:after {content: ""}
+img a {border: none}
+  p {font-family: Helvetica; font-size: 12px}
+.center_service {height: 200px; width: 200px; margin: 15px}
+.right_sponsored {height: 250px; width: 250px; float: left; margin: 9px 0 4px 9px}
+#main p {float: left; width: 315px; margin-top: 10px; padding-right: 10px}
+#main #travellers {text-align: left}
+#main #travellers #center_travellers_logo {height: 115px; width: 81px; background: url(../images/system/bg/versionSprites.png); background-position: 0 -7803px; background-repeat: no-repeat; float: left; margin: 30px 40px 60px 40px}
+#main #travellers h1 {float: left; text-transform: capitalize; margin-top: 30px}
+#main #travellers h2 {float: left; width: 325px}
+#main #articles ol {margin-top: 26px}
+#main #articles ol li {float: left; margin-bottom: 10px}
+#main #articles ol li img {float: left; margin: 0 20px 0 40px}
+#main #articles ol li h3 {float: left; font-weight: bold}
+#main #articles ol li hr {background: #4d4d4d; float: left; width: 450px; border: 0px none; height: 1px; margin-left: 21px}
+#main #classified ol {margin-top: 11px}
+#main #classified ol li {float: left; width: 187px; margin-left: 40px; margin-top: 15px}
+#main #classified ol li p {width: 187px; margin-top: 0}
+#right-column #whatson ol {margin-top: 11px}
+#right-column #whatson ol li {float: left; width: 220px; margin-top: 15px; margin-left: 40px}
+#right-column #whatson ol li h3 {text-transform: uppercase}
+  .ec-calendar {font-family: verdana, arial, helvetica, sans-serif; font-size: 11px; line-height: 14px; margin: 0; padding: 0; border-bottom: 1px solid #d5d5d5}
+ .ec-calendar-header {padding: 5px 0; width: 100%; table-layout: fixed}
+.ec-month-name {font-size: 16px; font-weight: bold}
+.ec-month-nav {}
+ .ec-body {position: relative; border-right: 1px solid #303030; white-space: nowrap}
+ .ec-day-names {position: absolute; top: 0; left: 0; width: 100%; table-layout: fixed; padding: 2px 0; background: #303030; color: white}
+.ec-day-name {font-weight: normal}
+ .ec-rows {position: absolute; left: 0; bottom: 0; width: 100%; background: white; overflow: hidden; border-right: 1px solid #d5d5d5}
+.ec-row {position: absolute; left: 0; width: 100%; overflow: hidden}
+ .ec-row-bg {position: absolute; top: 0; left: 0; height: 100%; width: 100%; table-layout: fixed}
+.ec-day-bg {border-left: 1px solid #d5d5d5}
+.ec-today-bg {background-color: #ffffdd}
+.ec-row-table {position: relative; width: 100%; table-layout: fixed}
+ .ec-day-header {color: #444; text-align: right; padding: 0 5px; line-height: 16px; border-top: 1px solid #d5d5d5; border-left: 1px solid #d5d5d5; border-bottom: 1px dotted #bbbbbb; background-color: #ecede2; overflow: hidden}
+a.ec-day-link {color: #444}
+.ec-today-header {background-color: #d7d7ba}
+.ec-weekend-day-header {}
+.ec-other-month-header {background-color: #efefef; color: #777}
+ .ec-event-cell {cursor: pointer; vertical-align: top; padding-right: 1px; padding-left: 2px}
+.ec-event-cell a {text-decoration: none; display: block; width: 100%; height: 100%}
+.ec-no-event-cell {cursor: default}
+.ec-event {color: white; padding-right: 1px; padding-left: 11px; -webkit-border-radius: 3px; -khtml-border-radius: 3px; -moz-border-radius: 3px; overflow: hidden; white-space: nowrap}
+.ec-event :hover {  }
+.ec-event-bg a {color: white}
+ .ec-event-no-bg {position: relative;  }
+.ec-event-no-bg a { color: inherit}
+.ec-event-time {font-size: 85%; font-weight: bold; padding-right: 3px}
+  .ec-left-arrow, .ec-right-arrow {position: relative; top: 3px; width: 0; height: 0; font-size: 0; line-height: 0; margin-bottom: -8px; border-top: 4px solid transparent; border-bottom: 4px solid transparent}
+.ec-left-arrow {margin-left: -7px; margin-right: auto; border-right: 4px solid white}
+.ec-right-arrow {margin-left: auto; margin-right: 3px; border-left: 4px solid white}
+  .ec-bullet {position: absolute; top: 7px; width: 4px; height: 4px; margin-left: -7px; margin-right: auto; -webkit-border-radius: 2px; -khtml-border-radius: 2px; -moz-border-radius: 2px}
+body {background: url(../images/system/bg/background.jpg); width: 100%; height: 100%; margin: 0px; text-align: center}
+body #wrapper {width: 962px; margin: 0px auto; text-align: left}
+body #wrapper h4 {text-align: center; margin: 3px 0 0 0; text-transform: uppercase}
+body #wrapper h1 {text-align: left; margin: 3px 0 0 0; text-transform: uppercase}
+body #wrapper h1 a {text-decoration: none}
+body #wrapper #header {height: 156px; width: 962px; margin-bottom: 13px; float: left}
+body #wrapper #header #logo {height: 92px; width: 230px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0 0; margin: 9px 0 2px 0}
+body #wrapper #header #date {float: right; margin-top: 75px; color: white}
+body #wrapper #header #navbar {height: 53px; width: 962px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -92px}
+body #wrapper #header #navbar ul {width: 962px; height: 53px; margin: 0px; list-style: none; padding: 0px}
+body #wrapper #header #navbar ul li {text-transform: uppercase; float: left; margin: 15px 0 0 21px}
+body #wrapper #header #navbar ul li a {text-decoration: none}
+body #wrapper #header #navbar ul li h1 {text-transform: uppercase; float: left; margin: 15px 0 0 22px}
+body #wrapper #header #sub_navbar {height: 42px; width: 962px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7227px; margin-top: 13px}
+body #wrapper #header #sub_navbar ul {float: left}
+body #wrapper #header #sub_navbar ul li {text-transform: uppercase; float: left; margin: 15px 0 0 21px}
+body #wrapper #header #sub_navbar ul li a {text-decoration: none}
+body #wrapper #header #sub_navbar ul.variables {float: right; margin-right: 80px}
+body #wrapper #header #sub_navbar ul.variables li {margin-top: 10px}
+body #wrapper #header #sub_navbar ul.variables li h3 {margin-top: 5px}
+body #wrapper #header #sub_navbar h1 {text-transform: uppercase; float: left; margin: 15px 0 0 22px}
+body #wrapper #left-column {width: 161px; float: left; height: 1546px; background: transparent; margin-right: 8px; margin-bottom: 25px}
+body #wrapper #left-column #google_ads {width: 160px; height: 239px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2746px; margin-left: 1px}
+body #wrapper #left-column .header {height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -145px; margin-top: 11px; float: left; width: 161px}
+body #wrapper #left-column #magazine {height: 206px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -170px; float: left; width: 161px}
+body #wrapper #left-column .media {height: 318px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -466px; float: left; width: 161px}
+body #wrapper #left-column #chat {height: 432px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -784px; float: left; width: 161px}
+body #wrapper #left-column #social {height: 90px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -376px; float: left; width: 161px}
+body #wrapper #left-column #advertise {height: 107px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1216px; margin-top: 13px; float: left; width: 161px}
+body #wrapper #left-column #work {width: 161px; float: left; height: 86px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6223px; margin-top: 13px}
+body #wrapper #main.whatson {width: 492px; float: left; height: 1648px}
+body #wrapper #main {width: 492px; float: left; height: 1525px; background: transparent}
+body #wrapper #main .header {width: 492px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1323px}
+body #wrapper #main #travellers {width: 492px; float: left; height: 288px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1348px; margin-bottom: 13px}
+body #wrapper #main #articles {width: 492px; float: left; height: 379px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1636px; margin-bottom: 13px}
+body #wrapper #main .services {width: 231px; float: left; height: 229px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2015px; margin-bottom: 13px}
+body #wrapper #main .services_right {margin-left: 30px}
+body #wrapper #main #small_header {width: 443px; float: left; height: 24px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2244px; margin-left: 24px}
+body #wrapper #main #news {width: 492px; float: left; height: 143px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2268px; margin-bottom: 11px}
+body #wrapper #main #classified {width: 492px; float: left; height: 335px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2411px; margin-bottom: 13px}
+body #wrapper #main #events_gallery {width: 492px; float: left; height: 246px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4522px; margin-bottom: 13px}
+body #wrapper #main #events_list {width: 492px; float: left; height: 1366px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4834px}
+body #wrapper #main #events_list .header {width: 492px; float: left; height: 43px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4768px}
+body #wrapper #main #events_list .header h1 {margin: 9px 0 0 17px}
+body #wrapper #main #events_list .subheader {width: 458px; float: left; height: 23px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4811px; margin-left: 17px}
+body #wrapper #main #events_list .subheader h4 {text-align: left; margin-left: 33px}
+body #wrapper #main #events_list ul {width: 458px; float: left; margin-left: 26px; padding-bottom: 24px}
+body #wrapper #main #events_list ul li {width: 420px; margin: 10px 10px; list-style: disc outside; float: left}
+body #wrapper #main #events_list ul li h4 {text-align: left; width: 80%}
+body #wrapper #main #events_list ul li hr {border: 0px; border-top: 1px solid black}
+body #wrapper #main #events_list ul li .left {width: 84px; float: left}
+body #wrapper #main #events_list ul li .left .left_short {width: 84px; height: 76px; float: left; background: green}
+body #wrapper #main #events_list ul li .center {width: 325px; float: left; margin-left: 10px}
+body #wrapper #main #events_footer {width: 458px; float: left; height: 23px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6200px; margin-left: 17px}
+body #wrapper #right-column {width: 291px; float: left; height: 1525px; background: transparent; margin-left: 8px}
+body #wrapper #right-column .header {width: 291px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2985px}
+body #wrapper #right-column #whatson {width: 291px; float: left; width: 291px; float: left; height: 322px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -3010px}
+body #wrapper #right-column #advertisements {width: 291px; float: left; height: 1062px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -3332px; margin-top: 13px}
+body #wrapper #right-column #community_header {width: 244px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4394px; margin-top: 13px; margin-left: 24px}
+body #wrapper #right-column #community {width: 291px; float: left; height: 81px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4419px}
+body #wrapper #right-column #community_join {width: 153px; float: left; height: 22px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4500px; margin-left: 70px}
+body #wrapper #right-column #what_when {width: 291px; float: left; height: 245px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6309px}
+body #wrapper #right-column #advertise {width: 291px; float: left; height: 105px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6554px; margin: 13px 0}
+body #wrapper #right-column #single_advertisement {width: 291px; float: left; height: 272px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6955px; margin-top: 13px}
+body #wrapper #right-column #double_advertisement {width: 291px; float: left; height: 534px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7269px; margin-top: 13px; margin-bottom: 13px}
+body #wrapper #right-column #magazine {width: 291px; float: left; height: 295px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6660px}
+body #wrapper.whatson {height: 1892px}
+body #footer {width: 100%; float: left; height: 225px; background-image: url(../images/system/bg/footer.png); background-repeat: repeat-x; margin-top: 14px}
+#wrapper #header.admin {height: 200px}
+#adminblock {float: left; background: white; width: 962px; padding: 40px 0; margin-top: 13px}
+#adminblock #notice {width: 80%; margin: 0px auto}
+#adminblock #content {margin-left: 45px; height: 100%}
+#adminblock #content h1 {margin-bottom: 10px}
+#adminblock #content table tr td.title {width: 250px}

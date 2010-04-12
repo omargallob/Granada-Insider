@@ -1,0 +1,18 @@
+--- 
+javascripts: 
+- base: 
+  - jrails
+  - swfobject
+  - application
+  - event_calendar
+  - cufon-yui
+stylesheets: 
+- base: 
+  - print
+  - screen
+  - ie
+  - front
+  - event_calendar
+  - application
+  - admin
+

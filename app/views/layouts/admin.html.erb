@@ -9,15 +9,11 @@
 			google.load("jqueryui", "1.7.2");
 		</script>
 		<title>GI - Backend - <%= controller.controller_name %></title>
-		<link href="/stylesheets/admin.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		<link href="/stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		<link href="/stylesheets/admin.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<%= stylesheet_link_merged :base %>
 		<!--[if IE]>
 		    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<![endif]-->
-		<script type="text/javascript" src="/javascripts/cufon-yui.js"></script>
+	  <%= javascript_include_merged :base %>
   	<script type="text/javascript" src="/fonts/Quicksand_Book_400-Quicksand_Bold_700.font.js"></script>
 	  <script type="text/javascript" src="/fonts/Rockwell_Std_400-Rockwell_Std_700-Rockwell_Std_italic_400-Rockwell_Std_italic_700.font.js"></script>
   	<script type="text/javascript" src="/javascripts/nice_fonts.js"></script>
@@ -40,7 +36,7 @@
 	</style>
 	<![endif]-->
 	
-	
+			<%= stylesheet_link_tag "event_calendar" %>
   </head>
   <body>
    <div id="wrapper">
