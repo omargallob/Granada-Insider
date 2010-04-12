@@ -63,12 +63,12 @@
      
     </div>
      <div id="footer"></div> 
+		<%= yield :script %>
      <script>
        jQuery(document).ready(function() {
         $(document).nice_fonts();
        }); 
      </script>
-	<%= yield :script %>
  </body>
 </html>
 

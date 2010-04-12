@@ -19,8 +19,8 @@ module CalendarHelper
     # args is an argument hash containing :event, :day, and :options
     calendar event_calendar_opts do |args|
       event = args[:event]
-			if logged_in? and current_user.has_role?("Admin")
-      %(<a href="/admin/events/#{event.id}/edit" title="#{h(event.name)}">#{h(event.name)}</a>)
+			if logged_in? and current_user.has_role?("Admin")	
+	      %(<a href="/admin/events/#{event.id}" title="#{h(event.name)}">#{h(event.name)}</a>)
 			else
 			%(<a href="/events/#{event.id}" title="#{h(event.name)}">#{h(event.name)}</a>)
 			end

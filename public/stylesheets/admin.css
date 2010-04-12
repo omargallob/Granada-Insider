@@ -5,3 +5,5 @@
 #adminblock #content { margin-left: 45px; height: 100%; }
 #adminblock #content h1 { margin-bottom: 10px; }
 #adminblock #content table tr td.title { width: 250px; }
+#adminblock #content .event_info { width: 350px; float: left; }
+#adminblock #content .location_info { margin-left: 45px; }

@@ -1,5 +1,5 @@
 class Admin::EventsController < Admin::BaseController
-
+ include Geokit::Geocoders
   def index
 		@events = Event.find(:all, :order => "start_at asc")
     @month = params[:month].to_i
@@ -41,7 +41,19 @@ class Admin::EventsController < Admin::BaseController
 	end
 
 	def show
-			@event = Event.find_by_id(params[:id])	
+		@event = Event.find_by_id(params[:id])	
+		if @event.location
+			@res=GoogleGeocoder.geocode(@event.location.address)    
+			if @res.success
+				@lng = @res.lng
+				@lat = @res.lat
+			end
+
+			@map = GMap.new("map")
+			@map.control_init(:large_map => true,:map_type => true)
+			@map.center_zoom_init([@lat,@lng],14)
+			@map.overlay_init(GMarker.new([@lat,@lng],:info_window => "#{@event.location.address}"))
+		end
 	end
 
 	def edit

@@ -1,0 +1,35 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "Edit", edit_admin_event_path(@event) %></li>
+	</ul>
+<% end %>
+<div id="content">
+	<div class="event_info">
+		<h1>Event Info</h1>
+		<hr />
+		<h3><%= @event.title %></h3>
+		<hr />	
+		<%= @event.two_liner %>
+		<hr />
+		<%= @event.description %>
+	</div>
+	<% if @event.location %>
+	<div class="event_info location_info">
+		<h1>Location Info</h1>
+		<hr />
+		<h3><%= @event.location.title %></h3>
+		<hr />	
+		<%= @event.location.description %>
+		<hr />
+		<%= @map.div(:width => 350, :height => 350) %>	
+	</div>
+	<% end %>
+</div>
+
+<% content_for(:script) do %>
+<%= GMap.header(:with_vml => false, :host => request.host)%>
+<%= @map.to_html %>
+
+<% end %>
+
