@@ -67,9 +67,17 @@ body #wrapper #header #logo {height: 92px; width: 230px; float: left; background
 body #wrapper #header #date {float: right; margin-top: 75px; color: white}
 body #wrapper #header #navbar {height: 53px; width: 962px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -92px}
 body #wrapper #header #navbar ul {width: 962px; height: 53px; margin: 0px; list-style: none; padding: 0px}
-body #wrapper #header #navbar ul li {text-transform: uppercase; float: left; margin: 15px 0 0 21px}
+body #wrapper #header #navbar ul li {text-transform: uppercase; float: left; margin: 10px 0 0 21px}
 body #wrapper #header #navbar ul li a {text-decoration: none}
 body #wrapper #header #navbar ul li h1 {text-transform: uppercase; float: left; margin: 15px 0 0 22px}
+body #wrapper #header #navbar ul li#magic-line {margin: 0px}
+body #wrapper #header #navbar ul li#home {width: 73px}
+body #wrapper #header #navbar ul li#magazine {width: 127px}
+body #wrapper #header #navbar ul li#whatson {width: 142px}
+body #wrapper #header #navbar ul li#food {width: 73px}
+body #wrapper #header #navbar ul li#community {width: 155px}
+body #wrapper #header #navbar ul li#classified {width: 143px}
+body #wrapper #header #navbar ul li#about {width: 86px}
 body #wrapper #header #sub_navbar {height: 42px; width: 962px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7227px; margin-top: 13px}
 body #wrapper #header #sub_navbar ul {float: left}
 body #wrapper #header #sub_navbar ul li {text-transform: uppercase; float: left; margin: 15px 0 0 21px}
@@ -131,3 +139,11 @@ body #footer {width: 100%; float: left; height: 225px; background-image: url(../
 #adminblock #content {margin-left: 45px; height: 100%}
 #adminblock #content h1 {margin-bottom: 10px}
 #adminblock #content table tr td.title {width: 250px}
+ .nav-wrap {margin: 50px auto; background-color: rgba(0,0,0,0.6); border-top: 2px solid white; border-bottom: 2px solid white}
+.group:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+#main-menu {margin: 0 auto; list-style: none; position: relative; width: 960px}
+#main-menu li {display: inline}
+#main-menu li a {position: relative; z-index: 200; color: #bbb; font-size: 14px; display: block; float: left; padding: 6px 0px 4px 0px; text-decoration: none; text-transform: uppercase}
+#main-menu li a:hover {color: white}
+#main-menu #magic-line{ position: absolute; top: 0; left: 0; background: rgba(220, 133, 5, 0.9); z-index: 100; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 0 4px;}
+.current_page_item a, .current_page_item_two a {color: white !important}

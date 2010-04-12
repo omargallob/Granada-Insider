@@ -5,7 +5,8 @@ javascripts:
   - swfobject
   - application
   - event_calendar
-  - cufon-yui
+  - cufon-yui		
+  - jquery.color-RGBa-patch
 stylesheets: 
 - base: 
   - print
@@ -15,4 +16,5 @@ stylesheets:
   - event_calendar
   - application
   - admin
+  - magicline
 

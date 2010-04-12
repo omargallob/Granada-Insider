@@ -8,9 +8,17 @@ body #wrapper #header #logo { height: 92px; width: 230px; float: left; backgroun
 body #wrapper #header #date { float: right; margin-top: 75px; color: white; }
 body #wrapper #header #navbar { height: 53px; width: 962px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -92px; }
 body #wrapper #header #navbar ul { width: 962px; height: 53px; margin: 0px; list-style: none; padding: 0px; }
-body #wrapper #header #navbar ul li { text-transform: uppercase; float: left; margin: 15px 0 0 21px; }
+body #wrapper #header #navbar ul li { text-transform: uppercase; float: left; margin: 10px 0 0 21px; }
 body #wrapper #header #navbar ul li a { text-decoration: none; }
 body #wrapper #header #navbar ul li h1 { text-transform: uppercase; float: left; margin: 15px 0 0 22px; }
+body #wrapper #header #navbar ul li#magic-line { margin: 0px; }
+body #wrapper #header #navbar ul li#home { width: 73px; }
+body #wrapper #header #navbar ul li#magazine { width: 127px; }
+body #wrapper #header #navbar ul li#whatson { width: 142px; }
+body #wrapper #header #navbar ul li#food { width: 73px; }
+body #wrapper #header #navbar ul li#community { width: 155px; }
+body #wrapper #header #navbar ul li#classified { width: 143px; }
+body #wrapper #header #navbar ul li#about { width: 86px; }
 body #wrapper #header #sub_navbar { height: 42px; width: 962px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7227px; margin-top: 13px; }
 body #wrapper #header #sub_navbar ul { float: left; }
 body #wrapper #header #sub_navbar ul li { text-transform: uppercase; float: left; margin: 15px 0 0 21px; }

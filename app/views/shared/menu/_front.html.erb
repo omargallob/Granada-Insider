@@ -1,6 +1,6 @@
-<ul>
+<ul id="main-menu">
 	<% for page in @pages %>
-		<li class="<% if page.name == @page.name %>active<% end %>">
-		<%= link_to page.navlabel, view_page_path(page.name) %></li>    
+		<li id="<%= page.name %>" class="<% if page.name == @page.name %>current_page_item<% else %>regular<% end %>">
+		<%= link_to page.navlabel, view_page_path(page.name), :rel => "blue" %></li>    
 	<% end %>
 </ul> 
