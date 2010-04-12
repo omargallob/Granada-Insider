@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100411142752) do
+ActiveRecord::Schema.define(:version => 20100412194321) do
+
+  create_table "egalleries", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -59,6 +67,19 @@ ActiveRecord::Schema.define(:version => 20100411142752) do
 
   add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
   add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
+
+  create_table "uploads", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "egallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.integer  "position"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40

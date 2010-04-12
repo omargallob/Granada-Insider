@@ -1,7 +1,11 @@
 <% content_for(:sub_menu) do %>
 	<ul>
-		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "Back", "/admin/events/#{Time.now.year.to_s}/#{Time.now.month.to_s}" %></li>
 		<li><%= link_to "Edit", edit_admin_event_path(@event) %></li>
+	</ul>
+	<ul class="variables">
+		<li><h4>Related:</h4></li>
+		<li><h3><%= link_to "Galleries",admin_event_egalleries_path(@event)%></h3></li>
 	</ul>
 <% end %>
 <div id="content">

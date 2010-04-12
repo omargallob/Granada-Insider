@@ -20,7 +20,9 @@ ActionController::Routing::Routes.draw do |map|
 			 admin.resources :locations
 	  	 admin.resources :users	
 	  	 admin.resources :roles	
-			 admin.resources :events
+			 admin.resources :events, :has_many => :egalleries
+	
+
 			 admin.calendar 'events/:year/:month', :controller => 'events', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month      
 	     admin.root :controller=>"overview"	
      end

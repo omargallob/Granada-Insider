@@ -1,0 +1,15 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", admin_event_egalleries_path(@egallery.event) %></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h1>Event Gallery: <%= @egallery.title %> </h1>
+	<ul>
+		<% for u in @egallery.uploads %>
+			<li><%= image_tag u.photo.url(:thumb)%></li>
+		<% end %>
+	</ul>
+</div>
+

@@ -1,0 +1,25 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", admin_event_path(@event) %></li>
+		<li><%= link_to "New", new_admin_event_egallery_path(@event) %></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h1>Event: <%= @event.title %> | Galleries List</h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th>Title</th>
+				<th></th>
+				<th>Date Created</th>
+				<th></th>
+				<th>Options </th>
+
+			</tr>			
+			<%= render :partial => "gallery", :collection => @egalleries %>
+		</table>
+	</div>
+</div>
+

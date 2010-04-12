@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   has_event_calendar
   belongs_to :location
-
+	has_many :egalleries
 	include AASM
 
   aasm_column :state # defaults to aasm_state
