@@ -54,6 +54,14 @@ class Admin::EventsController < Admin::BaseController
 			@map.center_zoom_init([@lat,@lng],14)
 			@map.overlay_init(GMarker.new([@lat,@lng],:info_window => "#{@event.location.address}"))
 		end
+	
+ 		@month = @event.start_at.month
+    @year = @event.start_at.year
+		
+    @shown_month = Date.civil(@year, @month)
+
+    @event_strips = Event.event_strips_for_month(@shown_month)
+
 	end
 
 	def edit
@@ -69,7 +77,7 @@ class Admin::EventsController < Admin::BaseController
         format.html {
 
              flash[:notice] = 'Event was successfully updated.'
-             redirect_to :action => "index"
+             redirect_to "/admin/events/2010/4"
           
           }
         format.xml  { head :ok }

@@ -8,12 +8,15 @@
 	<div class="event_info">
 		<h1>Event Info</h1>
 		<hr />
+		<h2><%= @event.name %></h2>
 		<h3><%= @event.title %></h3>
+		<h3><%= @event.start_at.strftime(" %a %d %B %Y") %></h3>
 		<hr />	
 		<%= @event.two_liner %>
 		<hr />
 		<%= @event.description %>
 	</div>
+
 	<% if @event.location %>
 	<div class="event_info location_info">
 		<h1>Location Info</h1>
@@ -24,12 +27,17 @@
 		<hr />
 		<%= @map.div(:width => 400, :height => 350) %>	
 	</div>
+		<% content_for(:script) do %>
+			<%= GMap.header(:with_vml => false, :host => request.host)%>
+			<%= @map.to_html %>
+		<% end %>
+	<% end %>
+	<% if @event.state == "closed" %>
+	<div class="event_info" style="margin-left:45px">
+		<h1>Event Galleries</h1>
+		<hr />
+	</div>
 	<% end %>
 </div>
 
-<% content_for(:script) do %>
-<%= GMap.header(:with_vml => false, :host => request.host)%>
-<%= @map.to_html %>
-
-<% end %>
 
