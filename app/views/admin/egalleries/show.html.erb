@@ -8,8 +8,24 @@
 	<h1>Event Gallery: <%= @egallery.title %> </h1>
 	<ul>
 		<% for u in @egallery.uploads %>
-			<li><%= image_tag u.photo.url(:thumb)%></li>
+			<li><%= image_tag u.photo.url(:thumb)%> <%= link_to image_tag ('system/admin/buttons/delete.jpg', :height => "15px", :title => "delete"),  admin_egallery_upload_path(@egallery.id, u.id), :confirm => 'Are you sure?', :method => :delete %></li>
 		<% end %>
 	</ul>
+	<div class="event_info">
+	<hr />	
+
+	<h1>Add more images</h1>
+	<% form_for :upload,@upload,:url=>{:controller=>"admin/uploads", :action=>"create", :egallery_id=>@egallery.id},:html=>{:multipart =>true}  do |f| %>	
+	  <%= render :partial => "upload", :locals => {:f =>f}%>
+	  <p>
+	    <%= f.submit 'Create' %>
+	  </p>
+	<% end %>
+	</div>
 </div>
 
+
+<% content_for(:script) do %>
+
+<%= render :partial => "shared/tinymce" %>
+<% end %>

@@ -6,6 +6,7 @@ class Admin::EgalleriesController < Admin::BaseController
 
   def show
 		@egallery = Egallery.find_by_id(params[:id])
+		@upload = Upload.new
   end
 
   def new
