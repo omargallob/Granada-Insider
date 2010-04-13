@@ -71,7 +71,7 @@ body #wrapper #right-column #community_join { width: 153px; float: left; height:
 body #wrapper #right-column #what_when { width: 291px; float: left; height: 245px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6309px; }
 body #wrapper #right-column #advertise { width: 291px; float: left; height: 105px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6554px; margin: 13px 0; }
 body #wrapper #right-column #single_advertisement { width: 291px; float: left; height: 272px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6955px; margin-top: 13px; }
-body #wrapper #right-column #double_advertisement { width: 291px; float: left; height: 534px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7269px; margin-top: 13px; margin-bottom: 13px; }
+body #wrapper #right-column #double_advertisement { width: 291px; float: left; height: 534px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7269px; margin-bottom: 13px; }
 body #wrapper #right-column #magazine { width: 291px; float: left; height: 295px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6660px; }
 body #wrapper.whatson { height: 1892px; }
 body #footer { width: 100%; float: left; height: 225px; background-image: url(../images/system/bg/footer.png); background-repeat: repeat-x; margin-top: 14px; }
