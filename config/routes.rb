@@ -18,6 +18,7 @@ ActionController::Routing::Routes.draw do |map|
        # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
        admin.resources :pages
 			 admin.resources :locations
+			 admin.resources :posts
 	  	 admin.resources :users	
 	  	 admin.resources :roles	
 			 admin.resources :events, :has_many => :egalleries

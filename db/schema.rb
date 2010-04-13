@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100412194321) do
+ActiveRecord::Schema.define(:version => 20100413112346) do
 
   create_table "egalleries", :force => true do |t|
     t.string   "title"
@@ -53,6 +53,18 @@ ActiveRecord::Schema.define(:version => 20100412194321) do
     t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.date     "date"
+    t.string   "author"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "parent_id"
     t.integer  "position"
   end
 

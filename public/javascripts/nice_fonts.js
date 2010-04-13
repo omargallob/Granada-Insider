@@ -11,7 +11,7 @@ jQuery.fn.nice_fonts = function(){
 	Cufon.replace('#navbar ul.backend li', {
 		   fontFamily: "Quicksand Bold",
 		   color: 'black',
-		   fontSize: "24px",
+		   fontSize: "20px",
 	  		hover: {
 	   		color: 'white'
 	  	 }
@@ -47,5 +47,4 @@ jQuery.fn.nice_fonts = function(){
 	  	 }
 	 });
 	
-		
 }
