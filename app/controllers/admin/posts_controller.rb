@@ -12,12 +12,7 @@ class Admin::PostsController < Admin::BaseController
     @post = Post.new(params[:post])
 
       if @post.save
-          if params[:post][:photo].blank?
-         		flash[:notice] = 'post was successfully updated.'
-               redirect_to( admin_posts_path) 
-          else
-            render :action => "crop"
-          end
+		   redirect_to( admin_posts_path) 
       else
         render :action => "new"
       end
@@ -33,16 +28,15 @@ class Admin::PostsController < Admin::BaseController
        respond_to do |format|
          if @post.update_attributes(params[:post])
            format.html { 
-             if params[:post][:photo].blank?
-         		flash[:notice] = 'post was successfully updated.'
+         		   flash[:notice] = 'post was successfully updated.'
                redirect_to( admin_posts_path) 
-          else
-            render :action => "crop"
-          end
+           }
+					 format.xml  { head :ok }
+
                
             
-            }
-           format.xml  { head :ok }
+          
+          
          else
            format.html { render :action => "edit" }
            format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }

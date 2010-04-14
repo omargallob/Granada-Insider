@@ -4,6 +4,9 @@ class ViewerController < ApplicationController
 		if @page.name == "whatson"
 			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at > ?",Time.now], :include => "location")
 		end
+		if @page.name == "home"
+			@articles = Post.find_sub(2)
+		end
   end
 
 end

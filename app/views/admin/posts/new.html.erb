@@ -9,6 +9,7 @@
 	<h1>New Blog Post</h1>
 	<div style="float:left">	
 	<hr />
+
 	<% form_for @post, :url => {:action => ""}, :html => { :multipart => true }  do |f| %>	
 	<%= f.error_messages %> 
 		<%= render :partial => "form", :locals => {:f =>f}%>

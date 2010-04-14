@@ -14,18 +14,7 @@
 </div>
 <div id="articles">
 	<ol>
-		<li><%= image_tag "/static/images/articles/1.png" %> <h3>Article 1</h3>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,</p>	
-		<hr />
-		<li>
-		<li><%= image_tag "/static/images/articles/2.png" %> <h3>Article 2</h3>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,</p>	
-		<hr />
-		<li>
-		<li><%= image_tag "/static/images/articles/3.png" %> <h3>Article 3</h3>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,</p>	
-		<hr />
-		<li>
+		<%= render :partial => "shared/front/center/articles/article", :collection => @articles %>
 	</ol>
 </div> 
 <div class="header">

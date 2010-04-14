@@ -1,9 +1,9 @@
 <tr>
 	
-	<td><%= post.title %></td>
+	<td><br /><%= post.title %></td>
 
 	<% if controller.action_name == "show" %>
-		<td>
+		<td> <%= image_tag post.photo.url(:thumb) if post.photo %>
 		<%= post.description  %>
 		</td>
 		<td>

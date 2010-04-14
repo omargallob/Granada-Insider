@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<services>
+<Events>
+<image>/static/images/events/event1.png</image>
+<eventName>Welcome To Granada</eventName>
+<pdate>SAT 23 MAR 2010</pdate>
+<ptime>23:00</ptime>
+<plink>http://www.stevensacks.net</plink>
+</Events>
+<Events>
+<image>/static/images/events/event2.jpg</image>
+<eventName>Wake Me Up</eventName>
+<pdate>SAT 13 MAR 2010</pdate>
+<ptime>23:00</ptime>
+<plink>http://www.stevensacks.net</plink>
+</Events>
+<Events>
+<image>/static/images/events/event3.png</image>
+<eventName>Hot Stuff</eventName>
+<pdate>SAT 14 MAR 2010</pdate>
+<ptime>23:00</ptime>
+<plink>http://www.stevensacks.net</plink>
+</Events>
+<Events>
+<image>/static/images/events/event4.png</image>
+<eventName>Remarkable</eventName>
+<pdate>SAT 5 MAR 2010</pdate>
+<ptime>23:00</ptime>
+<plink>http://www.stevensacks.net</plink>
+</Events>
+</services>
