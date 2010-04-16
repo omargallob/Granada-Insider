@@ -37,6 +37,7 @@ body #wrapper #left-column #chat { height: 432px; background-image: url(../image
 body #wrapper #left-column #social { height: 90px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -376px; float: left; width: 161px; }
 body #wrapper #left-column #advertise { height: 107px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1216px; margin-top: 13px; float: left; width: 161px; }
 body #wrapper #left-column #work { width: 161px; float: left; height: 86px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6223px; margin-top: 13px; }
+body #wrapper #main.magazine { width: 492px; float: left; height: 1648px; }
 body #wrapper #main.whatson { width: 492px; float: left; height: 1648px; }
 body #wrapper #main { width: 492px; float: left; height: 1525px; background: transparent; }
 body #wrapper #main .header { width: 492px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1323px; }
