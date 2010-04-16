@@ -13,7 +13,8 @@
 	<ul>
 		<%= render :partial => "shared/front/center/events/event", :collection => @events %>
 	</ul>
+
 </div>  
 <div id="events_footer">
-  <h4>load more items</h4>
+  <h4>	<%= will_paginate @events %></h4>
 </div>
