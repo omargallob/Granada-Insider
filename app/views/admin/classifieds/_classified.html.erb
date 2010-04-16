@@ -1,0 +1,24 @@
+<tr>
+	
+	<td><br /><%= classified.title %></td>
+
+	<% if controller.action_name == "show" %>
+		<td> <%= %>
+		<%= classified.two_liner  %>
+		</td>
+		<td>
+		<%= classified.created_at.strftime("%a %d %B %Y") %>
+		</td>
+	<% end %>
+	<td>
+	<table class="nolines">
+		<tr>
+			<td> <% if classified.parent == nil %><%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => t('options.show')), admin_classified_path(classified) %><% else %>
+				<%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => t('options.show')), "#" %>
+			<% end %></td><td>&nbsp;|&nbsp;</td>
+			<td><%= link_to image_tag ('system/admin/buttons/edit.jpg', :height => "15px", :title => t('options.edit')), edit_admin_classified_path(classified) %></td><td>&nbsp;|&nbsp;</td>
+			<td><%= link_to image_tag ('system/admin/buttons/delete.jpg', :height => "15px", :title => t('options.delete')), admin_classified_path(classified), :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+	</table>
+	</td>
+</tr>

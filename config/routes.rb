@@ -21,6 +21,7 @@ ActionController::Routing::Routes.draw do |map|
 			 admin.resources :posts
 	  	 admin.resources :users	
 	  	 admin.resources :roles	
+	  	 admin.resources :classifieds	
 			 admin.resources :events, :has_many => :egalleries
   		 admin.resources :egalleries, :has_many => :uploads
 	

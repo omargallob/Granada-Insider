@@ -1,5 +1,7 @@
 class Upload < ActiveRecord::Base
-	belongs_to :egallery
+	belongs_to :egaller
+	acts_as_list :scope => :egallery
+
 	has_attached_file :photo,
 		                :styles => {
 		                  :pagesize => ["621x374#", :jpg],          :thumb => ["82x82#", :jpg],
@@ -12,7 +14,7 @@ class Upload < ActiveRecord::Base
 		                
 	attr_accessor :crop_x, :crop_y, :crop_w, :crop_h     
 
-	acts_as_list :scope => :egallery
+
 
 	# before_edit :reset_photo
 	after_update  :reprocess_photo, :if => :cropping?
@@ -33,4 +35,14 @@ class Upload < ActiveRecord::Base
 	 def reset_photo
 		 photo.reprocess!
 	 end
+
+	def url(style=:thumb)
+		if processing
+		  still_processing_image_path
+		else
+		  self.photo.url(style)
+		end
+	end
 end
+
+

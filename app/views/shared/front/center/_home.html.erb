@@ -1,13 +1,11 @@
 
 <div class="header">
-     <h4>granada travellers guide</h4>
+     <h4>Welcome to Granada Insider</h4>
 </div>
 <div id="travellers">
 	<div id="center_travellers_logo"></div>
-	<h1><b>Lorem Ipsum</b></h1>
-	<h2><i>Dolor sit arment, consecteuctre adispiscing elit sum</i></h2>
-	<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorpert.</p>
-<p> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+	<%= @page.body %>
+
 </div> 
 <div class="header">
   <h4>latest articles</h4>
@@ -34,12 +32,10 @@
 </div>    
 <div id="classified">
 	<ol>
-		<li><h3><b>Bar job @ Gringo Hotel</b></h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p></li>
-		<li><h3><b>Bar job @ Gringo Hotel</b></h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p></li>
-		<li><h3><b>Bar job @ Gringo Hotel</b></h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p></li>
-		<li><h3><b>Bar job @ Gringo Hotel</b></h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p></li>
-		<li><h3><b>Bar job @ Gringo Hotel</b></h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p></li>
-		<li><h3><b>Bar job @ Gringo Hotel</b></h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut </p></li>
+		
+		<%= render :partial => "shared/front/center/classifieds/classified", :collection => @classifieds %>
+		<%= render :partial => "shared/front/center/classifieds/classified", :collection => @classifieds %>
+	
 	</ol>
 </div>   
 
