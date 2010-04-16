@@ -49,5 +49,15 @@ class Admin::ClassifiedsController < Admin::BaseController
        end
 	end
 
+	def destroy
+
+	 @classified = Classified.find_by_id(params[:id])
+	 @classified.destroy
+
+	 respond_to do |format|
+		 format.html { redirect_to(admin_classified_path) }
+		 format.xml  { head :ok }
+	 end
+	end
 
 end

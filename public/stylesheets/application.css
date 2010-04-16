@@ -58,7 +58,7 @@ body #wrapper #main #events_list ul li { width: 420px; margin: 10px 10px; list-s
 body #wrapper #main #events_list ul li h4 { text-align: left; width: 80%; }
 body #wrapper #main #events_list ul li hr { border: 0px; border-top: 1px solid black; }
 body #wrapper #main #events_list ul li .left { width: 84px; float: left; }
-body #wrapper #main #events_list ul li .left .left_short { width: 84px; height: 76px; float: left; background: green; }
+body #wrapper #main #events_list ul li .left .left_short { width: 84px; height: 55px; float: left; background: transparent; }
 body #wrapper #main #events_list ul li .center { width: 325px; float: left; margin-left: 10px; }
 body #wrapper #main #events_footer { width: 458px; float: left; height: 23px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6200px; margin-left: 17px; }
 body #wrapper #right-column { width: 291px; float: left; height: 1525px; background: transparent; margin-left: 8px; }

@@ -1,6 +1,8 @@
 <tr>
 	<td ><%= user.login %></td>
 	<td style="width:15px"></td>
+	<td ><%= user.roles.first.name %></td>
+	<td style="width:15px"></td>
 	<td class="title"><%= user.email %></td>
 	<td style="width:15px"></td>
 	<td class="title"><% if user.activated_at %>true<%else%>false<% end %></td>

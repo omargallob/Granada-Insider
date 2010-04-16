@@ -17,7 +17,9 @@ class Event < ActiveRecord::Base
 
 	def check_event_state?
 		if self.start_at > Time.now
-			self.close		
+			self.close	
+		else
+			self.open	
 		end
 	end
 end

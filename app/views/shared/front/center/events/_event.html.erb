@@ -5,7 +5,9 @@
 	<% if event.location %>
 	<%=  image_tag event.location.photo.url(:thumb) %>
 	<% end %>
-	<div class="left_short"></div>
+	<div class="left_short">
+		<%= image_tag "system/bg/center_social.png" %>	
+	</div>
 </div>
 <div class="center">
 	<h4><%= event.title %></h4>
