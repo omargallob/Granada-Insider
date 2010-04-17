@@ -1,5 +1,5 @@
 <div id="left-column" class="<%= @page.name %>">
-<% if @page.name == "home" || @page.name == "whatson"  ||  @page.name == "magazine" %>
+<% if @page.name == "home" || @page.name == "whatson"  ||  @page.name == "magazine" ||  @page.name == "food" ||  @page.name == "community" %>
 <%= render :partial =>"shared/front/left/#{@page.name}" %>
 <% end %>
 </div> 
@@ -9,7 +9,7 @@
 <% end %>
 </div> 
 <div id="right-column" class="<%= @page.name %>">
-<% if @page.name == "home"  ||  @page.name == "whatson"  ||  @page.name == "magazine" %>
+<% if @page.name == "home"  ||  @page.name == "whatson"  ||  @page.name == "magazine"  ||  @page.name == "food" ||  @page.name == "community" %>
  <%= render :partial =>"shared/front/right/#{@page.name}" %>
 <% end %>
 </div>
