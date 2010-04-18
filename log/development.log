@@ -61041,3 +61041,100 @@ Rendered shared/_right_ads_swf (0.1ms)
 Rendered shared/front/right/_food (2.5ms)
 Rendered shared/menu/_front (1.4ms)
 Completed in 43ms (View: 28, DB: 1) | 200 OK [http://localhost/food]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-18 12:23:45) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (14.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'home') LIMIT 1[0m
+  [4;35;1mPost Load (9.5ms)[0m   [0mSELECT * FROM `posts` WHERE (parent_id = 2) ORDER BY date DESC[0m
+  [4;36;1mEvent Load (15.8ms)[0m   [0;1mSELECT * FROM `events` WHERE (end_at < '2010-04-19 12:23:45' and start_at > '2010-04-17 12:23:45') ORDER BY start_at asc[0m
+  [4;35;1mEvent Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mLocation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mLocation Load (0.2ms)[0m   [0mSELECT * FROM `locations` WHERE (`locations`.`id` = 2) [0m
+  [4;36;1mClassified Load (3.5ms)[0m   [0;1mSELECT * FROM `classifieds` WHERE (parent_id > 0) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_home (0.8ms)
+  [4;35;1mPost Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/front/center/articles/_article (410.5ms)
+Rendered shared/front/center/articles/_article (7.4ms)
+Rendered shared/front/center/articles/_article (7.2ms)
+Rendered shared/_center_services_swf (0.7ms)
+Rendered shared/_center_services_swf (0.1ms)
+  [4;36;1mClassified Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `classifieds`[0m
+Rendered shared/front/center/classifieds/_classified (3.6ms)
+Rendered shared/front/center/classifieds/_classified (0.1ms)
+Rendered shared/front/center/classifieds/_classified (0.1ms)
+Rendered shared/front/center/classifieds/_classified (0.1ms)
+Rendered shared/front/center/classifieds/_classified (0.1ms)
+Rendered shared/front/center/classifieds/_classified (0.1ms)
+Rendered shared/front/center/_home (522.4ms)
+Rendered shared/front/right/events/_event (0.6ms)
+Rendered shared/_right_ads_swf (0.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_home (11.9ms)
+Rendered shared/menu/_front (1.8ms)
+Completed in 831ms (View: 609, DB: 49) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-18 12:23:51) [GET]
+  Parameters: {"name"=>"food"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'food') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_food (0.6ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_food (2.2ms)
+Rendered shared/menu/_front (1.2ms)
+Completed in 31ms (View: 18, DB: 1) | 200 OK [http://localhost/food]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-18 12:23:53) [GET]
+  Parameters: {"name"=>"community"}
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`name` = 'community') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_community (0.9ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_community (3.0ms)
+Rendered shared/menu/_front (1.7ms)
+Completed in 41ms (View: 24, DB: 2) | 200 OK [http://localhost/community]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-04-18 12:23:55) [GET]
+  Parameters: {"name"=>"classified"}
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (parent_id IS NULL) ORDER BY position[0m
+  [4;36;1mPage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`name` = 'classified') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+Rendered shared/front/left/_classified (0.7ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/_right_ads_swf (0.1ms)
+Rendered shared/front/right/_classified (2.2ms)
+Rendered shared/menu/_front (1.3ms)
+Completed in 31ms (View: 18, DB: 1) | 200 OK [http://localhost/classified]
