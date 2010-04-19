@@ -1,5 +1,5 @@
 class Upload < ActiveRecord::Base
-	belongs_to :egaller
+	belongs_to :egallery
 	acts_as_list :scope => :egallery
 
 	has_attached_file :photo,

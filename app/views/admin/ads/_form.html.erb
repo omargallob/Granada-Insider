@@ -1,0 +1,23 @@
+<p>
+	  <%= f.label :title %><br/>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :rating %><br/>
+  <%= f.select :rating, 1..10 %>
+</p>
+<p>
+	  <%= f.label :description %><br/>
+  <%= f.text_area :description %>
+</p>
+<p>
+  <%= f.label :photo %><br/>
+  <%= f.file_field :photo %>
+</p>
+<p>
+  <%= f.label :valid_til %><br/>
+  <%= f.date_select :valid_til %>
+</p>
+  <%= f.hidden_field :client_id, :value => @parent.id %>
+
+

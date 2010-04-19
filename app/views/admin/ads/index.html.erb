@@ -1,0 +1,32 @@
+
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "new", new_admin_client_ad_path(@parent.id) %></li>
+	</ul>
+<% end %>
+
+
+<div id="content">
+	<h1>Client: <%=  @parent.title %> <br />total ads:<%= "0" %></h1>
+
+	<div style="padding:10px;">
+		<%= @parent.description %>
+	</div>
+
+
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th style="width:150px">thumb</th>
+				<th style="width:150px">title</th>
+				<th style="width:200px">created</th>
+				<th style="width:200px">valid til</th>
+				<th style="width:150px">options</th>
+			</tr>			
+			<%= render :partial => "ad", :collection => @ads %>
+		</table>
+	</div>
+</div>
+

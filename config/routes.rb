@@ -1,5 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
+  
+	map.ads '/rss/ads/:client_id', :controller => 'rss',:action => "ads"
+	
+	map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
@@ -9,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
   map.resource :session
+	map.resources :rss 
 
 
 
@@ -21,7 +25,8 @@ ActionController::Routing::Routes.draw do |map|
 			 admin.resources :posts
 	  	 admin.resources :users	
 	  	 admin.resources :roles	
-	  	 admin.resources :classifieds	
+	  	 admin.resources :classifieds
+	  	 admin.resources :clients, :has_many => :ads	
 			 admin.resources :events, :has_many => :egalleries
   		 admin.resources :egalleries, :has_many => :uploads
 	

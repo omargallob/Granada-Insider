@@ -10,6 +10,8 @@ class Location < ActiveRecord::Base
 			                :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
 			                :url =>  "/location/:id/:style/:basename.jpg",
 			                :path => "/assets/location/:id/:style/:basename.jpg"
+
+	has_one :client
 			                
 	attr_accessor :crop_x, :crop_y, :crop_w, :crop_h     
 

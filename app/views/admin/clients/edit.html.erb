@@ -1,0 +1,23 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", admin_clients_path(@client.parent)%></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h1>New Client</h1>
+	<div style="float:left">	
+	<hr />
+	<% form_for @client, :url => {:action => "update"}, :html => { :multipart => true }  do |f| %>	
+	<%= f.error_messages %> 
+		<%= render :partial => "form", :locals => {:f =>f}%>
+		<p>
+		  <%= f.submit 'Create' %>
+		</p>
+	<% end %>
+	</div>
+</div>
+<% content_for(:script) do %>
+
+<%= render :partial => "shared/tinymce" %>
+<% end %>

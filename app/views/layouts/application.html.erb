@@ -42,7 +42,7 @@
   </head>
   <body>
    <div id="wrapper" class="<%= @page.name %>">
-      <div id="header">
+      <div id="header" class="<%= @page.name %>">
         <div id="logo">
          
         </div> 
@@ -50,7 +50,11 @@
 				<div id="navbar">
         	<%= render :partial =>"shared/menu/front" %>
         </div>               
-
+				<% if @page.name == "whatson" %>
+					<div id="sub_navbar">
+						<%= yield :sub_menu %>
+					</div>
+				<% end %>	
       </div>  
 		
 		<%= yield %>

@@ -1,0 +1,24 @@
+
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", "#" %></li>
+		<li><%= link_to "new", new_admin_client_path %></li>
+	</ul>
+<% end %>
+
+
+
+<div id="content">
+	<h1>Client Categories(<%= @clients.size %>)</h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th style="width:200px">title</th>
+				<th style="width:150px">options</th>
+			</tr>			
+			<%= render :partial => "client", :collection => @clients %>
+		</table>
+	</div>
+</div>
+
