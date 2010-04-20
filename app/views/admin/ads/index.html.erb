@@ -1,7 +1,7 @@
 
 <% content_for(:sub_menu) do %>
 	<ul>
-		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "Back",admin_client_path(@parent.parent.id) %></li>
 		<li><%= link_to "new", new_admin_client_ad_path(@parent.id) %></li>
 	</ul>
 <% end %>

@@ -3,9 +3,9 @@ class Ad < ActiveRecord::Base
 belongs_to :client
 has_attached_file :photo,
 		                :styles => {
-		                  :pagesize => ["621x374#", :jpg],          :thumb => ["82x82#", :jpg],
+		                  :pagesize => ["250x250#", :jpg],          :thumb => ["82x82#", :jpg],
 		                },:processors => [:cropper],:convert_options => {  
-		                    :thumb => "-resize 83x82 -gravity center"
+		                    :thumb => "-resize 83x82 -gravity center", :pagesize => "-resize 250x250 -gravity center"
 		              	},
 		                :storage => :s3,
 		                :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
