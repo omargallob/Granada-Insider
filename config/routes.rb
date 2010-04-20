@@ -13,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
 	map.resources :rss 
-
+	map.crossdomain '/crossdomain.xml'
 
 
 

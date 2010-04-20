@@ -4,7 +4,7 @@
 <% end %>
 </div> 
 <div id="main">
-<% if @page.name == "home" ||  @page.name == "whatson" ||  @page.name == "magazine" ||  @page.name == "food" ||  @page.name == "community" ||  @page.name == "classified" ||  @page.name == "about" %>
+<% if @page.name == "home" ||  @page.name == "whatson" ||  @page.name == "magazine" ||  @page.name == "food" ||  @page.name == "community" ||  @page.name == "classified"  %>
 <%= render :partial =>"shared/front/center/#{@page.name}" %>
 <% end %>
 </div> 
