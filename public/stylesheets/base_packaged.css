@@ -9,7 +9,7 @@ q:before, q:after, blockquote:before, blockquote:after {content: ""}
 img a {border: none}
   p {font-family: Helvetica; font-size: 12px}
 .center_service {height: 200px; width: 200px; margin: 15px}
-.right_sponsored {height: 250px; width: 250px; float: left; margin: 9px 0 4px 9px}
+.right_sponsored {height: 250px; width: 250px; float: left; margin: 10px 0 3px 9px}
 #main p {float: left; width: 315px; margin-top: 10px; padding-right: 10px}
 #main #travellers {text-align: left}
 #main #travellers #center_travellers_logo {height: 115px; width: 81px; background: url(../images/system/bg/versionSprites.png); background-position: 0 -7803px; background-repeat: no-repeat; float: left; margin: 30px 40px 60px 40px}
