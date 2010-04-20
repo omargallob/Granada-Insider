@@ -21,6 +21,20 @@ jQuery.fn.nice_fonts = function(){
 		   color: 'white',
 		   fontSize: "24px",
 	 });
+	Cufon.replace('#sub_navbar ul li.header span', {
+		   fontFamily: "Quicksand Bold",
+		   color: 'white',
+		   fontSize: "15px",
+	 });
+
+	Cufon.replace('#sub_navbar ul li.regular', {
+		   fontFamily: "Quicksand Bold",
+		   color: 'black',
+		   fontSize: "14px",
+	  		hover: {
+	   		color: 'white'
+	  	 }
+	 });
 	Cufon.replace('h1', {
 		   fontFamily: "Quicksand Bold",
 		   color: 'black',
