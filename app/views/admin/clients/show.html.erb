@@ -9,6 +9,8 @@
 
 <div id="content">
 	<h1>Client Category: <%=  @parent.title %> (total <%= @clients.size || "0" %>)</h1>
+	
+	<%= render :partial => "shared/right_ads_swf_d.html.erb" %>
 
 	<div id="itsthetable">	
 		<table class="page_list">

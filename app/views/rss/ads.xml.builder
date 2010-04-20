@@ -6,7 +6,7 @@ xml.services do
 
 				 client.ads.each do |ad|
 					xml.advert do
-					xml.image ad.photo.url(:thumb)
+					xml.image ad.photo.url(:pagesize)
 					xml.link "/client/"+ad.client_id.to_s
 					end
 				 end
