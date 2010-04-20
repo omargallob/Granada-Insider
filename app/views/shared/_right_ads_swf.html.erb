@@ -1,6 +1,6 @@
 <script type="text/javascript">
 		var flashvars = {};
-		flashvars.sponsoredxml = "/static/feed/ads.xml";
+		flashvars.sponsoredxml = "/rss/ads/1";
 		flashvars.font = "font.swf";
 		var attributes = {};
 		attributes.wmode = "transparent";
@@ -8,7 +8,7 @@
 		var params = {}
 		params.allowscriptaccess = "always";
 
-		swfobject.embedSWF("/swf/sponsoredflash.swf", "pcontainer", "250", "252", "9", "/swf/expressInstall.swf", flashvars, params,attributes);
+		swfobject.embedSWF("http://s3.amazonaws.com/granadainsider-development/swf/sponsoredflash.swf", "pcontainer", "250", "252", "9", "/swf/expressInstall.swf", flashvars, params,attributes);
 </script>
 
 
