@@ -1,0 +1,36 @@
+<div class="header">
+     <h4>Classifieds & Ads</h4>
+</div>
+<div id="travellers">
+	<div id="center_travellers_logo"></div>
+	<%= @page.body %>
+</div> 
+
+<div class="header">
+  <h4>newest ads</h4>
+</div>
+<div id="articles" class="magazine">
+<ol id="classifieds">
+		<%= render :partial => "shared/front/center/classifieds/classified", :collection => @classifieds %>
+	</ol>
+</div> 
+
+<div class="header">
+  <h4>services</h4>
+</div>     
+<div class="services">
+	<%= render :partial => "shared/center_services_swf" %>	
+</div>   
+<div class="services services_right">
+	<%= render :partial => "shared/center_services_swf" %>		
+</div> 
+<div id="small_header">
+  <h4>granada news</h4></div>
+<div id="news">
+	<ol>
+		<li>
+		<h1>Title</h1>
+	<h3><%= Time.now.strftime("%a %d %B %Y")%> </h3><p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p></li>
+	</ol>
+</div>  

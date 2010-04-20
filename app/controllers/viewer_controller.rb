@@ -13,6 +13,13 @@ class ViewerController < ApplicationController
 			@articles = Post.find_all_sub.paginate :page => params[:page],:per_page => 6
 			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["end_at < ? and start_at > ?",Time.now + 1.day,Time.now - 1.day], :include => "location")
 		end
+		if @page.name == "food"
+			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["end_at < ? and start_at > ?",Time.now + 1.day,Time.now - 1.day], :include => "location")
+		end
+		if @page.name == "classified"
+			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["end_at < ? and start_at > ?",Time.now + 1.day,Time.now - 1.day], :include => "location")
+			@classifieds = Classified.find_all_sub
+		end
   end
 
 end
