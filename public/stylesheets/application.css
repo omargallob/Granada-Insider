@@ -42,6 +42,7 @@ body #wrapper #left-column #chat { height: 432px; background-image: url(../image
 body #wrapper #left-column #social { height: 90px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -376px; float: left; width: 161px; }
 body #wrapper #left-column #advertise { height: 107px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1216px; margin-top: 13px; float: left; width: 161px; }
 body #wrapper #left-column #work { width: 161px; float: left; height: 86px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6223px; margin-top: 13px; }
+body #wrapper #left-column #magazine.magazine { background-position: 0px -8686px; height: 204px; }
 body #wrapper #main.magazine { width: 492px; float: left; height: 1648px; }
 body #wrapper #main.whatson { width: 492px; float: left; height: 1648px; }
 body #wrapper #main { width: 492px; float: left; height: 1525px; background: transparent; }
@@ -68,7 +69,11 @@ body #wrapper #main #events_list ul li hr { border: 0px; border-top: 1px solid b
 body #wrapper #main #events_list ul li .left { width: 84px; float: left; }
 body #wrapper #main #events_list ul li .left .left_short { width: 84px; height: 55px; float: left; background: transparent; }
 body #wrapper #main #events_list ul li .center { width: 325px; float: left; margin-left: 10px; }
+body #wrapper #main #articles.magazine { width: 492px; height: 744px; background-position: 0 -7942px; }
+body #wrapper #main #articles.magazine .pagination { float: left; margin-left: 22px; }
 body #wrapper #main #events_footer { width: 458px; float: left; height: 23px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6200px; margin-left: 17px; }
+body #wrapper #main #events_footer h4 a { text-decoration: none; }
+body #wrapper #main #events_footer.magazine { margin: -4px 17px 13px 17px; }
 body #wrapper #right-column { width: 291px; float: left; height: 1525px; background: transparent; margin-left: 8px; }
 body #wrapper #right-column .header { width: 291px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2985px; }
 body #wrapper #right-column #whatson { width: 291px; float: left; width: 291px; float: left; height: 322px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -3010px; }
