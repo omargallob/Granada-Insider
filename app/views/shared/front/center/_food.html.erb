@@ -10,7 +10,9 @@
   <h4>latest reviews</h4>
 </div>
 <div id="articles" class="magazine">
-
+<ol>
+	<%= render :partial => "shared/front/center/articles/article", :collection => @reviews %>
+</ol>
 </div> 
 
 <div class="header">
