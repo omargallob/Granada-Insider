@@ -1,0 +1,24 @@
+
+
+<div id="content">
+	<h1>New Location Type</h1>
+
+	<div id="tabs" class="ui-tabs">
+
+	  <% form_for :location_type,@location_type, :url => {:action => ""}  do |f| %>	
+		  <%= render :partial => "form", :locals => {:f =>f}%>
+		  <p>
+		    <%= f.submit 'Create' %>
+		  </p>
+	  <% end %>
+	
+	</div>
+</div>
+
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+	</ul>
+<% end %>
+
+

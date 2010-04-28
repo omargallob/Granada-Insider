@@ -1,6 +1,10 @@
 <div style="float:left">
 
  <p>
+   <%= f.label :location_type_id %><br />
+   <%= f.collection_select :location_type_id, LocationType.find(:all), :id, :title, :include_blank => "-" %>
+ </p>
+ <p>
    <%= f.label :title %><br />
    <%= f.text_field :title %>
  </p>
