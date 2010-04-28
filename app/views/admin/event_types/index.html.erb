@@ -1,2 +1,26 @@
-<h1>Admin::EventTypes#index</h1>
-<p>Find me in app/views/admin/event_types/index.html.erb</p>
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "New", new_admin_event_type_path %></li>
+	</ul>
+<ul class="variables">
+		<li><h4>Related:</h4></li>
+		<li><h3>Events</h3></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h1>Event Types</h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th>Name</th>
+				<th></th>
+				<th>Options </th>
+
+			</tr>			
+			<%= render :partial => "type", :collection => @types %>
+		</table>
+	</div>
+</div>

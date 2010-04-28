@@ -28,6 +28,7 @@ ActionController::Routing::Routes.draw do |map|
 	  	 admin.resources :classifieds
 	  	 admin.resources :clients, :has_many => :ads	
 			 admin.resources :events, :has_many => :egalleries
+			 admin.resources :event_types
   		 admin.resources :egalleries, :has_many => :uploads
 	
 
