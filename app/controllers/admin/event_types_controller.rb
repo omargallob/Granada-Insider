@@ -37,4 +37,25 @@ class Admin::EventTypesController < Admin::BaseController
      format.xml  { head :ok }
    end
  end
+ def edit
+   @event_type = EventType.find(params[:id])
+ end
+ def update
+		@event_type = EventType.find_by_id(params[:id])
+    respond_to do |format|
+      if @event_type.update_attributes(params[:event_type])
+       flash[:notice] = 'EventType was successfully UPDATED.'
+       format.html {
+          
+            flash[:notice] = 'EventType was successfully updated.'
+            redirect_to(admin_event_types_path)
+         
+         }
+       format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @event_type.errors, :status => :unprocessable_entity }
+      end
+    end
+ end
 end
