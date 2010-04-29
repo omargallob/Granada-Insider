@@ -55,17 +55,20 @@
 						<ul>
 							<li class="header"><span>Listings</span></li>
 							<% EventType.find(:all, :order => "id").each do |type|%>
-								<% if params[:filter_e] and type.title.gsub(/ /,"-").downcase == params[:filter_e] %>
-									<li  class="active"><%= link_to type.title, whatson_filter_by_location_path(type.title.gsub(/ /,"-").downcase) %></li>
+								<% if params[:filter] and type.title.gsub(/ /,"-").downcase == params[:filter] %>
+									<li  class="active"><%= link_to type.title, whatson_filter_path("events",type.title.gsub(/ /,"-").downcase) %></li>
 								<% else %>
-									<li  class="regular"><%= link_to type.title, whatson_filter_by_location_path(type.title.gsub(/ /,"-").downcase) %></li>
+									<li  class="regular"><%= link_to type.title, whatson_filter_path("events",type.title.gsub(/ /,"-").downcase) %></li>
 								<% end %>
 							<% end %>
 							<li class="header"><span class="small">Venues</span></li>
-							<li class="regular">Bars</li>
-							<li class="regular">Live Venues</li>
-							<li class="regular">Clubs</li>
-							<li class="regular">Theatres</li>
+								<% LocationType.find(:all, :order => "id").each do |venue|%>
+									<% if params[:filter] and venue.title.gsub(/ /,"-").downcase == params[:filter] %>
+										<li  class="active"><%= link_to venue.title, whatson_filter_path("venues",venue.title.gsub(/ /,"-").downcase) %></li>
+									<% else %>
+										<li  class="regular"><%= link_to venue.title, whatson_filter_path("venues",venue.title.gsub(/ /,"-").downcase) %></li>
+									<% end %>
+								<% end %>
 						</ul>
 					</div>
 				<% end %>	

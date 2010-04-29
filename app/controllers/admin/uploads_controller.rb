@@ -1,14 +1,14 @@
 class Admin::UploadsController < ApplicationController
 
 	def	create
-	 @upload = TempUpload.new(params[:upload])
+	 @upload = Upload.new(params[:upload])
 
  	 @egallery = Egallery.find_by_id(params[:egallery_id])
 	 @upload.egallery_id = @egallery.id			
 		respond_to do |format|
     	if @upload.save
 			
-	    @upload.queue_move_to_s3
+	   # =>  @upload.queue_move_to_s3
 
 			
 			 format.html {

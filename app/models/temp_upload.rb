@@ -1,5 +1,5 @@
 class TempUpload < Upload
- has_attached_file :photo, :path => "#{RAILS_ROOT}/tmp/uploads/:id/:basename.:extension"
+ has_attached_file :photo, :path => "#{RAILS_ROOT}/tmp/uploads/:id/:basename.jpg"
 
 	def queue_move_to_s3
 	  self.send_later(:perform)

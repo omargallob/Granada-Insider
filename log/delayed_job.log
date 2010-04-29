@@ -1,0 +1,30 @@
+# Logfile created on Thu Apr 29 16:06:42 +0200 2010 by logger.rb/22285
+2010-04-29T16:06:42+0200: *** Starting job worker delayed_job host:ogs-MBP.local pid:2579
+2010-04-29T16:06:42+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+Could not load object for job: Couldn't find TempUpload with ID=34
+2010-04-29T16:06:42+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 completed after 0.0136
+2010-04-29T16:06:42+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+Could not load object for job: Couldn't find TempUpload with ID=35
+2010-04-29T16:06:42+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 completed after 0.0019
+2010-04-29T16:06:42+0200: 2 jobs processed at 21.6795 j/s, 0 failed ...
+2010-04-29T16:08:02+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+2010-04-29T16:08:09+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 failed with ActiveRecord::RecordInvalid: Validation failed: Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/madrid-vicente_calderon,2579,0.JPG is not recognized by the 'identify' command., Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/madrid-vicente_calderon,2579,0.JPG is not recognized by the 'identify' command. - 2 failed attempts
+2010-04-29T16:08:09+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+2010-04-29T16:08:11+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 failed with ActiveRecord::RecordInvalid: Validation failed: Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/madrid-vicente_calderon,2579,1.JPG is not recognized by the 'identify' command., Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/madrid-vicente_calderon,2579,1.JPG is not recognized by the 'identify' command. - 3 failed attempts
+2010-04-29T16:08:11+0200: 2 jobs processed at 0.2295 j/s, 2 failed ...
+2010-04-29T16:09:01+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+2010-04-29T16:09:02+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 failed with ActiveRecord::RecordInvalid: Validation failed: Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/test,2579,0.jpg is not recognized by the 'identify' command., Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/test,2579,0.jpg is not recognized by the 'identify' command. - 2 failed attempts
+2010-04-29T16:09:02+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+2010-04-29T16:09:04+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 failed with ActiveRecord::RecordInvalid: Validation failed: Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/test,2579,1.jpg is not recognized by the 'identify' command., Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/test,2579,1.jpg is not recognized by the 'identify' command. - 3 failed attempts
+2010-04-29T16:09:04+0200: 2 jobs processed at 0.6970 j/s, 2 failed ...
+2010-04-29T16:09:29+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+2010-04-29T16:09:30+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 failed with ActiveRecord::RecordInvalid: Validation failed: Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/paddys_day_2010_030,2579,0.JPG is not recognized by the 'identify' command., Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/paddys_day_2010_030,2579,0.JPG is not recognized by the 'identify' command. - 0 failed attempts
+2010-04-29T16:09:30+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+2010-04-29T16:09:32+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 failed with ActiveRecord::RecordInvalid: Validation failed: Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/paddys_day_2010_030,2579,1.JPG is not recognized by the 'identify' command., Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/paddys_day_2010_030,2579,1.JPG is not recognized by the 'identify' command. - 1 failed attempts
+2010-04-29T16:09:32+0200: 2 jobs processed at 0.6985 j/s, 2 failed ...
+2010-04-29T16:10:07+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+2010-04-29T16:10:08+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 failed with ActiveRecord::RecordInvalid: Validation failed: Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/paddys_day_2010_047,2579,0.JPG is not recognized by the 'identify' command., Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/paddys_day_2010_047,2579,0.JPG is not recognized by the 'identify' command. - 2 failed attempts
+2010-04-29T16:10:08+0200: * [Worker(delayed_job host:ogs-MBP.local pid:2579)] acquired lock on TempUpload#perform
+2010-04-29T16:10:09+0200: * [JOB] delayed_job host:ogs-MBP.local pid:2579 failed with ActiveRecord::RecordInvalid: Validation failed: Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/paddys_day_2010_047,2579,1.JPG is not recognized by the 'identify' command., Photo /var/folders/ZJ/ZJA5bhfUHbqKq+1W507Px++++TI/-Tmp-/paddys_day_2010_047,2579,1.JPG is not recognized by the 'identify' command. - 3 failed attempts
+2010-04-29T16:10:09+0200: 2 jobs processed at 0.7453 j/s, 2 failed ...
+2010-04-29T16:10:38+0200: Exiting...

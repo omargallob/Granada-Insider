@@ -37,4 +37,25 @@ class Admin::LocationtypesController < Admin::BaseController
       format.xml  { head :ok }
     end
   end
+  def edit
+    @location = LocationType.find_by_id(params[:id])
+  end
+  def update
+ 		@location = LocationType.find_by_id(params[:id])
+     respond_to do |format|
+       if @location.update_attributes(params[:location_type])
+        flash[:notice] = 'EventType was successfully UPDATED.'
+        format.html {
+
+             flash[:notice] = 'EventType was successfully updated.'
+             redirect_to(admin_locationtypes_path)
+
+          }
+        format.xml  { head :ok }
+       else
+         format.html { render :action => "edit" }
+         format.xml  { render :xml => @location.errors, :status => :unprocessable_entity }
+       end
+     end
+  end
 end
