@@ -26,6 +26,7 @@ img a {border: none}
 #right-column #whatson ol {margin-top: 11px}
 #right-column #whatson ol li {float: left; width: 220px; margin-top: 15px; margin-left: 40px}
 #right-column #whatson ol li h3 {text-transform: uppercase}
+#right-column #double_advertisement .right_sponsored {margin-top: 9px; margin-bottom: 4px}
   .ec-calendar {font-family: verdana, arial, helvetica, sans-serif; font-size: 11px; line-height: 14px; margin: 0; padding: 0; border-bottom: 1px solid #d5d5d5}
  .ec-calendar-header {padding: 5px 0; width: 100%; table-layout: fixed}
 .ec-month-name {font-size: 16px; font-weight: bold}
