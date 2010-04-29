@@ -55,7 +55,7 @@
 						<ul>
 							<li class="header"><span>Listings</span></li>
 							<% EventType.find(:all).each do |type|%>
-								<% if params[:filter_e] and type.title.gsub(/ /,"-") == params[:filter_e] %>
+								<% if params[:filter_e] and type.title.gsub(/ /,"-").downcase == params[:filter_e] %>
 									<li  class="active"><%= link_to type.title, whatson_filter_by_location_path(type.title.gsub(/ /,"-").downcase) %></li>
 								<% else %>
 									<li  class="regular"><%= link_to type.title, whatson_filter_by_location_path(type.title.gsub(/ /,"-").downcase) %></li>
