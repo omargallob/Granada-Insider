@@ -21,3 +21,4 @@ p { font-family: Helvetica; font-size: 12px; }
 #right-column #whatson ol { margin-top: 11px; }
 #right-column #whatson ol li { float: left; width: 220px; margin-top: 15px; margin-left: 40px; }
 #right-column #whatson ol li h3 { text-transform: uppercase; }
+#right-column #double_advertisement .right_sponsored { margin-top: 9px; margin-bottom: 4px; }

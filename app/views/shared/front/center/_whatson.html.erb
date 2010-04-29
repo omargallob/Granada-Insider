@@ -8,7 +8,12 @@
     <h1>granada night life</h1>
   </div>
   <div class="subheader">
-    <h4>Upcoming Events</h4>
+	<% if params[:type] || params[:filter] %>
+	 <h4><%= params[:filter].gsub(/-/," ") %></h4>		
+	<% else %>
+	 <h4>Upcoming Events</h4>
+	<% end %>
+   
   </div>
 	<ul>
 		<% if params[:type] || params[:filter] %>
