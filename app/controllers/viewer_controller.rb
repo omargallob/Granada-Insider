@@ -3,7 +3,7 @@ class ViewerController < ApplicationController
 		@page = Page.find_by_name(params[:name])
 		if @page.name == "whatson"
 		  if params[:filter_e]
-		    title = params[:filter_e].gsub(/-/," ")
+		    title = params[:filter_e].gsub(/-/," ").capitalize
 		    @event_type = EventType.find_by_title(title)
 		    @events = @event_type.events.paginate :page => params[:page],:per_page => 6
 		  else
