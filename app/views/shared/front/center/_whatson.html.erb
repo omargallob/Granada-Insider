@@ -11,7 +11,15 @@
     <h4>Upcoming Events</h4>
   </div>
 	<ul>
-		<%= render :partial => "shared/front/center/events/event", :collection => @events %>
+		<% if params[:filter_e] || params[:filter_l] %>
+			<% if params[:filter_e] %>
+				<%= render :partial => "shared/front/center/events/event", :collection => @events %>
+			<% else %>
+				<%= render :partial => "shared/front/center/events/location", :collection => @locations %>		
+			<% end %>
+		<% else %>
+			<%= render :partial => "shared/front/center/events/event", :collection => @events %>
+		<% end %>
 	</ul>
 
 </div>  

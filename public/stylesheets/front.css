@@ -14,7 +14,7 @@ p { font-family: Helvetica; font-size: 12px; }
 #main #articles ol li img { float: left; margin: 0 20px 0 40px; }
 #main #articles ol li h3 { float: left; font-weight: bold; }
 #main #articles ol li hr { background: #4d4d4d; float: left; width: 450px; border: 0px none; height: 1px; margin-left: 21px; }
-#main #classified ol { margin-top: 11px; }
+#main #classified ol { margin-top: 6px; float: left; height: 320px; overflow-y: scroll; width: 98%; }
 #main #classified ol li { float: left; width: 187px; margin-left: 40px; margin-top: 15px; }
 #main #classified ol li p { width: 187px; margin-top: 0; }
 
