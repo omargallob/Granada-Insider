@@ -66,5 +66,12 @@ jQuery.fn.nice_fonts = function(){
 	   		color: 'white'
 	  	 }
 	 });
-	
+	Cufon.replace('#footer .column h5', {
+		   fontFamily: "Quicksand Bold",
+		   color: 'white',
+		   fontSize: "16px",
+	  		hover: {
+	   		color: 'white'
+	  	 }
+	 });
 }

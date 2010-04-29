@@ -2,9 +2,9 @@
 	<% for page in @pages %>
 		<li id="<%= page.name %>" class="<% if page.name == @page.name %>current_page_item<% else %>regular<% end %>">
 		<% if page.name == "community" %>
-			<%= link_to page.navlabel, "#", :rel => "blue" %></li>    
+			<%= link_to page.navlabel, "#", :rel => "#9197a3" %></li>    
 		<% else %>
-			<%= link_to page.navlabel, view_page_path(page.name), :rel => "blue" %></li>    
+			<%= link_to page.navlabel, view_page_path(page.name), :rel => "#9197a3" %></li>    
 		<% end %>
 	<% end %>
 </ul> 

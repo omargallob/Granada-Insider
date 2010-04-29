@@ -1,0 +1,20 @@
+<div id="sub_navbar">
+	<ul>
+		<li class="header"><span>Listings</span></li>
+		<% EventType.find(:all, :order => "id").each do |type|%>
+			<% if params[:filter] and type.title.gsub(/ /,"-").downcase == params[:filter] %>
+				<li  class="active"><%= link_to type.title, whatson_filter_path("events",type.title.gsub(/ /,"-").downcase) %></li>
+			<% else %>
+				<li  class="regular"><%= link_to type.title, whatson_filter_path("events",type.title.gsub(/ /,"-").downcase) %></li>
+			<% end %>
+		<% end %>
+		<li class="header"><span class="small">Venues</span></li>
+			<% LocationType.find(:all, :order => "id").each do |venue|%>
+				<% if params[:filter] and venue.title.gsub(/ /,"-").downcase == params[:filter] %>
+					<li  class="active"><%= link_to venue.title, whatson_filter_path("venues",venue.title.gsub(/ /,"-").downcase) %></li>
+				<% else %>
+					<li  class="regular"><%= link_to venue.title, whatson_filter_path("venues",venue.title.gsub(/ /,"-").downcase) %></li>
+				<% end %>
+			<% end %>
+	</ul>
+</div>

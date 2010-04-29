@@ -22,3 +22,8 @@ p { font-family: Helvetica; font-size: 12px; }
 #right-column #whatson ol li { float: left; width: 220px; margin-top: 15px; margin-left: 40px; }
 #right-column #whatson ol li h3 { text-transform: uppercase; }
 #right-column #double_advertisement .right_sponsored { margin-top: 9px; margin-bottom: 4px; }
+
+#footer #holder { margin: 80px auto 0px auto; width: 940px; }
+#footer #holder .column { width: 170px; float: left; text-align: left; margin-right: 15px; }
+#footer #holder .column ul { float: left; }
+#footer #holder .column ul li { float: left; width: 100%; color: #414141; line-height: 24px; font-family: Arial; }

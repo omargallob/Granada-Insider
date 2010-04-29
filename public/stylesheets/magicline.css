@@ -18,6 +18,6 @@
 #main-menu li { display: inline; }
 #main-menu li a { position: relative; z-index: 200; color: #bbb; font-size: 14px; display: block; float: left; padding: 6px 0px 4px 0px; text-decoration: none; text-transform: uppercase; }
 #main-menu li a:hover { color: white; }
-#main-menu #magic-line{ position: absolute; top: 0; left: 0; background: rgba(220, 133, 5, 0.9); z-index: 100; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 0 4px;}
+#main-menu #magic-line{ position: absolute; top: 0; left: 0; background: #9197a3; z-index: 100; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 0 4px;}
 
 .current_page_item a, .current_page_item_two a { color: white !important; }
