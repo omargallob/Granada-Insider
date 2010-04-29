@@ -2,7 +2,8 @@ class Event < ActiveRecord::Base
   has_event_calendar
   belongs_to :location
 	has_many :egalleries
-
+  
+	belongs_to :event_type
   validates_length_of       :description,    :within => 140..170
 
 	include AASM

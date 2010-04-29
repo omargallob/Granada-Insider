@@ -38,6 +38,9 @@ ActionController::Routing::Routes.draw do |map|
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.view_page ':name', :controller => 'viewer', :action => 'show'
+  map.whatson_filter_by_event '/whatson/:filter_e', :controller => 'viewer', :action => "show", :name =>"whatson"
+  map.whatson_filter_by_location '/whatson/:filter_l', :controller => 'viewer', :action => "show", :name =>"whatson"
+  
 
   map.root :controller => "viewer", :action=>"show", :name => 'home'
 

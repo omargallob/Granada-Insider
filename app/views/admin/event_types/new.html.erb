@@ -1,2 +1,22 @@
-<h1>Admin::EventTypes#new</h1>
-<p>Find me in app/views/admin/event_types/new.html.erb</p>
+<div id="content">
+	<h1>New event Type</h1>
+
+	<div id="tabs" class="ui-tabs">
+
+	  <% form_for :event_type,@event_type, :url => {:action => ""}  do |f| %>	
+		  <%= render :partial => "form", :locals => {:f =>f}%>
+		  <p>
+		    <%= f.submit 'Create' %>
+		  </p>
+	  <% end %>
+	
+	</div>
+</div>
+
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+	</ul>
+<% end %>
+
+

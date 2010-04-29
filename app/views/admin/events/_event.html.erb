@@ -1,6 +1,7 @@
 <tr>
+	<td style="padding:0 10px 0 0"><%= event.event_type.title if event.event_type %></td>
 	<td class="title"><%= event.title %></td>
-	<td  ><%= event.location.title if event.location %></td>
+	<td style="padding:0 10px 0 0"><%= event.location.title if event.location %></td>
 	<td><%= event.start_at.strftime("%a %d %B %Y") %></td>
 	<td style="width:15px"></td>
 	<td><%= event.state  %></td>

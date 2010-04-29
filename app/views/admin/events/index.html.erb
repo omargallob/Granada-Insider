@@ -3,6 +3,10 @@
 		<li><%= link_to "Back", :back %></li>
 		<li><%= link_to "New", new_admin_event_path %></li>
 	</ul>
+	<ul class="variables">
+			<li><h4>Related:</h4></li>
+			<li><h3><%= link_to "event types", admin_event_types_path %></h3></li>
+	</ul>
 <% end %>
 
 <%= event_calendar %>
@@ -12,6 +16,8 @@
 	<div id="itsthetable">	
 		<table class="page_list">
 			<tr>
+				
+				<th>Type</th>
 				<th>Title</th>
 				<th>Location</th>
 				<th>Date start</th>	

@@ -54,11 +54,13 @@
 					<div id="sub_navbar">
 						<ul>
 							<li class="header"><span>Listings</span></li>
-							<li  class="regular">Live Music</li>
-							<li class="regular">Night Life</li>
-							<li class="regular">Theatre</li>
-							<li class="regular">Art</li>
-							<li class="regular">Culture</li>
+							<% EventType.find(:all).each do |type|%>
+								<% if type.title.gsub(/ /,"-") == params[:filter_e]%>
+									<li  class="active"><%= link_to type.title, whatson_filter_by_location_path(type.title.gsub(/ /,"-").downcase) %></li>
+								<% else %>
+									<li  class="regular"><%= link_to type.title, whatson_filter_by_location_path(type.title.gsub(/ /,"-").downcase) %></li>
+								<% end %>
+							<% end %>
 							<li class="header"><span class="small">Venues</span></li>
 							<li class="regular">Bars</li>
 							<li class="regular">Live Venues</li>

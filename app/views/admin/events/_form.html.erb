@@ -1,5 +1,9 @@
 <div style="float:left">
  <p>
+   <%= f.label :event_type_id %><br />
+   <%= f.collection_select :event_type_id,EventType.find(:all), :id, :title, :include_blank => "-" %>
+ </p>
+ <p>
    <%= f.label :name %><br />
    <%= f.text_field :name %>
  </p>

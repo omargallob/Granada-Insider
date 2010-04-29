@@ -2,7 +2,13 @@ class ViewerController < ApplicationController
   def show
 		@page = Page.find_by_name(params[:name])
 		if @page.name == "whatson"
-			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at > ?",Time.now], :include => "location").paginate :page => params[:page],:per_page => 6
+		  if params[:filter_e]
+		    @event_type = EventType.find_by_title(params[:filter_e].gsub(/-/," ").capitalize)
+		    @events = @event_type.events.paginate :page => params[:page],:per_page => 6
+		  else
+		    @events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at > ?",Time.now], :include => "location").paginate :page => params[:page],:per_page => 6
+		  end
+			
 		end
 		if @page.name == "home"
 			@articles = Post.find_sub(2).paginate :page => 1,:per_page => 3
