@@ -27,6 +27,10 @@ img a {border: none}
 #right-column #whatson ol li {float: left; width: 220px; margin-top: 15px; margin-left: 40px}
 #right-column #whatson ol li h3 {text-transform: uppercase}
 #right-column #double_advertisement .right_sponsored {margin-top: 9px; margin-bottom: 4px}
+#footer #holder {margin: 80px auto 0px auto; width: 940px}
+#footer #holder .column {width: 170px; float: left; text-align: left; margin-right: 15px}
+#footer #holder .column ul {float: left}
+#footer #holder .column ul li {float: left; width: 100%; color: #414141; line-height: 24px; font-family: Arial}
   .ec-calendar {font-family: verdana, arial, helvetica, sans-serif; font-size: 11px; line-height: 14px; margin: 0; padding: 0; border-bottom: 1px solid #d5d5d5}
  .ec-calendar-header {padding: 5px 0; width: 100%; table-layout: fixed}
 .ec-month-name {font-size: 16px; font-weight: bold}
@@ -169,5 +173,5 @@ body #footer {width: 100%; float: left; height: 225px; background-image: url(../
 #main-menu li {display: inline}
 #main-menu li a {position: relative; z-index: 200; color: #bbb; font-size: 14px; display: block; float: left; padding: 6px 0px 4px 0px; text-decoration: none; text-transform: uppercase}
 #main-menu li a:hover {color: white}
-#main-menu #magic-line{ position: absolute; top: 0; left: 0; background: rgba(220, 133, 5, 0.9); z-index: 100; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 0 4px;}
+#main-menu #magic-line{ position: absolute; top: 0; left: 0; background: #9197a3; z-index: 100; -moz-border-radius: 5px; -webkit-border-radius: 5px; padding: 0 4px;}
 .current_page_item a, .current_page_item_two a {color: white !important}
