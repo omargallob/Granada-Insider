@@ -20,19 +20,19 @@ class ViewerController < ApplicationController
 		end
 		if @page.name == "home"
 			@articles = Post.find_sub(2).paginate :page => 1,:per_page => 3
-			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["end_at < ? and start_at > ?",Time.now + 1.day,Time.now - 1.day], :include => "location")
+			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 			@classifieds = Classified.find_all_sub
 		end
 		if @page.name == "magazine"
 			@articles = Post.find_all_sub.paginate :page => params[:page],:per_page => 6
-			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["end_at < ? and start_at > ?",Time.now + 1.day,Time.now - 1.day], :include => "location")
+			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 		end
 		if @page.name == "food"
-			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["end_at < ? and start_at > ?",Time.now + 1.day,Time.now - 1.day], :include => "location")
+			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 			@reviews = Post.find_sub(11)
 		end
 		if @page.name == "classified"
-			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["end_at < ? and start_at > ?",Time.now + 1.day,Time.now - 1.day], :include => "location")
+			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 			@classifieds = Classified.find_all_sub
 		end
   end
