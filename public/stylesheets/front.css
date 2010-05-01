@@ -18,7 +18,7 @@ p { font-family: Helvetica; font-size: 12px; }
 #main #classified ol li { float: left; width: 187px; margin-left: 40px; margin-top: 15px; }
 #main #classified ol li p { width: 187px; margin-top: 0; }
 
-#right-column #whatson ol { margin-top: 11px; }
+#right-column #whatson ol { margin-top: 6px; float: left; overflow-y: scroll; width: 98%; height: 310px; }
 #right-column #whatson ol li { float: left; width: 220px; margin-top: 15px; margin-left: 40px; }
 #right-column #whatson ol li h3 { text-transform: uppercase; }
 #right-column #double_advertisement .right_sponsored { margin-top: 9px; margin-bottom: 4px; }
