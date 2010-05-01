@@ -2,15 +2,15 @@
 	<div class="column">
 		<h5>Granada Magazine Latest Issue</h5>
 		<ul>
-			<li>Latest Articles</li>
+			<li><%= link_to "Latest Articles",  view_page_path("magazine") %></li>
 		</ul>
 	</div>
 	<div class="column">
 		<h5>Granada City Guide Areas</h5>
 		<ul>
+			<li><%= link_to "Events",  view_page_path("whatson") %></li>
 			<li>Areas</li>
 			<li>Tourist attractions</li>
-			<li>Events</li>
 		</ul>
 	</div>
 	<div class="column">
@@ -24,10 +24,10 @@
 	<div class="column">
 		<h5>Granada NightLife</h5>
 		<ul>
-			<li>Bars</li>
-			<li>Clubs</li>
-			<li>Live music</li>
-			<li>Theatre</li>
+			<li>	</li>
+			<li><%= link_to "Clubs",  whatson_filter_path("venues","clubs") %></li>
+			<li><%= link_to "Live Music",  whatson_filter_path("venues","live-venues") %></li>
+			<li><%= link_to "Theatre",  whatson_filter_path("venues","theatre") %></li>
 		</ul>
 	</div>
 	<div class="column">

@@ -26,4 +26,6 @@ p { font-family: Helvetica; font-size: 12px; }
 #footer #holder { margin: 80px auto 0px auto; width: 940px; }
 #footer #holder .column { width: 170px; float: left; text-align: left; margin-right: 15px; }
 #footer #holder .column ul { float: left; }
-#footer #holder .column ul li { float: left; width: 100%; color: #414141; line-height: 24px; font-family: Arial; }
+#footer #holder .column ul li { float: left; width: 100%; line-height: 24px; font-family: Arial; }
+#footer #holder .column ul li a { color: #414141; text-decoration: none; font-size: 14px; }
+#footer #holder .column ul li a:hover { color: white; }
