@@ -40,7 +40,7 @@ ActionController::Routing::Routes.draw do |map|
   map.view_page ':name', :controller => 'viewer', :action => 'show'
 
   map.whatson_filter '/whatson/:type/:filter', :controller => 'viewer', :action => "show", :name =>"whatson"
-  
+  map.classified_filter '/classified/:filter', :controller => 'viewer', :action => "show", :name =>"classified"
 
   map.root :controller => "viewer", :action=>"show", :name => 'home'
 

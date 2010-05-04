@@ -1,0 +1,9 @@
+		<li class="header"><span>Listings</span></li>
+		<% Classified.find_main.each do |classified| %>
+	
+			<% if params[:filter] and classified.title.gsub(/ /,"-").downcase == params[:filter] %>
+				<li  class="active"><%= link_to classified.title, "/classified/#{classified.title.downcase}" %></li>
+			<% else %>
+				<li  class="regular"><%= link_to classified.title,"/classified/#{classified.title.downcase}" %></li>
+			<% end %>
+		<% end %>

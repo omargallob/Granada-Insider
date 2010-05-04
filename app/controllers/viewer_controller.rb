@@ -2,6 +2,18 @@ class ViewerController < ApplicationController
   def show
 		@page = Page.find_by_name(params[:name])
 		@news = Post.find_sub(3).paginate :page => 1,:per_page => 1
+		if @page.name == "classified"
+			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
+			if params[:filter]
+
+            title = params[:filter].gsub(/-/," ").capitalize
+    		    @classified_type = Classified.find_by_title(title)
+    		    @classifieds = @classified_type.subclassifieds.paginate :page => params[:page],:per_page => 6
+
+			else
+			  @classifieds = Classified.find_all_sub
+		  end
+		end
 		if @page.name == "whatson"
 		  if params[:type] and params[:filter]
         if params[:type] == "events"
@@ -30,10 +42,6 @@ class ViewerController < ApplicationController
 		if @page.name == "food"
 			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 			@reviews = Post.find_sub(11)
-		end
-		if @page.name == "classified"
-			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
-			@classifieds = Classified.find_all_sub
 		end
   end
 
