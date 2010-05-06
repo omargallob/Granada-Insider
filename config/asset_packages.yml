@@ -7,7 +7,6 @@ javascripts:
   - event_calendar
   - cufon-yui		
   - jquery.color-RGBa-patch
-  - jquery.simpletip-1.3.1
 stylesheets: 
 - base: 
   - print
