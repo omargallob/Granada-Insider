@@ -10,8 +10,8 @@
   <h4>newest ads</h4>
 </div>
 <div id="articles" class="magazine">
-<ol id="classifieds">
-		<%= render :partial => "shared/front/center/classifieds/classified", :collection => @classifieds %>
+	<ol id="classifieds">
+			<%= render :partial => "shared/front/center/classifieds/classified", :collection => @classifieds %>
 	</ol>
 </div> 
 
@@ -31,3 +31,6 @@
 		<%= render :partial => "shared/front/center/news/news", :collection => @news %>
 	</ol>
 </div>  
+<% content_for :script do %>
+
+<% end %>
