@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   
 	map.ads '/rss/ads/:client_id', :controller => 'rss',:action => "ads"
+	map.service_ads '/rss/ads/:client_id/:side/', :controller => 'rss',:action => "service_ads"
 	
 	map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'

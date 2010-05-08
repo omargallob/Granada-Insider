@@ -22,4 +22,12 @@ layout nil
           format.xml  #{ render :xml => @properties }
       end
 	end
+	def service_ads
+		@category = Client.find_by_id(params[:client_id])
+		@subs = @category.subclients
+		 respond_to do |format|
+          format.xml  #{ render :xml => @properties }
+      end
+	end
+	
 end
