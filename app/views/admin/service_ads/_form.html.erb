@@ -1,0 +1,31 @@
+<p>
+	  <%= f.label :title %><br/>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :rating %><br/>
+  <%= f.select :rating, 1..10 %>
+</p>
+<p>
+  <%= f.label :side %><br/>
+  <%= f.select :side, %w[left right], {} %>
+</p>
+<p>
+	  <%= f.label :description %><br/>
+  <%= f.text_area :description %>
+</p>
+<p>
+  <%= f.label :photo %><br/>
+  <%= f.file_field :photo %>
+</p>
+<p>
+  <%= f.label :valid_till %><br/>
+  <%= f.date_select :valid_till %>
+</p>
+<p>
+	  <%= f.label :link %><br/>
+  <%= f.text_field :link %>
+</p>
+  <%= f.hidden_field :client_id, :value => @parent.id %>
+
+

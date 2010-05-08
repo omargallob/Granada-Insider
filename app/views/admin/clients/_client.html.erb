@@ -13,9 +13,18 @@
 	<td>
 	<table class="nolines">
 		<tr>
-			<td> <% if client.parent == nil %><%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => t('options.show')), admin_client_path(client) %><% else %>
-				<%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => t('options.show')), admin_client_ads_path(client) %>
-			<% end %></td><td>&nbsp;|&nbsp;</td>
+			<td>
+				<% if client.parent == nil %>
+					<%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => t('options.show')), admin_client_path(client) %>
+				<% else %>
+					<% if client.parent_id == 21 %>
+						<%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => t('options.show')), admin_client_service_ads_path(client) %>
+					<% else %>
+						<%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => t('options.show')), admin_client_ads_path(client) %>
+					<% end %>
+				<% end %>
+			</td>
+			<td>&nbsp;|&nbsp;</td>
 			<td><%= link_to image_tag ('system/admin/buttons/edit.jpg', :height => "15px", :title => t('options.edit')), edit_admin_client_path(client) %></td><td>&nbsp;|&nbsp;</td>
 			<td><%= link_to image_tag ('system/admin/buttons/delete.jpg', :height => "15px", :title => t('options.delete')), admin_client_path(client), :confirm => 'Are you sure?', :method => :delete %></td>
 		</tr>

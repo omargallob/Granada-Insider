@@ -3,6 +3,7 @@ class Client < ActiveRecord::Base
   belongs_to :parent, :class_name => 'Client', :foreign_key => 'parent_id'
 
 	has_many :ads
+	has_many :service_ads
 	belongs_to :location
 # functions
 	def self.find_main

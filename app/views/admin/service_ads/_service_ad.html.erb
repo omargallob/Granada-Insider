@@ -1,0 +1,24 @@
+<tr>
+	
+	<td><br /><%= image_tag service_ad.photo.url(:thumb) %></td>
+	<td><br /><%= service_ad.title %></td>
+	<td><br /><%= service_ad.created_at.strftime("%a %d %B %Y") %></td>
+	<td><br /><%= service_ad.valid_till.strftime("%a %d %B %Y") %></td>
+	<% if controller.action_name == "show" %>
+		<td> <%= %>
+		<%= service_ad.description  %>
+		</td>
+		<td>
+		<%= service_ad.created_at.strftime("%a %d %B %Y") %>
+		</td>
+	<% end %>
+	<td>
+	<table class="nolines">
+		<tr>
+			
+			<td><%= link_to image_tag ('system/admin/buttons/edit.jpg', :height => "15px", :title => t('options.edit')),   edit_admin_client_service_ad_path(service_ad.client.id, service_ad.id) %></td><td>&nbsp;|&nbsp;</td>
+			<td><%= link_to image_tag ('system/admin/buttons/delete.jpg', :height => "15px", :title => t('options.delete')),admin_client_service_ad_path(service_ad.client.id, service_ad.id), :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+	</table>
+	</td>
+</tr>

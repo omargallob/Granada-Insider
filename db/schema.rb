@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100428190435) do
+ActiveRecord::Schema.define(:version => 20100508135357) do
 
   create_table "ads", :force => true do |t|
     t.string   "title"
@@ -149,6 +149,22 @@ ActiveRecord::Schema.define(:version => 20100428190435) do
   add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
   add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
 
+  create_table "service_ads", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "client_id"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.datetime "valid_till"
+    t.integer  "rating"
+    t.string   "side"
+  end
+
   create_table "temp_uploads", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -170,7 +186,7 @@ ActiveRecord::Schema.define(:version => 20100428190435) do
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
-    t.string   "name",                      :limit => 100, :default => ""
+    t.string   "name",                      :limit => 100
     t.string   "email",                     :limit => 100
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
