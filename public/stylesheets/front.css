@@ -9,12 +9,15 @@ p { font-family: Helvetica; font-size: 12px; }
 #main #travellers #center_travellers_logo { height: 115px; width: 81px; background: url(../images/system/bg/versionSprites.png); background-position: 0 -7803px; background-repeat: no-repeat; float: left; margin: 30px 40px 60px 40px; }
 #main #travellers h1 { float: left; text-transform: capitalize; margin-top: 30px; }
 #main #travellers h2 { float: left; width: 325px; }
-#main #articles ol { margin-top: 26px; }
+#main #articles ol { margin-top: 26px; float: left; }
 #main #articles ol li { float: left; margin-bottom: 10px; }
 #main #articles ol li img { float: left; margin: 0 20px 0 40px; }
 #main #articles ol li h3 { float: left; font-weight: bold; }
 #main #articles ol li hr { background: #4d4d4d; float: left; width: 450px; border: 0px none; height: 1px; margin-left: 21px; }
 #main #articles ol#classifieds { float: left; height: 700px; width: 487px; overflow-y: auto; overflow-x: hidden; }
+#main #articles ol.food { float: left; height: 700px; width: 487px; overflow-y: auto; overflow-x: hidden; }
+#main #articles ol.food li { border-bottom: 0px none; width: 458px; }
+#main #articles ol.food li p { width: 280px; margin: 0 11px 5px 11px; float: right; }
 #main #classified ol { margin-top: 6px; float: left; height: 320px; overflow-y: scroll; width: 98%; }
 #main #classified ol li { float: left; width: 187px; margin-left: 40px; margin-top: 15px; }
 #main #classified ol li p { width: 187px; margin-top: 0; }

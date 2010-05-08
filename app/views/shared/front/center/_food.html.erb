@@ -5,15 +5,27 @@
 	<div id="center_travellers_logo"></div>
 	<%= @page.body %>
 </div> 
-
+<% unless params[:title] %>
 <div class="header">
   <h4>latest reviews</h4>
 </div>
 <div id="articles" class="magazine">
-<ol>
-	<%= render :partial => "shared/front/center/articles/article", :collection => @reviews %>
-</ol>
-</div> 
+	<ol>
+		<%= render :partial => "shared/front/center/articles/review", :collection => @reviews %>
+	</ol>
+</div>
+<% else %>
+<div class="header">
+  <h4><%= @review.title %></h4>
+</div>
+<div id="articles" class="magazine">
+	<ol class="food">
+	<%= render :partial => "shared/front/center/articles/reviewfull", :object => @review %>
+	</ol>
+</div>
+
+<% end %>
+
 <%= render :partial => "shared/front/center/service_ads"%>
 <div id="small_header">
   <h4>granada news</h4></div>

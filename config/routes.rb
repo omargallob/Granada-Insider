@@ -43,7 +43,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.whatson_filter '/whatson/:type/:filter', :controller => 'viewer', :action => "show", :name =>"whatson"
   map.classified_filter '/classified/:filter', :controller => 'viewer', :action => "show", :name =>"classified"
-
+  
+  map.food_review 'food/reviews/:title', :controller => 'viewer', :action => "show", :name =>"food"
   map.root :controller => "viewer", :action=>"show", :name => 'home'
 
   # See how all your routes lay out with "rake routes"

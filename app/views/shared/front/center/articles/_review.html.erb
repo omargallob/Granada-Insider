@@ -1,0 +1,4 @@
+<li><%= image_tag review.photo.url(:thumb) %> <h3><%= link_to review.title, food_review_path(review.title.gsub(/ /,"_")) %></h3>
+<%= review.two_liner %>
+<hr />
+</li>

@@ -40,8 +40,14 @@ class ViewerController < ApplicationController
 			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 		end
 		if @page.name == "food"
-			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
-			@reviews = Post.find_sub(11)
+		  if params[:title]
+		    @review = Post.find_by_title(params[:title].gsub(/_/, " "))
+		  else
+		  
+  			@reviews = Post.find_sub(11)
+		  end
+		    @events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
+			
 		end
   end
 
