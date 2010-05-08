@@ -19,7 +19,9 @@ class ViewerController < ApplicationController
         if params[:type] == "events"
           title = params[:filter].gsub(/-/," ").capitalize
   		    @event_type = EventType.find_by_title(title)
-  		    @events = @event_type.events.sort_by(&:start_at).paginate :page => params[:page],:per_page => 6
+  		    @events = @event_type.events
+  		    @events.delete_if{|d| d.start_at < Time.now }
+  		    @events = @events.sort_by(&:start_at).paginate :page => params[:page],:per_page => 6
         else    
           title = params[:filter].gsub(/-/," ").capitalize
           @location_type = LocationType.find_by_title(title)
