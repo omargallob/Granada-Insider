@@ -54,7 +54,7 @@ jQuery.fn.nice_fonts = function(){
 		   color: 'black',
 		   fontSize: "14px",
 	  		hover: {
-	   		color: 'white'
+	   		color: 'red'
 	  	 }
 	 });
 
