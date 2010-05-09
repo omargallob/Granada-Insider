@@ -1,5 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  #forms
+  map.advertise "/about/advertise", :controller =>"contact", :action => "advertise"
+  map.work "/about/work", :controller =>"contact", :action => "work"
   
+  #rss feeds
 	map.ads '/rss/ads/:client_id', :controller => 'rss',:action => "ads"
 	map.service_ads '/rss/ads/:client_id/:side/', :controller => 'rss',:action => "service_ads"
 	
@@ -9,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
 	map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate', :activation_code => nil
-
+  
   map.resources :users
 
   map.resource :session
