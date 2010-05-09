@@ -15,6 +15,7 @@ class ViewerController < ApplicationController
 		  end
 		end
 		if @page.name == "whatson"
+		  @today = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 		  if params[:type] and params[:filter]
         if params[:type] == "events"
           title = params[:filter].gsub(/-/," ").capitalize
