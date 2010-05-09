@@ -1,0 +1,2 @@
+module IssuuHelper
+end

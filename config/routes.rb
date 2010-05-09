@@ -3,6 +3,9 @@ ActionController::Routing::Routes.draw do |map|
   map.advertise "/about/advertise", :controller =>"contact", :action => "advertise"
   map.work "/about/work", :controller =>"contact", :action => "work"
   
+  #digital mag
+  map.issuu_index '/issuu/:publication_name/', :controller => "issuu", :action=>"index"
+  map.issuu_show '/issuu/:publication_name/:number', :controller => "issuu", :action=>"show"
   #rss feeds
 	map.ads '/rss/ads/:client_id', :controller => 'rss',:action => "ads"
 	map.service_ads '/rss/ads/:client_id/:side/', :controller => 'rss',:action => "service_ads"
