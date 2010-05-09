@@ -37,8 +37,10 @@ p { font-family: Helvetica; font-size: 12px; }
 #contact #middle ol li { float: left; text-align: right; background: transparent; margin-bottom: 25px; width: 313px; }
 #contact #middle ol li h3 { float: right; width: 160px; }
 #contact #middle ol li p { float: right; width: 150px; }
-#contact #middle ol li input[type="text"] { width: 312px; height: 29px; background-position: 0 -10743px; background-image: url(../images/system/bg/versionSprites.png); border: 0px none; float: right; font-size: 12px; }
-#contact #middle ol li textarea { width: 312px; height: 76px; background-position: 0 -10775px; background-image: url(../images/system/bg/versionSprites.png); background-repeat: none; border: 0px none; font-family: Verdana; font-size: 12px; margin: 0px; }
+#contact #middle ol li input[type="text"] { width: 306px; height: 29px; border: 0px none; float: right; font-size: 12px; background: transparent; }
+#contact #middle ol li textarea { width: 300px; height: 62px; background: transparent; font-family: Verdana; font-size: 12px; margin: 6px; border: 0px; }
+#contact #middle ol li.textinput { width: 312px; height: 29px; background-position: 0 -10743px; background-image: url(../images/system/bg/versionSprites.png); border: 0px none; }
+#contact #middle ol li.textarea { width: 312px; height: 76px; background-position: 0 -10775px; background-image: url(../images/system/bg/versionSprites.png); background-repeat: none; border: 0px none; }
 
 #footer #holder { margin: 80px auto 0px auto; width: 940px; }
 #footer #holder .column { width: 170px; float: left; text-align: left; margin-right: 15px; }

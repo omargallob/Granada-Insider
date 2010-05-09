@@ -4,15 +4,13 @@
 		<h4>Work with us</h4>
 	</div>
 	<div id="middle">
+		<% form_for @contact, :url =>{:action =>"create"} do |f| -%>
 		<ol>
-			<li><p><select><option>Photographer</option><option>Journalist</option></select></p><h3>SELECT OCCUPATION</h3></li>
-				
-			<li><p><select><option>Full Time</option><option>Part Time</option></select></p><h3>DISPONIBILITY</h3></li>
-			<li><input type="text"></li>
-			<li><input type="text"></li>
-			<li><textarea ></textarea></li>
+		<%= render :partial => "work_form", :locals =>{:f => f} %>
 			<li><%= image_submit_tag("system/buttons/send.png", :id => "system/buttons/send.png", :name => "system/buttons/send.png", :class => "system/buttons/send.png-button", :disabled => false) %></li>
 			
 		</ol>
+		 
+		<% end -%>
 	</div>
 </div>
