@@ -16,12 +16,15 @@ class ContactMailer < ActionMailer::Base
        @recipients  = "#{contact.email}"
        @from        = "system@granadainsider.com"
        @subject     = "Granada Insider - Online Magazine "
+       @content_type = "text/html"
        @sent_on     = Time.now
        @body[:contact] = contact
+       
      end
      def system_email_setup(contact)
          @recipients  = "contact@granadainsider.com"
           @from        = "#{contact.email}"
+          @content_type =  "text/html"
           @sent_on     = Time.now
      end
 end
