@@ -171,6 +171,8 @@ body #wrapper #right-column #community_header {width: 244px; float: left; height
 body #wrapper #right-column #community {width: 291px; float: left; height: 81px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4419px}
 body #wrapper #right-column #community_join {width: 186px; float: left; height: 22px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4500px; margin-left: 54px}
 body #wrapper #right-column #what_when {width: 291px; float: left; height: 245px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6309px}
+body #wrapper #right-column #what_when ol.whatson {margin: 15px 20px; padding: 10px 0; height: 205px; overflow-x: hidden; overflow-y: auto}
+body #wrapper #right-column #what_when ol.whatson li {width: 190px; margin-bottom: 5px}
 body #wrapper #right-column #advertise {width: 291px; float: left; height: 105px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6554px; margin: 13px 0}
 body #wrapper #right-column #single_advertisement {width: 291px; float: left; height: 272px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6955px; margin-top: 13px}
 body #wrapper #right-column #double_advertisement {width: 291px; float: left; height: 534px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7269px; margin-bottom: 13px}
