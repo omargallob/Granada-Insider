@@ -1,8 +1,8 @@
  	<li><p><%= f.select :job, ["photographer","journalist"] %></p><h3>SELECT OCCUPATION</h3></li>
 		
 	<li><p><%= f.select :disponibility, ["Full Time","Part Time"] %></p><h3>DISPONIBILITY</h3></li>
-	<li class="textinput"><%= f.text_field :name %></li>
-	<li class="textinput"><%= f.text_field :email %></li>
-	<li class="textinput"><%= f.text_field :telephone %></li>
-	<li class="textarea"><%= f.text_area :comment %></li>
+	<li class="textinput"><%= f.text_field :name, :title =>"Name" %></li>
+	<li class="textinput"><%= f.text_field :email,:title => "Email" %></li>
+	<li class="textinput"><%= f.text_field :telephone,:title => "Telephone" %></li>
+	<li class="textarea"><%= f.text_area :comment,:title => "Comment" %></li>
 	<% f.hidden_field :type, :value => "work" %>
