@@ -24,6 +24,6 @@ class ContactController < ApplicationController
       @page = Page.find_by_name("about")
       contact = Contact.find_by_id(params[:contact_id])
       ContactMailer.deliver_contact_notification(contact)
-      ContactMailer.deliver_system_notification(contact)  
+      ContactMailer.deliver_system_notification(contact)    
   end
 end

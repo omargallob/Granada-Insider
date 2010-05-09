@@ -2,13 +2,13 @@ class ContactMailer < ActionMailer::Base
   def contact_notification(contact)
     setup_email(contact)
     @subject    += 'Thank you for contacting us'
-    @body[:url]  = contact
+    @body[:contact]  = contact
   end
   
   def system_notification(contact)
      system_email_setup(contact)
      @subject     = "contact - #{contact.type}"     
-     @body[:user] = contact
+     @body[:contact] = contact
   end
   
   protected
@@ -17,7 +17,7 @@ class ContactMailer < ActionMailer::Base
        @from        = "system@granadainsider.com"
        @subject     = "Granada Insider - Online Magazine "
        @sent_on     = Time.now
-       @body[:user] = contact
+       @body[:contact] = contact
      end
      def system_email_setup(contact)
          @recipients  = "contact@granadainsider.com"
