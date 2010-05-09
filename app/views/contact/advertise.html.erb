@@ -5,6 +5,8 @@
 	</div>
 	<div id="middle">
 		<% form_for @contact, :url =>{:action =>"create"} do |f| -%>
+		<%= f.error_messages %> 
+		
 		<ol>
 		<%= render :partial => "advertise_form", :locals =>{:f => f} %>
 			<li><%= image_submit_tag("system/buttons/send.png", :id => "system/buttons/send.png", :name => "system/buttons/send.png", :class => "system/buttons/send.png-button", :disabled => false) %></li>
