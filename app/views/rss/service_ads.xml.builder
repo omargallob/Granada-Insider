@@ -8,7 +8,7 @@ xml.services do
 				   if ad.side == params[:side]
 					xml.advert do
 					xml.image ad.photo.url(:pagesize)
-					xml.link ad.link
+					xml.link ad.client.link || "http://www.granadainsider.com/"
 				    end
 					end
 				 end
