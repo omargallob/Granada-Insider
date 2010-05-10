@@ -1,8 +1,15 @@
-<div style="float:left">
-	<% if params[:publication_name] == "april-2010" %>
-		<%= render :partial => "april" %>
-	<% end %>
-	<% if params[:publication_name] == "may-2010" %>
-		<%= render :partial => "may" %>
-	<% end %>
+<div id="left-column" class="<%= @page.name %>">
+<%= render :partial =>"shared/front/left/#{@page.name}" %>
+
+</div> 
+<div id="main">
+
+<%= render :partial =>"shared/front/center/#{@page.name}" %>
+
+</div> 
+<div id="right-column" class="<%= @page.name %>">
+
+ <%= render :partial =>"shared/front/right/#{@page.name}" %>
+
 </div>
+

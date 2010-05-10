@@ -51,12 +51,16 @@
 				<div id="navbar">
         	<%= render :partial =>"shared/menu/front" %>
         </div>               
-			<% if @page.name == "whatson" || @page.name == "classified" %>
+			<% if @page.name == "whatson" || @page.name == "classified" || @page.name == "magazine" %>
 				<div id="sub_navbar">
 					<ul>
 					<% if @page.name =="whatson" %>
 						<%= render :partial =>"shared/menu/whatson_submenu" %>		        	
-					<% else %>
+					<% end %>
+					<% if @page.name =="magazine" %>
+						<%= render :partial =>"shared/menu/magazine_submenu" %>		        	
+					<% end %>
+					<% if @page.name =="classified" %>
 						<%= render :partial =>"shared/menu/classified_submenu" %>		        	
 					<% end %>
 					</ul>

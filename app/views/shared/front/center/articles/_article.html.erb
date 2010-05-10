@@ -1,5 +1,5 @@
 		<li><%= image_tag article.photo.url(:thumb) %>
-			 <h3><%= link_to article.title, issuu_index_path(article.publication_name, article.page_number) if article.publication_name %><%=  article.title  unless article.publication_name%></h3>
+			 <h3><%= link_to article.title, issuu_show_path(article.publication_name, article.page_number) if article.publication_name %><%=  article.title  unless article.publication_name%></h3>
 				<%= article.two_liner %>
 		<hr />
 		</li>

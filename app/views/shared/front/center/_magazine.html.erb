@@ -8,14 +8,26 @@
 </div> 
 
 <div class="header">
-  <h4>latest articles</h4>
+  <h4>
+	<% if controller.controller_name == "viewer"%>latest articles<% else %>All issues<% end %></h4>
 </div>
 <div id="articles" class="magazine">
+	<% if controller.controller_name == "viewer"%>
 	<ol>
 		<%= render :partial => "shared/front/center/articles/article", :collection => @articles %>
 	</ol>
 
 	<%= will_paginate @articles %>	
+	<% else %>
+	<ol> 
+		<li><h3 style="margin-left:27px"><%= link_to "May Issue", issuu_show_path("may-2010", "1") %> </h3>
+			<hr />
+			</li>
+			<li><h3 style="margin-left:27px"><%= link_to "April Issue", issuu_show_path("april-2010", "1") %></h3>
+				<hr />
+				</li>
+	</ol>
+	<% end %>
 
 </div> 
 

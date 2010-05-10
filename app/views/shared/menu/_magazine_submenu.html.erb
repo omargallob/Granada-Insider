@@ -1,0 +1,11 @@
+		<li class="header"><span>Listings</span></li>
+		<% if controller.controller_name == "viewer" %>
+			<li  class="active"><%= "Latest Articles" %></li>
+		<% else %>
+			<li  class="regular"><%= link_to  "Latest Articles", "/magazine" %></li>
+		<% end %>
+		<% if controller.controller_name == "issuu" %>
+			<li  class="active"><%= "Latest Issues" %></li>
+		<% else %>
+			<li  class="regular"><%= link_to  "Latest Issues", "/magazine/issues" %></li>
+		<% end %>
