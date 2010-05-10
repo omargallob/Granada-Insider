@@ -57,7 +57,7 @@
 					<% if @page.name =="whatson" %>
 						<%= render :partial =>"shared/menu/whatson_submenu" %>		        	
 					<% end %>
-					<% if @page.name =="magazine" %>
+					<% if @page.name =="magazine" and controller.controller_name == "viewer" %>
 						<%= render :partial =>"shared/menu/magazine_submenu" %>		        	
 					<% end %>
 					<% if @page.name =="classified" %>
