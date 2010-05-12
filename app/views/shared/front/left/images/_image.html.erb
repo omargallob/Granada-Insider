@@ -1,1 +1,1 @@
-<li><%= image_tag image.uploads.first.photo.url(:thumb) %></li>
+<li><%= link_to image_tag(image.uploads.first.photo.url(:thumb)),image.uploads.first.photo.url(:pagesize),:rel => "prettyPhoto"  %></li>

@@ -20,8 +20,8 @@
 	  <script type="text/javascript" src="/fonts/Rockwell_Std_400-Rockwell_Std_700-Rockwell_Std_italic_400-Rockwell_Std_italic_700.font.js"></script>
 	  <script type="text/javascript" src="/fonts/Helvetica_Neue_LT_Std_300-Helvetica_Neue_LT_Std_700-Helvetica_Neue_LT_Std_italic_400-Helvetica_Neue_LT_Std_italic_700.font.js"></script>
 
-		<%= javascript_include_tag "nice_fonts","magicline","jquery.toggleformtext","jcarousellite" %>
-
+		<%= javascript_include_tag "nice_fonts","magicline","jquery.toggleformtext","jcarousellite","jquery.prettyPhoto" %>
+		<%= stylesheet_link_tag "prettyPhoto" %>
 	<style type="text/css">
 
 	  .clearfix:after {
@@ -80,6 +80,8 @@
      <script type="text/javascript">
        jQuery(document).ready(function() {
         $(document).nice_fonts();
+		  	$(".image_carousel a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+
        }); 
 			preload_sprites();
      </script>
