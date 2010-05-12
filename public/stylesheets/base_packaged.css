@@ -129,10 +129,10 @@ body #wrapper #left-column #magazine {height: 206px; background-image: url(../im
 body #wrapper #left-column .media {height: 318px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -466px; float: left; width: 161px}
 body #wrapper #left-column .media .image_carousel {float: left}
 body #wrapper #left-column .media .image_carousel ul {width: 122px; margin: 0px 17px}
-body #wrapper #left-column .media .image_carousel ul li {margin: 0px; width: 122px; height: 76px; background: white; border: 1px solid #999999; padding: 1px}
+body #wrapper #left-column .media .image_carousel ul li {margin: 0px 0 3px 0; width: 122px; height: 76px; background: white; border: 1px solid #999999; padding: 1px}
 body #wrapper #left-column .media .image_carousel ul li img {border: 1px solid #999999}
 body #wrapper #left-column .media .arrow_buttons {width: 126px; height: 25px; float: left; margin: 0px 17px}
-body #wrapper #left-column .media .previous {background-image: url(../images/system/buttons/left_top.png); background-position: 0px 0px; margin: 11px 17px 3px 17px}
+body #wrapper #left-column .media .previous {background-image: url(../images/system/buttons/left_top.png); background-position: 0px 0px; margin: 6px 17px 3px 17px}
 body #wrapper #left-column .media .next {background-image: url(../images/system/buttons/left_bottom.png); background-position: 0px 0px}
 body #wrapper #left-column #chat {height: 432px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -784px; float: left; width: 161px}
 body #wrapper #left-column #social {height: 90px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -376px; float: left; width: 161px}
