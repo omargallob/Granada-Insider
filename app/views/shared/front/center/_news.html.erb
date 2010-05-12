@@ -1,16 +1,16 @@
-<div class="previous"></div>
+<div class="previous_i"></div>
 <div class="news_carousel">
 	<ul>
 		<%= render :partial => "shared/front/center/news/news_item", :collection => @news %>
 	</ul>
 </div>
-<div class="next"></div>
+<div class="next_i"></div>
 
 <script>
 $(function() {
     $(".news_carousel").jCarouselLite({
-        btnNext: ".next",
-        btnPrev: ".previous",
+        btnNext: ".next_i",
+        btnPrev: ".previous_i",
 				visible: 1
     });
 });
