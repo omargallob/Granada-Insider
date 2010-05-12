@@ -7,6 +7,10 @@ javascripts:
   - event_calendar
   - cufon-yui		
   - jquery.color-RGBa-patch
+- secondary:
+  - magicline
+  - jquery.toggleformtext
+  - easySlider1.5
 stylesheets: 
 - base: 
   - print

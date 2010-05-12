@@ -4,9 +4,9 @@ class Upload < ActiveRecord::Base
 
 	has_attached_file :photo,
 		                :styles => {
-		                  :pagesize => ["621x374#", :jpg],          :thumb => ["122x74#", :jpg],
+		                  :pagesize => ["621x374#", :jpg],          :thumb => ["120x74#", :jpg],
 		                },:processors => [:cropper],:convert_options => {  
-		                    :thumb => "-resize 83x82 -gravity center"
+		                    :thumb => "-resize 120x74 -gravity center"
 		              	},
 		                :storage => :s3,
 		                :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
