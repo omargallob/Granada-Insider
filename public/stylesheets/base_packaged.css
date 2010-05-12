@@ -127,7 +127,7 @@ body #wrapper #left-column #google_ads {width: 160px; height: 239px; background-
 body #wrapper #left-column .header {height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -145px; margin-top: 11px; float: left; width: 161px}
 body #wrapper #left-column #magazine {height: 206px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -170px; float: left; width: 161px}
 body #wrapper #left-column .media {height: 318px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -466px; float: left; width: 161px}
-body #wrapper #left-column .media .image_carousel {float: left}
+body #wrapper #left-column .media .image_carousel {float: left; width: 126px; margin-left: 17px}
 body #wrapper #left-column .media .image_carousel ul {width: 122px; margin: 0px 17px}
 body #wrapper #left-column .media .image_carousel ul li {margin: 0px 0 3px 0; width: 122px; height: 76px; background: white; border: 1px solid #999999; padding: 1px}
 body #wrapper #left-column .media .image_carousel ul li img {border: 1px solid #999999}
