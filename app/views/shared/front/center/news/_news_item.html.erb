@@ -1,5 +1,5 @@
 <li>
-	<h1><%= news_item.title %></h1>
+	<h1><%= link_to news_item.title,issuu_show_path(news_item.publication_name, news_item.page_number) if news_item.publication_name  %></h1>
 	<h3><%= news_item.created_at.strftime("%a %d %B %Y")%> </h3>
 	<%= news_item.two_liner %>
 	
