@@ -39,8 +39,9 @@ class ViewerController < ApplicationController
 			@classifieds = Classified.find_all_sub
 		end
 		if @page.name == "magazine"
-			@articles = Post.find_all_sub.paginate :page => params[:page],:per_page => 6
+			@articles = Post.find_all_sub.delete_if{|f| f.parent_id == 11}.paginate :page => params[:page],:per_page => 6
 			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
+			@articles.delete_if{|f| f.parent_id == 11}
 		end
 		if @page.name == "food"
 		  if params[:title]
