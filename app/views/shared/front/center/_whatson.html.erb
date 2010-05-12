@@ -5,14 +5,14 @@
 
 <div id="events_list">
   <div class="header">
-    <h1>granada night life</h1>
+   	<% if params[:type] || params[:filter] %>
+		 <h1>Granada - <%= params[:filter].gsub(/-/," ") %></h4>		
+		<% else %>
+		 <h1>Granada Events</h1>
+		<% end %>
   </div>
   <div class="subheader">
-	<% if params[:type] || params[:filter] %>
-	 <h4><%= params[:filter].gsub(/-/," ") %></h4>		
-	<% else %>
 	 <h4>Upcoming Events</h4>
-	<% end %>
    
   </div>
 	<ul>
