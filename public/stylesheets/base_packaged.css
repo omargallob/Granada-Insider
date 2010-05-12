@@ -149,8 +149,13 @@ body #wrapper #main .services {width: 231px; float: left; height: 229px; backgro
 body #wrapper #main .services_right {margin-left: 30px}
 body #wrapper #main #small_header {width: 443px; float: left; height: 24px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2244px; margin-left: 24px}
 body #wrapper #main #news {width: 492px; float: left; height: 143px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2268px; margin-bottom: 11px}
-body #wrapper #main #news ol {width: 80%; padding: 15px 46px}
-body #wrapper #main #news ol li p {width: 386px}
+body #wrapper #main #news .news_carousel {width: 442px; float: left; height: 143px}
+body #wrapper #main #news .news_carousel ul {width: 442px; float: left; height: 143px}
+body #wrapper #main #news .news_carousel ul li {width: 392px; float: left; height: 143px; padding: 0 25px}
+body #wrapper #main #news .news_carousel ul li p {width: 386px}
+body #wrapper #main #news .news_carousel ul li h1 {padding-top: 25px}
+body #wrapper #main #news .previous {width: 25px; height: 143px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2268px; float: left}
+body #wrapper #main #news .next {width: 25px; height: 143px; background-image: url(../images/system/bg/versionSprites.png); background-position: -467px -2268px; float: left}
 body #wrapper #main #classified {width: 492px; float: left; height: 335px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2411px; margin-bottom: 13px}
 body #wrapper #main #events_gallery {width: 492px; float: left; height: 246px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4522px; margin-bottom: 13px}
 body #wrapper #main #events_list {width: 492px; float: left; height: 1366px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4834px}

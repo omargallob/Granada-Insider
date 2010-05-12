@@ -1,7 +1,7 @@
 class ViewerController < ApplicationController
   def show
 		@page = Page.find_by_name(params[:name])
-		@news = Post.find_sub(3).paginate :page => 1,:per_page => 1
+		@news = Post.find_sub(3)
 		if @page.name == "classified"
 			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 			if params[:filter]

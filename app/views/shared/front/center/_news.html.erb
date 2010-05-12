@@ -1,0 +1,18 @@
+<div class="previous"></div>
+<div class="news_carousel">
+	<ul>
+		<%= render :partial => "shared/front/center/news/news_item", :collection => @news %>
+	</ul>
+</div>
+<div class="next"></div>
+
+<script>
+$(function() {
+    $(".news_carousel").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".previous",
+				visible: 1
+    });
+});
+
+</script>
