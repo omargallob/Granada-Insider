@@ -11,11 +11,7 @@
 </div>
 <div id="articles">
 	<div id="map_container">
-		<%= @map.div(:width => 460, :height => 350) %>	
+		<iframe width="460" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps/ms?ie=UTF8&amp;hl=es&amp;msa=0&amp;msid=118238186713668424879.0004828dec218b960e2c5&amp;ll=37.171534,-3.598967&amp;spn=0.026263,0.038581&amp;output=embed"></iframe><br /><small>Ver <a href="http://maps.google.es/maps/ms?ie=UTF8&amp;hl=es&amp;msa=0&amp;msid=118238186713668424879.0004828dec218b960e2c5&amp;ll=37.171534,-3.598967&amp;spn=0.026263,0.038581&amp;source=embed" style="color:#0000FF;text-align:left">GI Distribution</a> en un mapa más grande</small>
 	</div>
 </div>
 
-<% content_for(:script) do %>
-	<%= GMap.header(:with_vml => false, :host => request.host)%>
-	<%= @map.to_html %>
-<% end %>
