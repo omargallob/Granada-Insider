@@ -1,4 +1,6 @@
 class ViewerController < ApplicationController
+  include Geokit::Geocoders
+  
   def show
 		@page = Page.find_by_name(params[:name])
 		@news = Post.find_sub(3)
@@ -39,6 +41,19 @@ class ViewerController < ApplicationController
 			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 			@classifieds = Classified.find_all_sub
 		end
+		if @page.name == "about"
+		  @events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
+		  	@res=GoogleGeocoder.geocode("Calle Frailes, 27. Granada. Spain")    
+  			if @res.success
+  				@lng = @res.lng
+  				@lat = @res.lat
+  			end
+
+  			@map = GMap.new("map")
+  			@map.control_init(:large_map => true,:map_type => true)
+  			@map.center_zoom_init([@lat,@lng],14)
+  			@map.overlay_init(GMarker.new([@lat,@lng],:info_window => "Add: Calle Frailes, 27. Granada. Spain<br/>Tlf: +34958269334"))
+	  end
 		if @page.name == "magazine"
 			@articles = Post.find_all_sub.delete_if{|f| f.parent_id == 11}.paginate :page => params[:page],:per_page => 6
 			@events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")

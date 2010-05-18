@@ -146,6 +146,7 @@ body #wrapper #main {width: 492px; float: left; height: 1525px; background: tran
 body #wrapper #main .header {width: 492px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1323px}
 body #wrapper #main #travellers {width: 492px; float: left; height: 288px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1348px; margin-bottom: 13px}
 body #wrapper #main #articles {width: 492px; float: left; height: 379px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1636px; margin-bottom: 13px}
+body #wrapper #main #articles #map_container {margin: 10px 17px 0 17px}
 body #wrapper #main .services {width: 231px; float: left; height: 229px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2015px; margin-bottom: 13px}
 body #wrapper #main .services_right {margin-left: 30px}
 body #wrapper #main #small_header {width: 443px; float: left; height: 24px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2244px; margin-left: 24px}

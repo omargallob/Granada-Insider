@@ -1,0 +1,21 @@
+
+<div class="header">
+     <h4><%= @page.title %></h4>
+</div>
+<div id="travellers">
+	<div id="center_travellers_logo"></div>
+	<%= @page.body %>
+</div> 
+<div class="header">
+  <h4>Officle Location</h4>
+</div>
+<div id="articles">
+	<div id="map_container">
+		<%= @map.div(:width => 460, :height => 350) %>	
+	</div>
+</div>
+
+<% content_for(:script) do %>
+	<%= GMap.header(:with_vml => false, :host => request.host)%>
+	<%= @map.to_html %>
+<% end %>

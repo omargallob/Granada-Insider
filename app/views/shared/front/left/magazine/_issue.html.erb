@@ -1,3 +1,3 @@
 <div class="issue">
-<%= link_to (image_tag @issue.photo.url(:pagesize), :class=> "reflect", :id=>@issue.publication_name), issuu_show_path(@issue.publication_name, "1") %>
+<%= link_to (image_tag issue.photo.url(:pagesize), :class=> "reflect", :id=>issue.publication_name  ), issuu_show_path(issue.publication_name, "1") %>
 </div>
