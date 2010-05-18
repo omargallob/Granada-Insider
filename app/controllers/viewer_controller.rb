@@ -21,7 +21,7 @@ class ViewerController < ApplicationController
           title = params[:filter].gsub(/-/," ").capitalize
   		    @event_type = EventType.find_by_title(title)
   		    @events = @event_type.events
-  		    @events.delete_if{|d| d.start_at < Time.now }
+  		    @events.delete_if{|d| d.start_at < Date.today }
   		    @events = @events.sort_by(&:start_at).paginate :page => params[:page],:per_page => 6
         else    
           title = params[:filter].gsub(/-/," ").capitalize
@@ -29,7 +29,7 @@ class ViewerController < ApplicationController
           @locations = @location_type.locations.paginate :page => params[:page],:per_page => 6
         end  
 		  else
-		    @events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at > ?",Time.now], :include => "location").paginate :page => params[:page],:per_page => 6
+		    @events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at >= ?",Date.today], :include => "location").paginate :page => params[:page],:per_page => 6
 		  end
 			
 		end
