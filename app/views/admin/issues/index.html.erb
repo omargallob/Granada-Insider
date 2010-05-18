@@ -1,0 +1,30 @@
+
+<div id="content">
+	<h1>Issues List</h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th  width="80px">thumb</th>
+				<th ></th>
+				<th width="100px">Title</th>
+				<th ></th>
+				<th  width="200px">Publication Name</th>
+				<th></th>
+				<th>Options </th>
+
+			</tr>			
+			<%= render :partial => "issue", :collection => @issues %>
+		</table>
+	</div>
+</div>
+
+<% content_for(:sub_menu) do %>
+	<ul>
+		<%= render :partial => "shared/menu/admin_overview_submenu" %>
+	</ul>
+	<ul class="variables">
+		<li><h4>Issues:</h4></li>
+		<li><h3><%= link_to "new", new_admin_issue_path %></h3></li>
+	</ul>
+<% end %>

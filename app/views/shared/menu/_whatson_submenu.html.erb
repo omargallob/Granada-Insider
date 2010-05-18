@@ -9,7 +9,7 @@
 		<% end %>
 		<li class="header"><span class="small">Venues</span></li>
 			<% LocationType.find(:all, :order => "id").each do |venue|%>
-				<% if params[:filter] and venue.title.gsub(/ /,"-").downcase == params[:filter] %>
+				<% if params[:filter]  and venue.title.gsub(/ /,"-").downcase == params[:filter] %>
 					<li  class="active"><%= link_to venue.title, whatson_filter_path("venues",venue.title.gsub(/ /,"-").downcase) %></li>
 				<% else %>
 					<li  class="regular"><%= link_to venue.title, whatson_filter_path("venues",venue.title.gsub(/ /,"-").downcase) %></li>

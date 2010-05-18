@@ -16,7 +16,7 @@
 </p>
 <p>
 	  <%= f.label :publication_name %><br/>
-  <%= f.text_field :publication_name %>
+  <%= f.collection_select :publication_name, Issue.find(:all, :order => "created_at desc"), :id, :publication_name, :include_blank => false %>
 </p>
 <p>
 	  <%= f.label :page_number %><br/>

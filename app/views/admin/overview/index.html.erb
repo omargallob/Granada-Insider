@@ -24,3 +24,11 @@
 		</table>
 	</div>
 </div>
+
+<% content_for(:sub_menu) do %>
+	<ul>
+		<%= render :partial => "shared/menu/admin_overview_submenu" %>
+	</ul>
+<% end %>
+
+

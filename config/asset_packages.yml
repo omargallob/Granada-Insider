@@ -6,11 +6,15 @@ javascripts:
   - application
   - event_calendar
   - cufon-yui		
+  - autoload
+  - reflection
   - jquery.color-RGBa-patch
-- secondary:
+  - nice_fonts
   - magicline
   - jquery.toggleformtext
-  - easySlider1.5
+  - jcarousellite
+  - jquery.prettyPhoto
+
 stylesheets: 
 - base: 
   - print

@@ -1,0 +1,10 @@
+<h1><%= @issue.publication_name %></h1>
+
+<%= @issue.embed_html %>
+<% content_for(:sub_menu) do %>
+
+	<ul class="variables">
+		<li><h4>Issues:</h4></li>
+		<li><h3><%= link_to "back", :back %></h3></li>
+	</ul>
+<% end %>

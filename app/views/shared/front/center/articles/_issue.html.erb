@@ -1,0 +1,6 @@
+<li>
+	<%= image_tag issue.photo.url(:thumb) %>
+	<h3 style="width:250px"><%= link_to issue.publication_name.gsub(/-/," ").capitalize, issuu_show_path(issue.publication_name, "1") %> </h3>
+ <%= issue.description %>
+	<hr />
+</li>

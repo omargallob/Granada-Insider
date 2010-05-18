@@ -1,0 +1,23 @@
+<div id="content">
+	<h1>Edit issue</h1>
+
+	<div id="tabs" class="ui-tabs">
+
+		<% form_for :issue,@issue, :url => {:action => "update"},:html =>{ :method => :put, :multipart => true}  do |f| %>	
+	  <%= render :partial => "form", :locals => {:f =>f}%>
+	  <p>
+	    <%= f.submit 'Create' %>
+	  </p>
+		<% end %>
+	
+	</div>
+</div>
+<% content_for(:sub_menu) do %>
+	<ul>
+		<%= render :partial => "shared/menu/admin_overview_submenu" %>
+	</ul>
+	<ul class="variables">
+		<li><h4>Issues:</h4></li>
+		<li><h3><%= link_to "back", :back %></h3></li>
+	</ul>
+<% end %>

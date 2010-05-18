@@ -1,0 +1,9 @@
+	<li class="header"><span>Section</span></li>
+		<% if controller.controller_name == "overview" and controller.action_name == "index" %>
+			<li  class="active">Overview</li>
+			<li  class="regular"><%= link_to "Issues", admin_issues_path %></li>
+			
+		<% else %>
+			<li  class="regular"><%= link_to "Overview", "/admin" %></li>
+			<li  class="active">Issues</li>
+		<% end %>

@@ -20,7 +20,6 @@
 	  <script type="text/javascript" src="/fonts/Rockwell_Std_400-Rockwell_Std_700-Rockwell_Std_italic_400-Rockwell_Std_italic_700.font.js"></script>
 	  <script type="text/javascript" src="/fonts/Helvetica_Neue_LT_Std_300-Helvetica_Neue_LT_Std_700-Helvetica_Neue_LT_Std_italic_400-Helvetica_Neue_LT_Std_italic_700.font.js"></script>
 
-		<%= javascript_include_tag "nice_fonts","magicline","jquery.toggleformtext","jcarousellite","jquery.prettyPhoto" %>
 		<%= stylesheet_link_tag "prettyPhoto" %>
 	<style type="text/css">
 
@@ -59,8 +58,12 @@
 					<% if @page.name =="whatson" %>
 						<%= render :partial =>"shared/menu/whatson_submenu" %>		        	
 					<% end %>
-					<% if @page.name =="magazine" and controller.controller_name == "viewer" %>
+					<% if @page.name =="magazine" and controller.controller_name == "viewer"  %>
 						<%= render :partial =>"shared/menu/magazine_submenu" %>		        	
+					<% end %>
+					<% if controller.controller_name == "issuu" and controller.action_name == "index" %>
+						<%= render :partial =>"shared/menu/magazine_submenu" %>		        	
+					
 					<% end %>
 					<% if @page.name =="classified" %>
 						<%= render :partial =>"shared/menu/classified_submenu" %>		        	

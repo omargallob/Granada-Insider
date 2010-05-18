@@ -20,12 +20,7 @@
 	<%= will_paginate @articles %>	
 	<% else %>
 	<ol> 
-		<li><h3 style="margin-left:27px"><%= link_to "May Issue", issuu_show_path("may-2010", "1") %> </h3>
-			<hr />
-			</li>
-			<li><h3 style="margin-left:27px"><%= link_to "April Issue", issuu_show_path("april-2010", "1") %></h3>
-				<hr />
-				</li>
+		<%= render :partial => "shared/front/center/articles/issue", :collection => Issue.find(:all, :order => "created_at desc")%>
 	</ol>
 	<% end %>
 
