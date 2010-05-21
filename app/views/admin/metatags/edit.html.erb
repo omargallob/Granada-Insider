@@ -1,0 +1,20 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h1>Editing metadata of page:</h1>
+
+	<% form_for @meta, :url => {:action => "update"}  do |f| %>	
+	  <%= render :partial => "form", :locals => {:f =>f}%>
+	  <p>
+	    <%= f.submit 'Create' %>
+	  </p>
+	<% end %>
+
+
+
+</div>
+

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100518094835) do
+ActiveRecord::Schema.define(:version => 20100521163143) do
 
   create_table "ads", :force => true do |t|
     t.string   "title"
@@ -134,6 +134,15 @@ ActiveRecord::Schema.define(:version => 20100518094835) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "location_type_id"
+  end
+
+  create_table "metatags", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "keywords"
+    t.integer  "page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pages", :force => true do |t|

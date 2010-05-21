@@ -1,0 +1,31 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "New", new_admin_metatag_path %></li>
+	</ul>
+	<ul class="variables">
+		<li><h4>Related:</h4></li>
+		<li><h3><a href="/admin/metatags">metatag</a></h3></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h1>metatags List</h1>
+	<div style="float:left; width:450px; border-right: 1px solid green;margin-right: 25px">
+	<h2>Pages</h2>
+	<table>
+		<% for page in @pages%>
+		<tr>
+			<td><%= page.name %> </td><td>&nbsp;|&nbsp;</td> 
+			<td><% if page.metatag %><%= page.metatag.id %> <% else %> No metatags <% end %></td><td>&nbsp;|&nbsp;</td>
+			<td><% if page.metatag %>
+				 	 <%= link_to "Edit", edit_admin_metatag_path(page.metatag) %>
+				<% else %>
+				 <%= link_to "Add", :controller => "metatags", :action=>"new", :parent=>page.id, :type => "page" %>
+				<% end %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+	</div>
+</div>

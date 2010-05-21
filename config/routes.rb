@@ -40,6 +40,7 @@ ActionController::Routing::Routes.draw do |map|
 			 admin.resources :event_types
   		 admin.resources :egalleries, :has_many => :uploads
   		 admin.resources :issues
+  		 admin.resources :metatags
 	
 
 			 admin.calendar 'events/:year/:month', :controller => 'events', :action => 'index', :year => Time.zone.now.year, :month => Time.zone.now.month      

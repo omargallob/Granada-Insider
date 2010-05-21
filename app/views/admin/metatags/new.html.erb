@@ -1,0 +1,17 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h2>Adding metadata to <%= params[:type]%>: <%= params[:name]%></h2>
+
+	<% form_for :metatag, :url => {:action => ""}  do |f| %>	
+	  <%= render :partial => "form", :locals => {:f =>f}%>
+	  <p>
+	    <%= f.submit 'Create' %>
+	  </p>
+	<% end %>
+
+</div>

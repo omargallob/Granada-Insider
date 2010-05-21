@@ -69,6 +69,17 @@ class ViewerController < ApplicationController
 		    @events = Event.find(:all, :order =>"start_at asc", :conditions => ["start_at = ?",Date.today], :include => "location")
 			
 		end
+		if @page.metatag
+  		set_meta_tags :title => @page.metatag.title,
+                      :description => @page.metatag.description,
+                      :keywords => @page.metatag.keywords
+    else
+      set_meta_tags :title => @page.title,
+                      :description => 'Testing the viewer',
+                      :keywords => @page.title
+
+  		      
+		end
   end
 
 end
