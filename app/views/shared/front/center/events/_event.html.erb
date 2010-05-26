@@ -10,7 +10,7 @@
 	</div>
 </div>
 <div class="center">
-	<h4><%= event.title %></h4>
+	<h4><%= link_to event.title,event_show_path(event.id, event.start_at.day,event.start_at.month,event.start_at.year, event.title.gsub(/ /, "_")) %></h4>
 	<%= event.description %>
 	<p><b>Gallery</b> | <%= event.location.title if event.location %> <b>Events</b> | 11 <b>Comments</b></p>
 </div>

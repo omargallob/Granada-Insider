@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  #events
+  map.event_show "/event/:id/:day/:month/:year/:title", :controller => "events", :action => "show"
   #forms
   map.advertise "/about/advertise", :controller =>"contact", :action => "advertise"
   map.work "/about/work", :controller =>"contact", :action => "work"
-  
   #digital mag
   map.issuu_index '/magazine/issues', :controller => "issuu", :action=>"index"
   map.issuu_show '/issuu/:publication_name/:number', :controller => "issuu", :action=>"show"

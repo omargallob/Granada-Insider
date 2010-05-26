@@ -8,7 +8,7 @@ body #wrapper h1 a { text-decoration: none; }
 body #wrapper #header.classified { height: 200px; }
 body #wrapper #header.whatson { height: 200px; }
 body #wrapper #header.magazine { height: 200px; }
-body #wrapper #header { height: 156px; width: 962px; margin-bottom: 13px; float: left; }
+body #wrapper #header { height: 156px; width: 962px; margin-bottom: 10px; float: left; }
 body #wrapper #header #logo { height: 92px; width: 230px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0 0; margin: 9px 0 2px 0; }
 body #wrapper #header #date { float: right; margin-top: 75px; color: white; }
 body #wrapper #header #navbar { height: 53px; width: 962px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -92px; }
@@ -40,7 +40,7 @@ body #wrapper #header #sub_navbar ul.variables li h3 { margin-top: 5px; }
 body #wrapper #header #sub_navbar h1 { text-transform: uppercase; float: left; margin: 15px 0 0 22px; }
 body #wrapper #left-column { width: 161px; float: left; height: 1546px; background: transparent; margin-right: 8px; margin-bottom: 25px; }
 body #wrapper #left-column #google_ads { width: 160px; height: 239px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2746px; margin-left: 1px; }
-body #wrapper #left-column .header { height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -145px; margin-top: 11px; float: left; width: 161px; }
+body #wrapper #left-column .header { height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -145px; margin-top: 10px; float: left; width: 161px; }
 body #wrapper #left-column #magazine { height: 206px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -170px; float: left; width: 161px; }
 body #wrapper #left-column #magazine .issue { margin: 5px 20px 0px 20px; }
 body #wrapper #left-column .media { height: 318px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -466px; float: left; width: 161px; }
@@ -53,19 +53,34 @@ body #wrapper #left-column .media .previous { background-image: url(../images/sy
 body #wrapper #left-column .media .next { background-image: url(../images/system/buttons/left_bottom.png); background-position: 0px  0px; }
 body #wrapper #left-column #chat { height: 432px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -784px; float: left; width: 161px; }
 body #wrapper #left-column #social { height: 90px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -376px; float: left; width: 161px; }
-body #wrapper #left-column #advertise { height: 107px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1216px; margin-top: 13px; float: left; width: 161px; }
-body #wrapper #left-column #work { width: 161px; float: left; height: 86px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6223px; margin-top: 13px; }
+body #wrapper #left-column #advertise { height: 107px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1216px; margin-top: 10px; float: left; width: 161px; }
+body #wrapper #left-column #work { width: 161px; float: left; height: 86px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6223px; margin-top: 10px; }
 body #wrapper #left-column #magazine.magazine { background-position: 0px -8686px; height: 204px; }
 body #wrapper #main.magazine { width: 492px; float: left; height: 1648px; }
 body #wrapper #main.whatson { width: 492px; float: left; height: 1648px; }
 body #wrapper #main { width: 492px; float: left; height: 1525px; background: transparent; }
 body #wrapper #main .header { width: 492px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1323px; }
-body #wrapper #main #travellers { width: 492px; float: left; height: 288px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1348px; margin-bottom: 13px; }
-body #wrapper #main #articles { width: 492px; float: left; height: 379px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1636px; margin-bottom: 13px; }
+body #wrapper #main #travellers { width: 492px; float: left; height: 288px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1348px; margin-bottom: 10px; }
+body #wrapper #main #articles { width: 492px; float: left; height: 379px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -1636px; margin-bottom: 10px; }
 body #wrapper #main #articles #map_container { margin: 10px 17px 0 17px; }
-body #wrapper #main .services { width: 231px; float: left; height: 229px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2015px; margin-bottom: 13px; }
+body #wrapper #main #event_top { width: 492px; float: left; height: 247px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -8890px; margin-bottom: 10px; }
+body #wrapper #main #event_top #top_header { height: 37px; width: 492px; float: left; }
+body #wrapper #main #event_top #top_description { float: left; height: 190px; padding-top: 20px; width: 492px; float: left; }
+body #wrapper #main #event_top #top_description #top_image { float: left; margin: 0 40px; }
+body #wrapper #main #events_in_location { height: 107px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -9136px; width: 492px; float: left; margin-bottom: 10px; }
+body #wrapper #main #events_in_location .previous_e_l { height: 107px; width: 25px; float: left; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -9136px; }
+body #wrapper #main #events_in_location #events_carousel { width: 442px; height: 107px; float: left; }
+body #wrapper #main #events_in_location #events_carousel ul li { float: left; margin: 14px; }
+body #wrapper #main #events_in_location .next_e_l { height: 107px; width: 25px; float: left; margin-left: 2px; background-image: url(../images/system/bg/versionSprites.png); background-position: -466px -9136px; }
+body #wrapper #main #event_location { height: 210px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -9247px; width: 492px; float: left; margin-bottom: 10px; }
+body #wrapper #main #event_location #location_description { float: left; height: 190px; padding-top: 20px; width: 492px; float: left; }
+body #wrapper #main #event_location #location_description #location_image { float: left; margin: 0 40px; }
+body #wrapper #main #event_location h1 { float: left; }
+body #wrapper #main #event_images { height: 195px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -9460px; width: 492px; float: left; margin-bottom: 10px; }
+body #wrapper #main #event_comments { height: 466px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -9657px; width: 492px; float: left; margin-bottom: 10px; }
+body #wrapper #main .services { width: 231px; float: left; height: 229px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2015px; margin-bottom: 10px; }
 body #wrapper #main .services_right { margin-left: 30px; }
-body #wrapper #main #small_header { width: 443px; float: left; height: 24px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2244px; margin-left: 24px; }
+body #wrapper #main .small_header { width: 443px; float: left; height: 24px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2244px; margin-left: 24px; }
 body #wrapper #main #news { width: 492px; float: left; height: 143px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2268px; margin-bottom: 11px; }
 body #wrapper #main #news .news_carousel { width: 442px; float: left; height: 143px; }
 body #wrapper #main #news .news_carousel ul { width: 442px; float: left; height: 143px; }
@@ -74,8 +89,8 @@ body #wrapper #main #news .news_carousel ul li p { width: 386px; }
 body #wrapper #main #news .news_carousel ul li h1 { padding-top: 25px; }
 body #wrapper #main #news .previous_i { width: 25px; height: 143px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2268px; float: left; }
 body #wrapper #main #news .next_i { width: 25px; height: 143px; background-image: url(../images/system/bg/versionSprites.png); background-position: -467px -2268px; float: left; }
-body #wrapper #main #classified { width: 492px; float: left; height: 335px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2411px; margin-bottom: 13px; }
-body #wrapper #main #events_gallery { width: 492px; float: left; height: 246px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4522px; margin-bottom: 13px; }
+body #wrapper #main #classified { width: 492px; float: left; height: 335px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2411px; margin-bottom: 10px; }
+body #wrapper #main #events_gallery { width: 492px; float: left; height: 246px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4522px; margin-bottom: 10px; }
 body #wrapper #main #events_list { width: 492px; float: left; height: 1366px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4834px; }
 body #wrapper #main #events_list .header { width: 492px; float: left; height: 43px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4768px; }
 body #wrapper #main #events_list .header h1 { margin: 9px 0 0 17px; }
@@ -95,20 +110,20 @@ body #wrapper #main #articles.magazine ol#classifieds li h3 { width: 420px; marg
 body #wrapper #main #articles.magazine ol#classifieds li p { width: 420px; margin: 0 11px 5px 11px; }
 body #wrapper #main #events_footer { width: 458px; float: left; height: 23px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6200px; margin-left: 17px; }
 body #wrapper #main #events_footer h4 a { text-decoration: none; }
-body #wrapper #main #events_footer.magazine { margin: -4px 17px 13px 17px; }
+body #wrapper #main #events_footer.magazine { margin: -4px 17px 10px 17px; }
 body #wrapper #right-column { width: 291px; float: left; height: 1525px; background: transparent; margin-left: 8px; }
 body #wrapper #right-column .header { width: 291px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -2985px; }
 body #wrapper #right-column #whatson { width: 291px; float: left; width: 291px; float: left; height: 322px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -3010px; }
-body #wrapper #right-column #advertisements { width: 291px; float: left; height: 1062px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -3332px; margin-top: 13px; }
-body #wrapper #right-column #community_header { width: 244px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4394px; margin-top: 13px; margin-left: 24px; }
+body #wrapper #right-column #advertisements { width: 291px; float: left; height: 1062px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -3332px; margin-top: 10px; }
+body #wrapper #right-column #community_header { width: 244px; float: left; height: 25px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4394px; margin-top: 10px; margin-left: 24px; }
 body #wrapper #right-column #community { width: 291px; float: left; height: 81px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4419px; }
 body #wrapper #right-column #community_join { width: 186px; float: left; height: 22px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -4500px; margin-left: 54px; }
 body #wrapper #right-column #what_when { width: 291px; float: left; height: 245px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6309px; }
 body #wrapper #right-column #what_when ol.whatson { margin: 15px 20px; padding: 10px 0; height: 205px; overflow-x: hidden; overflow-y: auto; }
 body #wrapper #right-column #what_when ol.whatson li { width: 190px; margin-bottom: 5px; }
-body #wrapper #right-column #advertise { width: 291px; float: left; height: 105px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6554px; margin: 13px 0; }
-body #wrapper #right-column #single_advertisement { width: 291px; float: left; height: 272px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6955px; margin-top: 13px; }
-body #wrapper #right-column #double_advertisement { width: 291px; float: left; height: 534px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7269px; margin-bottom: 13px; }
+body #wrapper #right-column #advertise { width: 291px; float: left; height: 105px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6554px; margin: 10px 0; }
+body #wrapper #right-column #single_advertisement { width: 291px; float: left; height: 272px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6955px; margin-top: 10px; }
+body #wrapper #right-column #double_advertisement { width: 291px; float: left; height: 534px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -7269px; margin-bottom: 10px; }
 body #wrapper #right-column #magazine { width: 291px; float: left; height: 295px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6660px; }
 body #wrapper.whatson { height: 1892px; }
 body #footer { width: 100%; float: left; height: 225px; background-image: url(../images/system/bg/footer.png); background-repeat: repeat-x; margin-top: 14px; }

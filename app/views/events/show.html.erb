@@ -1,0 +1,71 @@
+<div id="left-column" class="<%= @page.name %>">
+<%= render :partial =>"shared/front/left/home" %>
+
+</div> 
+<div id="main">
+	<div id="event_top">
+		<div id="top_header"></div>	
+		<div id="top_description">
+			<div id="top_image">
+				<%= image_tag @event.location.photo.url(:thumb) %>
+			</div>
+			<h1><%= @event.location.title %></h1>
+			<%= @event.description %>
+		</div>
+	</div>
+	<div class="small_header">
+		<h4>Other events at <%= @event.location.title %></h4>
+	</div>
+	<div id="events_in_location">
+		<%# @events_at_location.length %>
+		<div class="previous_e_l"></div>
+		<div id="events_carousel">
+			<ul>
+				<%= render :partial => "event_location", :collection => @events_at_location %>
+			</ul>
+		</div>
+		<div class="next_e_l"></div>
+		<script>
+		$(function() {
+		    $("#events_carousel").jCarouselLite({
+		        btnNext: ".next_e_l",
+		        btnPrev: ".previous_e_l",
+						visible: 4
+		    });
+		});
+
+		</script>
+	</div>
+	<div class="header">
+		<h4><%= @event.location.title %></h4>
+	</div>
+	<div id="event_location">
+		<div id="location_description">
+			<div id="location_image">
+				<%= image_tag @event.location.photo.url(:thumb) %>				
+			</div>
+			
+			<h1><%= @event.location.title %></h1>
+			<%= @event.location.description %>
+		</div>
+	</div>
+	<div class="small_header">
+		<h4>Images</h4>
+	</div>
+	<div id="event_images"></div>
+	<div class="header">
+		<h4>Comments</h4>
+	</div>
+	<div id="event_comments"></div>
+	<div class="small_header">
+	  <h4>granada news</h4></div>
+	<div id="news">
+		<%= render :partial => "shared/front/center/news" %>
+	</div>
+</div> 
+<div id="right-column" class="<%= @page.name %>">
+
+ <%= render :partial =>"shared/front/right/magazine" %>
+
+</div>
+
